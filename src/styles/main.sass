@@ -1,4 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Amiri:400,700&subset=arabic');
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Amiri:400&subset=arabic');
+@import url('https://fonts.googleapis.com/css?family=Karla');
 
-html
-  background-color: pink
+html, body
+  background-color: LavenderBlush;
+  font-family: "Karla", sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+
+// GLOBAL CLASSES
+.arabicTxt 
+  font-family: "Amiri", sans-serif;
+
+.quarterWidth
+  width: 33.33%;
+
+
+// HEADER NAVBAR
+.navbar
+  margin: 6px;
+
+  .mosque
+    width: 32px;
+    height: 32px;
+
+  h1
+    display: inline-block;
+    margin: 0 6px;
+    font-size: 2rem;
+
+// .navbar-menu
+  // float: right;
+
+
+
+
+// FOOTER
+.footer 
+  width: 100%;
+
+
+
+// finally import Bulma
+@import "~bulma"

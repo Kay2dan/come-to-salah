@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Salah Application`,
-    description: `An introduction to salah, the second pillar of Islam.`,
+    title: `Come to Salah`,
+    description: `An introduction to Salah, the second pillar of Islam.`,
     author: `SalmanK`,
   },
   plugins: [
@@ -20,4 +20,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
