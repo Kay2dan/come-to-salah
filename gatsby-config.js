@@ -4,6 +4,7 @@ module.exports = {
     description: `An introduction to Salah, the second pillar of Islam.`,
     author: `SalmanK`,
   },
+  // pathPrefix: "/come_to_salah",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
