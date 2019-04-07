@@ -1,5 +1,5 @@
 {
-  "name": "salah_app",
+  "name": "come-to-salah",
   "private": true,
   "description": "An application introducing salah",
   "version": "0.1.0",
@@ -15,6 +15,7 @@
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.31",
     "gatsby-source-filesystem": "^2.0.28",
+    "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-sharp": "^2.1.17",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
@@ -28,14 +29,14 @@
   },
   "keywords": [
     "salah",
-    "salat",
+    "salaat",
     "prayer"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

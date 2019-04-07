@@ -2,17 +2,24 @@ module.exports = {
   siteMetadata: {
     title: `Come to Salah`,
     description: `An introduction to Salah, the second pillar of Islam.`,
-    author: `SalmanK`,
   },
-  // pathPrefix: "/come_to_salah",
+  // pathPrefix: "/come-to-salah",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    // "gatsby-transformer-remark",
+    // `gatsby-transformer-yaml`,
+    {
+      resolve: "gatsby-transformer-json",
+      options: {
+        pedantic: false,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     `gatsby-transformer-sharp`,

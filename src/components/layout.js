@@ -1,43 +1,44 @@
 import React, { Component } from "react";
+import { Columns, Column } from "bloomer";
 // import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Columns, Column } from "bloomer";
 import Header from "./header";
 import Footer from "./footer";
+import SEO from "./seo";
 import SVG from "./svg";
 import SectionContent from "./sectionContent";
-import headingContent from "../data/headingContent";
+// import headingContent from "../data/headingContent";
 // import "../styles/layout.css"
 
 class Layout extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      menuVisibility: true,
       activeNavbarItem: "",
     };
   }
 
-  selectMenuItem = ev => {
-    const evTarget = ev.target;
-    console.log(
-      "%c evTarget:",
-      "color: green",
-      evTarget.getAttribute("data-heading")
-    );
+  selectMenuItem = e =>
     this.setState({
-      activeNavbarItem: evTarget.getAttribute("data-heading"),
+      activeNavbarItem: e.target.getAttribute("data-heading"),
     });
-  };
+
+  toggleMenu = e =>
+    this.setState({
+      menuVisibility: !this.state.menuVisibility,
+    });
 
   render() {
-    const { activeNavbarItem } = this.state;
-    const contentToDisplay =
-      (activeNavbarItem.length &&
-        headingContent.filter(
-          content => activeNavbarItem === content.heading && content.body
-        )[0].body) ||
-      "";
-    console.log("%c contentToDisplay: ", "color: blue", contentToDisplay);
+    // const { mainContent } = this.props;
+    const { menuVisibility, activeNavbarItem } = this.state;
+    console.log("___", activeNavbarItem, this.state);
+    // const contentToDisplay =
+    //   (activeNavbarItem.length &&
+    //     headingContent.filter(
+    //       content => activeNavbarItem === content.heading && content.body
+    //     )[0].body) ||
+    //   "";
     return (
       <StaticQuery
         query={graphql`
@@ -51,20 +52,17 @@ class Layout extends Component {
         `}
         render={data => (
           <>
+            <SEO
+              title="Home"
+              keywords={[`salah`, `salaat`, `salat`, `prayer`]}
+            />
             <Header
               siteTitle={data.site.siteMetadata.title}
+              menuVisibility={menuVisibility}
               activeNavbarItem={activeNavbarItem}
+              menuToggleHandler={this.toggleMenu}
               onClickHandler={this.selectMenuItem}
             />
-            {/* <div
-              style={{
-                margin: `0 auto`,
-                maxWidth: 960,
-                padding: `0px 1.0875rem 1.45rem`,
-                paddingTop: 0,
-              }}
-            > */}
-            {/* <main>{this.props.children}</main> */}
             <main>
               <Columns>
                 <Column>
@@ -72,12 +70,11 @@ class Layout extends Component {
                   <span>Placeholder vector image</span>
                 </Column>
                 <Column>
-                  <SectionContent content={contentToDisplay} />
+                  {/* <SectionContent content={contentToDisplay} /> */}
                 </Column>
               </Columns>
             </main>
             <Footer />
-            {/* </div> */}
           </>
         )}
       />

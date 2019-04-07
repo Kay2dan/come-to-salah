@@ -1,0 +1,43 @@
+{
+  "id": "",
+  "title": "",
+  "menuSections": [
+    {
+      "label": "Local Salah Time",
+      "headings": ["Local Salah Time", "Local Salah Time Monthview"]
+    },
+    {
+      "label": "Salah Walkthrough",
+      "headings": ["Fajr", "Dhuhr", "Asr", "Mughrib", "Isha"]
+    },
+    {
+      "label": "Guide to Salah",
+      "headings": [
+        "What is Salah",
+        "Adhaan (Call to Prayer)",
+        "Wudhu (Ablution)",
+        "Timing of Salah",
+        "Performance of Salah",
+        "Conditions & Duties of Salah",
+        "Pillars of Salah",
+        "Preferred Acts of Salah",
+        "How to Perform Fajr",
+        "How to Perform Dhuhr",
+        "How to Perform Asr",
+        "How to Perform Mughrib",
+        "How to Perform Isha",
+        "Mistakes & Things that invalidate Salah",
+        "Misc. Notes on Salah",
+        "Private Supplications after Salah",
+        "Congregational Prayer",
+        "Traveller’s Prayer",
+        "Sick Person’s Prayer",
+        "Voluntary Prayer (incl. Witr)",
+        "Jumah Prayer",
+        "Eid Prayer",
+        "Prayer for Rain",
+        "Funeral Prayer"
+      ]
+    }
+  ]
+}
