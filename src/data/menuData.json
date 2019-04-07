@@ -1,10 +1,10 @@
 {
-  "id": "",
+  "id": "app_menu",
   "title": "",
   "menuSections": [
     {
       "label": "Local Salah Time",
-      "headings": ["Local Salah Time", "Local Salah Time Monthview"]
+      "headings": ["Local Salah Time", "Local Salah Time Month View"]
     },
     {
       "label": "Salah Walkthrough",

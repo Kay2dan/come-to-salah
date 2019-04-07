@@ -32,7 +32,7 @@ class Layout extends Component {
   render() {
     // const { mainContent } = this.props;
     const { menuVisibility, activeNavbarItem } = this.state;
-    console.log("___", activeNavbarItem, this.state);
+    // console.log("___", activeNavbarItem, this.state);
     // const contentToDisplay =
     //   (activeNavbarItem.length &&
     //     headingContent.filter(

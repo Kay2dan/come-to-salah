@@ -8,8 +8,6 @@ import {
   NavbarItem,
   NavbarEnd,
 } from "bloomer";
-// import brandLogo from "../images/logo.png";
-import menuData from "../data/menuData";
 
 const Header = ({
   siteTitle,
@@ -18,6 +16,19 @@ const Header = ({
   menuToggleHandler,
   onClickHandler,
 }) => {
+  console.log(
+    "props within Header:",
+    "siteTitle: ",
+    siteTitle,
+    "menuVisibility: ",
+    menuVisibility,
+    "activeNavbarItem: ",
+    activeNavbarItem,
+    "menuToggleHandler: ",
+    menuToggleHandler,
+    "onClickHandler: ",
+    onClickHandler
+  );
   return (
     <Navbar>
       <NavbarBrand>
@@ -119,7 +130,7 @@ const Header = ({
             className={menuVisibility ? "close_icon" : "menu_icon"}
             onClick={menuToggleHandler}
           />
-          {/* {menuVisibility && <HeaderMenu />} */}
+          {menuVisibility && <HeaderMenu activeNavbarItem={activeNavbarItem} />}
         </NavbarEnd>
       </NavbarMenu>
     </Navbar>
