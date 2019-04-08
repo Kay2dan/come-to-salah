@@ -2,6 +2,7 @@ import React from "react";
 import SEO from "../components/seo";
 import { Columns, Column, Container, Icon } from "bloomer";
 import SalahTimes from "../components/salahTimes";
+import "../styles/localSalahTime.sass";
 
 const LocalSalahTimePage = () => {
   const { localStorage } = window;
@@ -36,35 +37,38 @@ const LocalSalahTimePage = () => {
       }
     );
 
+  const gregorianDate = new Date().toLocaleDateString("en-US", {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+
+  // fetch hijri date
+
   return (
-    <>
+    <Container className="">
       <SEO
         title="Local Salah Time"
         keywords={[`salah`, `salaat`, `salat`, `prayer`]}
       />
       <main>
-        <Container>
-          <h1>Local Salah Time</h1>
-          <Icon className="" />
+        <Container className="level">
           {/* icon for month view page */}
+          <Icon className="level-item" />
+          <h1 className="level-item">Local Salah Time</h1>
         </Container>
-        <Columns>
-          <Column isSize="1/2">
-            <div>Gregorian Date</div>
-          </Column>
-          <Column isSize="1/2">
-            <div>Hijri Date</div>
-          </Column>
-        </Columns>
-        <Container>
-          <div onClick={getUserLocation}>
-            <Icon isSize="small" className="" />
-            {`Your location: ${userLocation}`}
-          </div>
+        <Container className="has-text-centered dateSection">
+          <div className="">{gregorianDate}</div>
+          <div className="">Hijri Date</div>
+        </Container>
+        <Container className="level userLocation" onClick={getUserLocation}>
+          <Icon isSize="" className="level-item" />
+          <span className="level-item">{`Your location: ${userLocation}`}</span>
         </Container>
         <SalahTimes />
       </main>
-    </>
+    </Container>
   );
 };
 

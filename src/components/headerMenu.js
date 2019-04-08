@@ -20,7 +20,7 @@ const HeaderMenu = ({ activeNavbarItem }) => {
         }
       `}
       render={data => {
-        console.log("staticQuery data in HeaderMenu: ", data);
+        // console.log("staticQuery data in HeaderMenu: ", data);
         return (
           <Menu>
             {data.allDataJson.nodes[2].menuSections.map((collection, i) => {
@@ -30,7 +30,9 @@ const HeaderMenu = ({ activeNavbarItem }) => {
                   {collection.headings.map((heading, j) => {
                     let link = heading.replace(/[^\w]/g, "");
                     link = heading.charAt(0).toLowerCase() + link.slice(1);
-                    console.log("s: ", link);
+                    {
+                      /* console.log("s: ", link); */
+                    }
                     return (
                       <Link
                         to={`/${link}`}

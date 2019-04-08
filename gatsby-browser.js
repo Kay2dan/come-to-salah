@@ -1,18 +1,47 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-// import React, { Component } from "react";
-// import Layout from "./src/components/layout";
+import React, { Component } from "react";
+import Header from "./src/components/header";
+import Layout from "./src/components/layout";
 
-// export class wrapPageElement extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {};
-//   }
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <div className="testWrapper">
+      <PageWrapper props={props} element={element} />
+    </div>
+  );
+};
 
-//   render() {
-//     return <Layout {...this.props.props}>{this.props.element}</Layout>;
-//   }
-// }
+class PageWrapper extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuVisibility: true,
+      activeNavbarItem: "",
+    };
+  }
+
+  selectMenuItem = e =>
+    this.setState({
+      activeNavbarItem: e.target.getAttribute("data-heading"),
+    });
+
+  toggleMenu = e =>
+    this.setState({
+      menuVisibility: !this.state.menuVisibility,
+    });
+
+  render() {
+    const { props, element } = this.props;
+    const { menuVisibility, activeNavbarItem } = this.state;
+    return (
+      <>
+        <Header
+          menuVisibility={menuVisibility}
+          activeNavbarItem={activeNavbarItem}
+          menuToggleHandler={this.toggleMenu}
+          onClickHandler={this.selectMenuItem}
+        />
+        <Layout {...props}>{element}</Layout>
+      </>
+    );
+  }
+}

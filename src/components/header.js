@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "gatsby";
 import HeaderMenu from "./headerMenu";
 import {
   Navbar,
@@ -8,9 +9,9 @@ import {
   NavbarItem,
   NavbarEnd,
 } from "bloomer";
+import "../styles/header.sass";
 
 const Header = ({
-  siteTitle,
   menuVisibility,
   activeNavbarItem = "",
   menuToggleHandler,
@@ -18,110 +19,163 @@ const Header = ({
 }) => {
   console.log(
     "props within Header:",
-    "siteTitle: ",
-    siteTitle,
     "menuVisibility: ",
     menuVisibility,
-    "activeNavbarItem: ",
+    "; activeNavbarItem: ",
     activeNavbarItem,
-    "menuToggleHandler: ",
+    "; menuToggleHandler: ",
     menuToggleHandler,
-    "onClickHandler: ",
+    "; onClickHandler: ",
     onClickHandler
   );
   return (
     <Navbar>
       <NavbarBrand>
         <NavbarItem>
-          <svg
-            version="1.1"
-            viewBox="0 0 62.395058 96.28801"
-            className="mosque"
-          >
-            <g id="layer1">
-              <g transform="translate(-5.2916669)" id="g4324">
-                <path
-                  id="path3775"
-                  style={{
-                    fill: "#244b7a",
-                    fillOpacity: 1,
-                    fillRule: "nonzero",
-                    stroke: "none",
-                    strokeWidth: "0.08466666",
-                  }}
-                  d="m 37.041709,16.879485 v 0 c -2.84141,5.68198 -7.48284,10.2633 -13.20292,13.0302 l -10.94063,5.29167 c -7.8342004,3.78883 -9.4894404,14.22654 -3.2114004,20.25311 l 1.0430904,1.00076 h 26.31186 26.3127 l 1.04056,-1.00076 c 6.27972,-6.02657 4.62534,-16.46428 -3.20971,-20.25311 l -10.94148,-5.29167 c -5.71923,-2.7669 -10.36066,-7.34822 -13.20207,-13.0302 v 0"
-                />
-                <path
-                  id="path3777"
-                  style={{
-                    fill: "#72d1f5",
-                    fillOpacity: 1,
-                    fillRule: "nonzero",
-                    stroke: "none",
-                    strokeWidth: "0.08466666",
-                  }}
-                  d="M 68.061029,96.435675 H 6.0223786 v -34.75567 c 0,-3.00059 2.43248,-5.43221 5.4322204,-5.43221 h 51.17337 c 3.00228,0 5.43306,2.43162 5.43306,5.43221 v 34.75567"
-                />
-                <path
-                  id="path3779"
-                  style={{
-                    fill: "#3a3a3c",
-                    fillOpacity: 1,
-                    fillRule: "nonzero",
-                    stroke: "none",
-                    strokeWidth: "0.08466666",
-                  }}
-                  d="m 48.662209,96.435675 v -22.82106 c 0,-6.107 -11.6205,-9.84588 -11.6205,-9.84588 0,0 -11.62135,3.73888 -11.62135,9.84588 v 22.82106 h 23.24185"
-                />
-                <path
-                  id="path3781"
-                  style={{
-                    fill: "#3a3a3c",
-                    fillOpacity: 1,
-                    fillRule: "nonzero",
-                    " stroke": "none",
-                    strokeWidth: "0.08466666",
-                  }}
-                  d="m 63.026749,74.096375 c 0,-1.82796 -4.58977,-5.24934 -4.58977,-5.24934 0,0 -4.5864,3.42138 -4.5864,5.24934 v 13.66604 h 9.17617 v -13.66604"
-                />
-                <path
-                  id="path3783"
-                  style={{
-                    fill: "#3a3a3c",
-                    fillOpacity: "1",
-                    fillRule: "nonzero",
-                    stroke: "none",
-                    strokeWidth: "0.08466666",
-                  }}
-                  d="m 20.232839,74.096375 c 0,-1.82796 -4.58809,-5.24934 -4.58809,-5.24934 0,0 -4.58724,3.42138 -4.58724,5.24934 v 13.66604 h 9.17533 v -13.66604"
-                />
-                <path
-                  id="path3785"
-                  style={{
-                    fill: "#244b7a",
-                    fillOpacity: "1",
-                    fillRule: "nonzero",
-                    stroke: "none",
-                    strokeWidth: "0.08466666",
-                  }}
-                  d="m 45.430479,15.478255 c -0.97451,0.36237 -2.02692,0.56303 -3.12758,0.56303 -4.95385,0 -8.96874,-4.01574 -8.96874,-8.9687398 0,-2.78892 1.27254,-5.27981 3.26813,-6.92487996 -0.0745,0.0102 -0.14817,0.0237 -0.22183,0.0356 -4.56353,0.72474 -8.05434,4.67443996 -8.05434,9.44201996 0,5.2831998 4.28329,9.5664898 9.56734,9.5664898 3.0844,0 5.82591,-1.4605 7.57512,-3.72703 -0.0127,0.005 -0.0263,0.009 -0.0381,0.0136"
-                />
-                <path
-                  id="path3787"
-                  style={{
-                    fill: "#244b7a",
-                    fillOpacity: "1",
-                    fillRule: "nonzero",
-                    stroke: "none",
-                    strokeWidth: "0.08466666",
-                  }}
-                  d="m 40.676449,2.7968852 1.21497,3.36634 3.57716,0.1143 -2.82786,2.19541 0.99737,3.4383098 -2.96164,-2.0108298 -2.96164,2.0108298 0.99737,-3.4383098 -2.82702,-2.19541 3.57717,-0.1143 1.21412,-3.36634"
-                />
+          <Link to="/">
+            <svg id="svgLogo" viewBox="0 0 140 102">
+              <g>
+                <g transform="matrix(.26458 0 0 .26458 -57 -84)">
+                  <text transform="translate(474 437)">
+                    <tspan
+                      x="0"
+                      y="0"
+                      className=" st1 st2 st3"
+                      font-size="92"
+                      font-family="TrajanPro-Bold"
+                      letter-spacing="2"
+                      fill="#0d324d"
+                    >
+                      Come
+                    </tspan>
+                    <tspan
+                      x="0"
+                      y="111"
+                      className=" st1 st2 st3"
+                      font-size="92"
+                      font-family="TrajanPro-Bold"
+                      letter-spacing="2"
+                      fill="#0d324d"
+                    >
+                      to
+                    </tspan>
+                    <tspan
+                      x="0"
+                      y="222"
+                      className=" st1 st2 st3"
+                      font-size="92"
+                      font-family="TrajanPro-Bold"
+                      letter-spacing="2"
+                      fill="#0d324d"
+                    >
+                      Salah
+                    </tspan>
+                  </text>
+                  <g>
+                    <path
+                      className=""
+                      d="M328 323l3-1v6h2l1-1v-6l3-1v5l2 1 1-1 1-1v-5l2-1v8l-2 2-3 2-2-1-2 2h-5l-1-2z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M346 326l-15 5h-3l-2-1 15-5a6 6 0 0 1 3 0z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M355 431l-2 7-5 5-8 4a35 35 0 0 1-26-4l-5-5a13 13 0 0 1-1-12l3-4 4-3 5-3 4-2a18 18 0 0 0 6-6v-12h8v8c1 2 0 4-1 6a21 21 0 0 1-7 8l-5 3-4 2-3 3-2 2-1 3 1 4 4 3 5 2a31 31 0 0 0 12 0l5-2 4-3 1-4-2-4-4-3-6-2-6-1a48 48 0 0 0 8-6c5 1 10 3 13 6 3 2 5 6 5 10zm4-21l1 3 4 2h6l4 1a4 4 0 0 1 0 5l-4 1h-6c-4 0-7-1-10-3-2-2-3-5-3-9v-6l-1-4-3-3-3-2-5-1h-20v7l1 2v3l2 2 4 2-4 2-4 2-3-3c-1-1-2-1-2-3l-1-3v-19h27a22 22 0 0 1 14 6 17 17 0 0 1 6 12zm-30 49l-1 2a4 4 0 0 1-6 0l-1-2 1-3a4 4 0 0 1 6 0zm1-74v-10l-1-2-1-2-3-1 1-2 2-1 3-1 2-2 1-2 1-1 1-1 1-1h1v25h-8zm9 74l-1 2a4 4 0 0 1-6 0l-1-2 1-3a4 4 0 0 1 6 0z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M403 334l-15 5-1 1h-1l-1-1-2-1 15-5a6 6 0 0 1 3 0z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M422 415l-1 3-2 2-2 2h-53l-4-1-1-3 1-2 4-1h20c-4-3-8-6-10-11-3-4-4-10-4-18v-17h1l1 1 1 1h1l2 3 1 2 3 1 2 1 1 2-3 1-1 2-1 2v2c0 5 1 10 4 13 2 4 5 6 9 9l14 4z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M306 545l-2 7-5 5-8 4a35 35 0 0 1-26-4l-5-5a13 13 0 0 1-1-12l3-4 4-3 5-3 4-2a18 18 0 0 0 5-6l1-4v-8h8v8l-1 6a21 21 0 0 1-8 8l-4 3-4 2-3 3-2 2-1 3 1 4 4 3 5 2a31 31 0 0 0 12 0l5-2 4-3 1-4-2-4-4-3-6-2-6-1a48 48 0 0 0 8-6c5 1 9 3 13 6 3 2 5 6 5 10zm4-21l1 3 4 2h6l4 1a4 4 0 0 1 0 5l-4 1h-6c-4 0-8-1-10-3s-3-5-3-9v-6l-1-4-3-3-3-2-5-1h-20v7l1 2v2l2 3 3 2-3 2-4 2-3-3-2-3-1-3-1-5v-14h28a22 22 0 0 1 14 6 17 17 0 0 1 6 12zm-29-25v-10l-1-2-1-2-3-1 1-2 2-1 3-1 1-2 2-2 1-1 1-1 1-1h1v25h-8z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M335 434l-15 6h-3l-2-1v-1l15-5a6 6 0 0 1 3 0z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      id="XMLID_24_"
+                      className=""
+                      d="M322 529v-44l-1-2v-2l-2-2-3-1 2-2 1-1h4l1-3 2-2v-1l2-1h1v-1h1v62h10l4 1 2 2-2 3-4 1h-25l-4-1-1-3 1-2 4-1z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M373 448l-15 6h-3l-2-1v-1l15-5a6 6 0 0 1 3 0z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M349 508c0 7 2 12 6 16 3 3 9 5 17 5h20c-2 5-5 7-9 7h-49l-3-1-2-3 2-2 3-1h14a24 24 0 0 1-6-11l-2-7v-11h31v-2l-1-2-2-1h-2l1-2 2-2h3l1-3 2-2 1-1h1l1-1h1v24z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M224 612l-2 3a4 4 0 0 1-5 0l-2-3 2-3a4 4 0 0 1 5 0zm-6 38v-6l2-11a22 22 0 0 1 12-12l9-3v8c-5 1-9 3-11 5-3 3-4 7-4 12h17v-29l-1-3-2-1-3-1 2-2 2-1 3-1 1-3 2-2h1l1-1 1-1h1v52zm15-38l-1 3a4 4 0 0 1-6 0l-1-3 1-3a4 4 0 0 1 6 0zm20 3l6-1 4-3 1 1c0 3-1 5-3 7l-8 4z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M304 548l-15 6h-2l-2-1 15-6a6 6 0 0 1 2 0z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M263 634v-39l-2-2-3-1a6 6 0 0 1 3-3h4l1-3 2-2v-1l1-1h1l1-1h1v57l4 3-5 2-3 2-4-5zm28 0v-53h1v1h1l2 1v1l2 2 1 3h4l1 1 2 2-3 1-2 2v2l-1 2v35l1 4 2 3 3 1 2 1h6l4 1 1 2-1 3-4 1h-6l-7-1-5-5-6 4-8 2a10 10 0 0 0-7 3l-2 3-1 3 2 3 2 3 3 2 3 1 3-1a18 18 0 0 0 6-5l1-3-1-4-3-3 4-2 3-2c2 1 4 3 4 5l1 6-1 6-5 5-6 3-6 3-6-3-6-3-4-5-2-6a15 15 0 0 1 5-12l6-3 7-1a10 10 0 0 0 9-6z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M338 569l2-1v5l1 1h1l2-2v-6l3-1v5c0 1 0 2 2 1l1-1v-6l3-1v6l-1 3-2 2-2 1-3-1-1 2-3 1-2-1-1-2z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M355 569l-15 5h-2l-3-1 16-5a6 6 0 0 1 2 0z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M314 641v-13l-1-2v-2l-2-2-3-1 2-2 1-1 4-1 1-2 2-2v-1l2-1 1-1h1v13c3-2 6-3 10-3h26l11-1 8-4h1v23c0 8-4 12-13 12h-58l-4-1-1-3 1-2 4-1h58c3 0 5-2 5-5v-12l-5 1-7 1h-26c-3 0-6 0-8 2s-2 4-2 7v4zm-4 22l2-5 1-6h8l-1 4-2 3-2 3-4 2zm55-13v-7h25l4 1 1 3-1 2-4 1z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M390 643v-46l-1-2-2-2h-3l2-3 2-1h3l1-3 2-2 1-1 1-1h1v-1h1v69h-14l-4-1-2-3 2-2 4-1z"
+                      fill="#0d324d"
+                    />
+                    <path
+                      className=""
+                      d="M423 573l-1 4-4 2h-14c-1 0-2 1-2 4h-1l-1-4c0-3 1-4 4-4h1c6-5 10-7 13-7s5 2 5 5zm-15 65v-41l-1-2-2-2h-3l2-2 2-2h3l1-3 2-2 1-1h1l1-1v-1h1v57l-1 12-2 9-4 6-5 6-2-2a51 51 0 0 0 6-21zm11-65l-2-1-7 3h5c3 0 4 0 4-2z"
+                      fill="#0d324d"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      className=""
+                      d="M448 366v15l1 38v177a7042 7042 0 0 1-1 92v15l-1-15a2806 2806 0 0 1 0-38l-1-54V444l1-25v-38z"
+                      fill="#0d324d"
+                    />
+                  </g>
+                </g>
               </g>
-            </g>
-          </svg>
-          <h1>{siteTitle}</h1>
-          <h1 className="arabicTxt"> حَيَّ عَلَى ٱلصَّلَاة</h1>
+              {/* <style id="style10">.{fill:#0d324d}.st1{font-family:&apos;TrajanPro-Bold&apos;}.st2{font-size:92.4438px}.st3{letter-spacing:2}</style> */}
+            </svg>
+          </Link>
         </NavbarItem>
       </NavbarBrand>
       <NavbarMenu>
@@ -138,7 +192,7 @@ const Header = ({
 };
 
 Header.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
+  // siteTitle: PropTypes.string.isRequired,
   activeNavbarItem: PropTypes.string,
   onClickHandler: PropTypes.func.isRequired,
 };
