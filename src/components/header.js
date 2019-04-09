@@ -32,6 +32,8 @@ const Header = ({
     <Navbar>
       <NavbarBrand>
         <NavbarItem>
+          <div className="borderCurve borderCurveLft" />
+          <div className="borderCurve borderCurveRgt" />
           <Link to="/">
             <svg id="svgLogo" viewBox="0 0 140 102">
               <g>

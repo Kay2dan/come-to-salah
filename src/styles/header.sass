@@ -2,8 +2,34 @@
     font-size: 0.8rem
     height: 42px
     margin: 0 !important
+    position: relative
     width: 100vw
     
+    .borderCurveRgt
+        display: block
+        background: white
+        width: 20px
+        height: 20px
+        position: absolute
+        z-index: 11
+        top: 50px
+        left: 160px
+        // https://bennettfeely.com/clippy/
+        -webkit-clip-path: polygon(100% 0, 78% 5%, 60% 13%, 41% 20%, 27% 32%, 16% 46%, 9% 64%, 4% 80%, 0 100%, 0 0)
+        clip-path: polygon(100% 0, 78% 5%, 60% 13%, 41% 20%, 27% 32%, 16% 46%, 9% 64%, 4% 80%, 0 100%, 0 0)
+    
+    .borderCurveLft
+        display: block
+        background: white
+        width: 20px
+        height: 20px
+        position: absolute
+        z-index: 11
+        top: 50px
+        left: -5px
+        -webkit-clip-path: polygon(0 0, 22% 5%, 40% 13%, 59% 20%, 73% 32%, 84% 46%, 91% 64%, 96% 80%, 100% 0)
+        clip-path: polygon(0 0, 22% 5%, 40% 13%, 59% 20%, 73% 32%, 84% 46%, 91% 64%, 96% 80%, 100% 0)
+
     svg#svgLogo
         display: block
         width: 152px
