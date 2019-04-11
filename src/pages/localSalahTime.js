@@ -1,12 +1,12 @@
 import React from "react";
 import SEO from "../components/seo";
-import { Columns, Column, Container, Icon } from "bloomer";
+import { Container, Icon } from "bloomer";
 import SalahTimes from "../components/salahTimes";
 import "../styles/localSalahTime.sass";
 
 const LocalSalahTimePage = () => {
   const { localStorage } = window;
-  const userLocation = JSON.parse(localStorage.getItem("userCoOrdForSalah"));
+  let userLocation = JSON.parse(localStorage.getItem("userCoOrdForSalah"));
   //https://stackoverflow.com/questions/6159074/given-the-lat-long-coordinates-how-can-we-find-out-the-city-country
   const getUserLocation = () =>
     userLocation ||

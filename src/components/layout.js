@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Columns, Column } from "bloomer";
+import React from "react";
+// import { Columns, Column } from "bloomer";
 import PropTypes from "prop-types";
 
 const Layout = ({ children }) => {

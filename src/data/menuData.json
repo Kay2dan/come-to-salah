@@ -1,6 +1,6 @@
 {
   "id": "app_menu",
-  "title": "",
+  "title": "Menu",
   "menuSections": [
     {
       "label": "Local Salah Time",
@@ -33,6 +33,10 @@
         "Prayer for Rain",
         "Funeral Prayer"
       ]
+    },
+    {
+      "label": "Misc",
+      "headings": ["About Us"]
     }
   ]
 }

@@ -9,12 +9,6 @@ const SalahTimes = (
   <Columns>
     <Column className="is-6 is-offset-3">
       <Table className="salahTimeTable">
-        {/* <thead>
-      <tr>
-        <th>Salah</th>
-        <th>Time</th>
-      </tr>
-    </thead> */}
         <tbody>
           <tr>
             <td>Imsak</td>

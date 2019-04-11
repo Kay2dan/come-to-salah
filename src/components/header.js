@@ -17,17 +17,6 @@ const Header = ({
   menuToggleHandler,
   onClickHandler,
 }) => {
-  console.log(
-    "props within Header:",
-    "menuVisibility: ",
-    menuVisibility,
-    "; activeNavbarItem: ",
-    activeNavbarItem,
-    "; menuToggleHandler: ",
-    menuToggleHandler,
-    "; onClickHandler: ",
-    onClickHandler
-  );
   return (
     <Navbar>
       <NavbarBrand>
@@ -43,9 +32,9 @@ const Header = ({
                       x="0"
                       y="0"
                       className=" st1 st2 st3"
-                      font-size="92"
-                      font-family="TrajanPro-Bold"
-                      letter-spacing="2"
+                      fontSize="92"
+                      fontFamily="TrajanPro-Bold"
+                      letterSpacing="2"
                       fill="#0d324d"
                     >
                       Come
@@ -54,9 +43,9 @@ const Header = ({
                       x="0"
                       y="111"
                       className=" st1 st2 st3"
-                      font-size="92"
-                      font-family="TrajanPro-Bold"
-                      letter-spacing="2"
+                      fontSize="92"
+                      fontFamily="TrajanPro-Bold"
+                      letterSpacing="2"
                       fill="#0d324d"
                     >
                       to
@@ -65,9 +54,9 @@ const Header = ({
                       x="0"
                       y="222"
                       className=" st1 st2 st3"
-                      font-size="92"
-                      font-family="TrajanPro-Bold"
-                      letter-spacing="2"
+                      fontSize="92"
+                      fontFamily="TrajanPro-Bold"
+                      letterSpacing="2"
                       fill="#0d324d"
                     >
                       Salah
@@ -110,7 +99,6 @@ const Header = ({
                       fill="#0d324d"
                     />
                     <path
-                      id="XMLID_24_"
                       className=""
                       d="M322 529v-44l-1-2v-2l-2-2-3-1 2-2 1-1h4l1-3 2-2v-1l2-1h1v-1h1v62h10l4 1 2 2-2 3-4 1h-25l-4-1-1-3 1-2 4-1z"
                       fill="#0d324d"
@@ -175,7 +163,7 @@ const Header = ({
                   </g>
                 </g>
               </g>
-              {/* <style id="style10">.{fill:#0d324d}.st1{font-family:&apos;TrajanPro-Bold&apos;}.st2{font-size:92.4438px}.st3{letter-spacing:2}</style> */}
+              {/* <style id="style10">.{fill:#0d324d}.st1{font-family:&apos;TrajanPro-Bold&apos;}.st2{fontSize:92.4438px}.st3{letter-spacing:2}</style> */}
             </svg>
           </Link>
         </NavbarItem>
