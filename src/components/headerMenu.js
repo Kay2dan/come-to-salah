@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { graphql, Link, StaticQuery } from "gatsby";
 import { Menu, MenuLabel, MenuList } from "bloomer";
 
@@ -28,10 +29,10 @@ const HeaderMenu = ({ activeNavbarItem }) => {
                   <MenuLabel>{collection.label}</MenuLabel>
                   {collection.headings.map((heading, j) => {
                     let link;
-                    const linkState = {};
+                    let navigateTo = "";
                     if (collection.label === "Salah Walkthrough") {
                       link = "salahWalkthrough";
-                      linkState.guideTo = heading;
+                      navigateTo = heading;
                     } else {
                       // replace special chars (incl. space)
                       link = heading.replace(/[^\w]/g, "");
@@ -40,7 +41,7 @@ const HeaderMenu = ({ activeNavbarItem }) => {
                     return (
                       <Link
                         to={`/${link}`}
-                        state={linkState.guideTo ? { guideTo: heading } : false}
+                        state={{ navigateTo }}
                         className="testHeading"
                         activeClassName="activeLink"
                         data-heading={heading}
@@ -58,6 +59,10 @@ const HeaderMenu = ({ activeNavbarItem }) => {
       }}
     />
   );
+};
+
+HeaderMenu.propTypes = {
+  activeNavbarItem: PropTypes.string,
 };
 
 export default HeaderMenu;

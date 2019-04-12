@@ -1,0 +1,44 @@
+{
+  "id": "performanceOfSalah",
+  "title": "Performance Of Salah",
+  "section": [
+    {
+      "heading": "How to Pray",
+      "id": "howToPray",
+      "content": [
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTxt",
+          "txt": [" صلوا كما رأيتموني أصلي"]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTranslation",
+          "txt": [
+            "`Perform your prayers in the same manner you have seen me doing.` Transmitted by Al-Bukhari"
+          ]
+        },
+        {
+          "eleType": "h3",
+          "id": "",
+          "classes": "",
+          "txt": ["Number Of Rakaats Per Prayer"]
+        },
+        {
+          "eleType": "h3",
+          "id": "",
+          "classes": "",
+          "txt": ["Number Of Rakaats Per Prayer"]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "txt": ["2 Rakaats sunnah", "2 Rakaats fardh"]
+        }
+      ]
+    }
+  ]
+}

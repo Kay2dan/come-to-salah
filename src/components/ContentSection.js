@@ -9,7 +9,7 @@ import { Container, Title } from "bloomer";
  *          structure within its own wrapper element tags.
  *          @param {data} container obj for all content for page
  */
-const ContentPost = ({ data }) => (
+const ContentSection = ({ data }) => (
   <section>
     {data.map((eachSection, k) => {
       const { id, heading, content } = eachSection;
@@ -60,19 +60,43 @@ const DomContent = ({ contentObj }) => {
       );
       return DomContent;
 
+    case "ol":
+      DomContent = (
+        <ol id={id}>
+          {txt.map((val, j) => (
+            <li className={classes} key={j}>
+              {val}
+            </li>
+          ))}
+        </ol>
+      );
+      return DomContent;
+
+    case "note":
+      DomContent = (
+        <h5 id={id}>
+          {txt.map((val, j) => {
+            if (j === 0) {
+              return <></>;
+            } else {
+              return <p key={j}>{val}</p>;
+            }
+          })}
+        </h5>
+      );
     default: {
-      DomContent = <div>Unexpected EleType encountered!</div>;
+      DomContent = <></>;
     }
   }
   return DomContent;
 };
 
-ContentPost.propTypes = {
-  data: PropTypes.object.isRequired,
+ContentSection.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 DomContent.propTypes = {
   contentObj: PropTypes.object.isRequired,
 };
 
-export default ContentPost;
+export default ContentSection;

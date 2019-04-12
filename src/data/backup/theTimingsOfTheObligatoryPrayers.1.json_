@@ -1,0 +1,112 @@
+{
+  "id": "theTimingOfTheObligatoryPrayers",
+  "title": "The Timings Of The Obligatory Prayers",
+  "sections": [
+    {
+      "heading": "The Time Prescribed",
+      "id": "theTimePrescribed",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "Islam has prescribed specified time limits for each obligatory prayer as can be noted from the following verse of the Holy Qur'an:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTranslation",
+          "txt": [
+            "'Prayer is enjoined on believers at stated times'(Qur an 4:103)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "And in an authentic prophetic saying it is confirmed that someone once asked the Prophet (PBUH) about the best action in the sight of Allah (SWT) and the Prophet replied:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTranslation",
+          "txt": [
+            "'Offering prayer at its prescribed time '(Reported by Imam Bukhari)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "Thus, the arrival of the time for prayer is a fundamental condition for performing it and if, therefore, a prayer is intentionally performed before or after its designated time it shall not be acceptable in the sight of 'Allah (SWT)'. However, persons who may forget (without intention) to perform any of the obligatory prayers within its ordained time or who are overtaken by sleep, then such persons should perform the prayer as soon as they remember it and/or as soon as they wake up from their sleep."
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "We shall now enumerate the different timings of the five obligatory prayers:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "txt": [""]
+        },
+        {
+          "eleType": "li",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "FAJR (Dawn) PRAYER - Its time begins at dawn when morning light first appears in the horizon and continues until the sun rises."
+          ]
+        },
+        {
+          "eleType": "li",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "DHUHR (Noon) PRAYER - Its time begins when the sun reaches its highest point in the sky and continues up to the time of Asr Prayer."
+          ]
+        },
+        {
+          "eleType": "li",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "ASR (Afternoon) PRAYER - Its time begins when the shadow of an object is equal to its own length, plus the length of its noontime shadow and continues until sunset."
+          ]
+        },
+        {
+          "eleType": "li",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "MAGHRIB (Sunset) PRAYER - Its time starts from sunset and continues until the end of twilight. Twilight is the redness which remains in the horizon after sunset."
+          ]
+        },
+        {
+          "eleType": "li",
+          "id": "",
+          "classes": "",
+          "txt": [
+            "ISHA (Evening) PRAYER-Its time starts when the twilight disappears and continues upto mid-night. Mid-night in this case may not necessarily be interpreted to mean 12:00 o'clock but may be construed as the mid-time between sunset and the appearance of the true dawn."
+          ]
+        },
+        {
+          "eleType": "ol_end",
+          "id": "",
+          "classes": "",
+          "txt": [""]
+        }
+      ]
+    }
+  ]
+}

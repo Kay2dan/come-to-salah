@@ -2,18 +2,18 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Container, Title } from "bloomer";
 import Layout from "../components/layout";
-import ContentPost from "../components/ContentPost";
+import ContentSection from "../components/ContentSection";
 
-const SalahWalkthrough = ({ data }) => {
+const WhatisSalah = ({ data }) => {
   const { id, sections, title } = data.allDataJson.edges[0].node;
-  // console.log("id, sec, title", id, sections, title);
+  console.log("id, sec, title", id, sections, title);
   return (
     <Layout>
       <Container className="">
         <Title isSize={2} id={id}>
           {title}
         </Title>
-        <ContentPost data={sections} />
+        <ContentSection data={sections} />
       </Container>
     </Layout>
   );
@@ -42,4 +42,4 @@ export const query = graphql`
   }
 `;
 
-export default SalahWalkthrough;
+export default WhatisSalah;

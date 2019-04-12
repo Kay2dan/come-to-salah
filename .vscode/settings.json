@@ -1,6 +1,6 @@
 {
-    "files.exclude": {
-        "**/.cache": true,
-        "**/node_modules": true
-    }
+  "files.exclude": {
+    "**/.cache": true,
+    "**/node_modules": true
+  }
 }
