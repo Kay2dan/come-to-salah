@@ -2,10 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Amiri:400&subset=arabic')
 @import url('https://fonts.googleapis.com/css?family=Karla')
 
+$font_blue: #0d324d
+$background_lightBlue: #53b7b5
+
 html, body
   font-family: "Karla", sans-serif
-  font-size: 10px
-  color: #333
+  // font-size: 10px
+  color: $font_blue
   padding: 0
   margin: 0
   width: 100%
@@ -14,7 +17,7 @@ html, body
 body
   background-image: url("../images/background.jpg")
   background-origin: border-box
-  background-position: center
+  background-position: center -180px
   background-repeat: no-repeat
   background-size: cover
 
@@ -30,9 +33,14 @@ body
   font-family: "Amiri", serif !important
 
 button.button
-  border: 1px solid #a8dbf2
+  background-color: rgba(255,255,255,0.8)
+  border: 0 solid transparent
   border-radius: 10px
+  padding: 0 21px
   text-transform: uppercase 
+
+  a
+    color: $font_blue
 
 
 // .quarterWidth

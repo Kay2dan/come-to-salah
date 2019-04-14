@@ -4,7 +4,7 @@ import Layout from "./src/components/layout";
 
 export const wrapPageElement = ({ element, props }) => {
   return (
-    <div className="testWrapper">
+    <div className="pageWrapper">
       <PageWrapper props={props} element={element} />
     </div>
   );
