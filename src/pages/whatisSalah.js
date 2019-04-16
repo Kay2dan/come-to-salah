@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Container, Title } from "bloomer";
 import Layout from "../components/layout";
-import ContentSection from "../components/ContentSection";
+import GuideContent from "../components/GuideContent";
 
 const WhatisSalah = ({ data }) => {
   const { id, sections, title } = data.allDataJson.edges[0].node;
@@ -13,7 +13,7 @@ const WhatisSalah = ({ data }) => {
         <Title isSize={2} id={id}>
           {title}
         </Title>
-        <ContentSection data={sections} />
+        <GuideContent data={sections} />
       </Container>
     </Layout>
   );

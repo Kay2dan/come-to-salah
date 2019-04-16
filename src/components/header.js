@@ -5,6 +5,7 @@ import HeaderMenu from "./headerMenu";
 import {
   Navbar,
   NavbarBrand,
+  NavbarBurger,
   NavbarMenu,
   NavbarItem,
   NavbarEnd,
@@ -15,14 +16,13 @@ const Header = ({
   menuVisibility,
   activeNavbarItem = "",
   menuToggleHandler,
-  onClickHandler,
+  // onClickHandler,
 }) => {
   return (
     <Navbar>
       <NavbarBrand>
         <NavbarItem>
-          <div className="borderCurve borderCurveLft" />
-          <div className="borderCurve borderCurveRgt" />
+          <div className="borderCurve" />
           <Link to="/">
             <svg id="svgLogo" viewBox="0 0 140 102">
               <g>
@@ -167,14 +167,27 @@ const Header = ({
             </svg>
           </Link>
         </NavbarItem>
+        <NavbarBurger className="" />
       </NavbarBrand>
       <NavbarMenu>
         <NavbarEnd>
-          <a
+          {/* <a
             className={menuVisibility ? "close_icon" : "menu_icon"}
             onClick={menuToggleHandler}
           />
-          {menuVisibility && <HeaderMenu activeNavbarItem={activeNavbarItem} />}
+          {menuVisibility && <HeaderMenu activeNavbarItem={activeNavbarItem} />} */}
+          {/* <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            href="#"
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </a> */}
+          <HeaderMenu activeNavbarItem={activeNavbarItem} />
         </NavbarEnd>
       </NavbarMenu>
     </Navbar>

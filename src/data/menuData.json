@@ -7,7 +7,7 @@
       "headings": ["Local Salah Time", "Local Salah Time Month View"]
     },
     {
-      "label": "Salah Walkthrough",
+      "label": "How to Pray Salah",
       "headings": ["Fajr", "Dhuhr", "Asr", "Mughrib", "Isha"]
     },
     {
@@ -21,7 +21,7 @@
         "Conditions & Duties of Salah",
         "Pillars of Salah",
         "Preferred Acts of Salah",
-        "Mistakes & Things that invalidate Salah",
+        "Mistakes & Things that Invalidate Salah",
         "Misc. Notes on Salah",
         "Private Supplications after Salah",
         "Congregational Prayer",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "label": "Misc",
+      "label": "About",
       "headings": ["About Us"]
     }
   ]

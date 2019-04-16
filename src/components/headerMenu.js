@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, Link, StaticQuery } from "gatsby";
-import { Menu, MenuLabel, MenuList } from "bloomer";
+import { NavbarDropdown, NavbarItem } from "bloomer";
 
 const HeaderMenu = ({ activeNavbarItem }) => {
   return (
@@ -22,39 +22,80 @@ const HeaderMenu = ({ activeNavbarItem }) => {
       `}
       render={data => {
         return (
-          <Menu>
+          // add class 'is-active' for enable/disable logic
+          <>
             {data.allDataJson.nodes[0].menuSections.map((collection, i) => {
               return (
-                <MenuList key={i}>
-                  <MenuLabel>{collection.label}</MenuLabel>
-                  {collection.headings.map((heading, j) => {
-                    let link;
-                    let navigateTo = "";
-                    if (collection.label === "Salah Walkthrough") {
-                      link = "salahWalkthrough";
-                      navigateTo = heading;
-                    } else {
-                      // replace special chars (incl. space)
-                      link = heading.replace(/[^\w]/g, "");
-                      link = heading.charAt(0).toLowerCase() + link.slice(1);
-                    }
-                    return (
-                      <Link
-                        to={`/${link}`}
-                        state={{ navigateTo }}
-                        className="testHeading"
-                        activeClassName="activeLink"
-                        data-heading={heading}
-                        key={j}
-                      >
-                        {heading}
-                      </Link>
-                    );
-                  })}
-                </MenuList>
+                <NavbarItem className="has-dropdown is-hoverable" key={i}>
+                  <a href="#" className="navbar-link">
+                    {collection.label}
+                  </a>
+                  <NavbarDropdown isBoxed={false}>
+                    {collection.headings.map((heading, j) => {
+                      let link;
+                      let navigateTo = "";
+                      if (collection.label === "How to Pray Salah") {
+                        link = "howToPraySalah";
+                        navigateTo = heading;
+                      } else {
+                        // replace special chars (incl. space)
+                        link = heading.replace(/[^\w]/g, "");
+                        link = heading.charAt(0).toLowerCase() + link.slice(1);
+                      }
+                      return (
+                        <NavbarItem key={j}>
+                          <Link
+                            to={`/${link}`}
+                            state={{ navigateTo }}
+                            className="testHeading"
+                            activeClassName="activeLink"
+                            data-heading={heading}
+                            key={j}
+                          >
+                            {heading}
+                          </Link>
+                        </NavbarItem>
+                      );
+                    })}
+                  </NavbarDropdown>
+                </NavbarItem>
               );
             })}
-          </Menu>
+          </>
+          // </NavbarItem>
+          // <Menu>
+          //   {data.allDataJson.nodes[0].menuSections.map((collection, i) => {
+          //     return (
+          //       <MenuList key={i}>
+          //         <MenuLabel>{collection.label}</MenuLabel>
+          //         {collection.headings.map((heading, j) => {
+          //           let link;
+          //           let navigateTo = "";
+          //           if (collection.label === "Salah Walkthrough") {
+          //             link = "salahWalkthrough";
+          //             navigateTo = heading;
+          //           } else {
+          //             // replace special chars (incl. space)
+          //             link = heading.replace(/[^\w]/g, "");
+          //             link = heading.charAt(0).toLowerCase() + link.slice(1);
+          //           }
+          //           return (
+          //             <Link
+          //               to={`/${link}`}
+          //               state={{ navigateTo }}
+          //               className="testHeading"
+          //               activeClassName="activeLink"
+          //               data-heading={heading}
+          //               key={j}
+          //             >
+          //               {heading}
+          //             </Link>
+          //           );
+          //         })}
+          //       </MenuList>
+          //     );
+          //   })}
+          // </Menu>
         );
       }}
     />
