@@ -4,14 +4,31 @@ import { Title } from "bloomer";
 import Layout from "../components/layout";
 import PraySalahContent from "../components/PraySalahContent";
 import StepControls from "../components/StepControls";
+import "../styles/howToPraySalah.sass";
 
 class HowToPraySalah extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentStep: "1.1", // 1st=major; 2nd=minor
+      currentStep: "a01",
+      ttlSteps: 0,
     };
   }
+
+  // componentDidMount() {
+  //   const { edges } = this.props.data.allDataJson;
+  //   const { navigateTo } = this.props.location.state;
+  //   const prayerNode = edges.find(
+  //     node => node.title === "How To Pray Each Salah"
+  //   );
+  //   const prayer = prayerNode.find(
+  //     aPrayer => aPrayer.heading.split(",")[0] === navigateTo
+  //   );
+  //   console.log("pp: ", prayerNode, prayer);
+  //   // this.setState({
+  //   //   ttlSteps:
+  //   // })
+  // }
 
   render() {
     const { navigateTo } = this.props.location.state;
@@ -39,20 +56,14 @@ class HowToPraySalah extends Component {
     });
     const { heading, rakaats, stepSequence } = prayer;
     const { currentStep } = this.state;
-    console.log("steps: ", steps);
-    let currentStepData;
-    // stepSequence.forEach((step, i) => {
-    //   if( step === currentStep ){
-    //     currentStepData = steps[currentStep];
-    //   }
-    // })
+    let currentStepTxt;
     for (const step of stepSequence) {
-      console.log("step: ", step);
       if (step === currentStep) {
-        currentStepData = steps[currentStep];
+        currentStepTxt = steps[currentStep];
         break;
       }
     }
+    console.log("currentStepTxt", currentStepTxt);
     return (
       <Layout>
         <Title size={2}>{title}</Title>
@@ -64,19 +75,18 @@ class HowToPraySalah extends Component {
             </div>
           ))}
         </div>
-        {/* <PraySalahContent
+        <PraySalahContent
           heading={heading}
           recitations={recitations}
-          steps={steps}
-          stepSequence={stepSequence}
-          currentStep={currentStep}
-        /> */}
+          currentStepTxt={currentStepTxt}
+        />
         <StepControls />
       </Layout>
     );
   }
 }
 
+// TODO: Convert repeat code to graphql fragments
 export const query = graphql`
   {
     allDataJson(
@@ -90,7 +100,7 @@ export const query = graphql`
         node {
           title
           steps {
-            a1 {
+            a01 {
               heading
               content {
                 id
@@ -98,6 +108,7 @@ export const query = graphql`
                 eleType
                 insertion {
                   location
+                  recitationId
                 }
                 txt
               }

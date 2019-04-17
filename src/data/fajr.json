@@ -4,7 +4,7 @@
     {
       "heading": "Fajr, The Morning Prayer",
       "id": "howToPrayFajr",
-      "stepSequence": ["a1", "a2"],
+      "stepSequence": ["a01", "a02"],
       "rakaats": [
         {
           "type": "sunnah",
@@ -19,7 +19,7 @@
     {
       "heading": "Dhuhr, The Noon Prayer",
       "id": "howToPrayDhuhr",
-      "stepSequence": ["a1", "a2"],
+      "stepSequence": ["a01", "a02"],
       "rakaats": [
         {
           "type": "sunnah",

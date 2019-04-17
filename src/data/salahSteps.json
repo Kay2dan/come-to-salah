@@ -1,8 +1,8 @@
 {
   "title": "Salah Steps",
   "steps": {
-    "1.1": {
-      "id": "1.1",
+    "a01": {
+      "id": "a01",
       "heading": "Standing For Niyyah",
       "content": [
         {
@@ -10,8 +10,8 @@
           "id": "",
           "classes": "",
           "insertion": {
-            "location": "none",
-            "recitationRef": []
+            "location": "after",
+            "recitationId": ["AllahuAkbar"]
           },
           "txt": ["Step 1: Standing"]
         },
@@ -21,7 +21,7 @@
           "classes": "",
           "insertion": {
             "location": "none",
-            "recitationRef": []
+            "recitationId": [""]
           },
           "txt": [
             "The person turns towards the direction of the Qiblah, (the sacred Mosque at Makkah), intending by heart to perform the Fajr (Dawn) prayer."
@@ -33,7 +33,7 @@
           "classes": "",
           "insertion": {
             "location": "none",
-            "recitationRef": []
+            "recitationId": [""]
           },
           "txt": [
             "Note:",
@@ -42,8 +42,8 @@
         }
       ]
     },
-    "1.2": {
-      "id": "1.2",
+    "a02": {
+      "id": "a02",
       "heading": "Takbiir",
       "content": [
         {
@@ -52,7 +52,7 @@
           "classes": "",
           "insertion": {
             "location": "none",
-            "recitationRef": []
+            "recitationId": [""]
           },
           "txt": ["Step 1.2: Takbiir"]
         },
@@ -62,7 +62,7 @@
           "classes": "",
           "insertion": {
             "location": "after",
-            "recitationRef": ["AllahuAkbar"]
+            "recitationId": ["AllahuAkbar"]
           },
           "txt": [
             "The person then raises both hands up to the level of the shoulders or near the lobes of the ears, pronounces the 'Takbiiratil Ihraam' by saying 'ALLAHU AKBAR' 'الله أكبر' and places both hands over the chest with the right hand over the left."
@@ -74,7 +74,7 @@
           "classes": "",
           "insertion": {
             "location": "none",
-            "recitationRef": []
+            "recitationId": [""]
           },
           "txt": [
             "By reciting the 'Takbiiratil - Ihraam', the person thus, resolves for prayer and enters into a state of worship and is thenceforth required to call to mind the majesty and glory of 'Allah (SWT)' and to dedicate his intentions, recitations and actions to Him alone until the end of the prayer. While praying the person is required to direct his eyes downwards at the spot of prostration."
