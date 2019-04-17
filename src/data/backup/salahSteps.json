@@ -1,7 +1,7 @@
 {
   "title": "Salah Steps",
-  "steps": {
-    "1.1": {
+  "steps": [
+    {
       "id": "1.1",
       "heading": "Standing For Niyyah",
       "content": [
@@ -42,7 +42,7 @@
         }
       ]
     },
-    "1.2": {
+    {
       "id": "1.2",
       "heading": "Takbiir",
       "content": [
@@ -82,5 +82,5 @@
         }
       ]
     }
-  }
+  ]
 }

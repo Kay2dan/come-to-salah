@@ -1,10 +1,10 @@
 {
   "title": "How To Pray Each Salah",
-  "sections": [
+  "prayers": [
     {
       "heading": "Fajr, The Morning Prayer",
       "id": "howToPrayFajr",
-      "stepSequence": ["1.1", "1.2"],
+      "stepSequence": ["a1", "a2"],
       "rakaats": [
         {
           "type": "sunnah",
@@ -19,7 +19,7 @@
     {
       "heading": "Dhuhr, The Noon Prayer",
       "id": "howToPrayDhuhr",
-      "stepSequence": ["1.1", "1.2"],
+      "stepSequence": ["a1", "a2"],
       "rakaats": [
         {
           "type": "sunnah",

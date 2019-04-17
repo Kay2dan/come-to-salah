@@ -1,29 +1,58 @@
 import React, { Component } from "react";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import { Title } from "bloomer";
 import Layout from "../components/layout";
 import PraySalahContent from "../components/PraySalahContent";
 import StepControls from "../components/StepControls";
 
-// const HowToPraySalah = ({ data }) => {
 class HowToPraySalah extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentStep: [1, 1], // 1st=major; 2nd=minor
+      currentStep: "1.1", // 1st=major; 2nd=minor
     };
   }
 
   render() {
-    const {
-      recitations,
-      sections,
-      steps,
-      title,
-    } = this.props.data.allDataJson.edges[0].node;
-    console.log("sections: ", sections);
-    // const contentSections = section
-    const { content, heading, rakaats } = sections[0];
+    const { navigateTo } = this.props.location.state;
+    const { edges } = this.props.data.allDataJson;
+    let recitations, prayer, steps, title;
+    console.log("edges: ", edges);
+    edges.forEach(obj => {
+      const { node } = obj;
+      switch (node.title) {
+        case "Salah Steps":
+          steps = node.steps;
+          break;
+        case "How To Pray Each Salah":
+          title = node.title;
+          prayer = node.prayers.find(
+            eachPrayer => eachPrayer.heading.split(",")[0] === navigateTo
+          );
+          break;
+        case "Salaat Recitation":
+          recitations = node.recitations;
+          break;
+        default:
+          return;
+      }
+    });
+    const { heading, rakaats, stepSequence } = prayer;
+    const { currentStep } = this.state;
+    console.log("steps: ", steps);
+    let currentStepData;
+    // stepSequence.forEach((step, i) => {
+    //   if( step === currentStep ){
+    //     currentStepData = steps[currentStep];
+    //   }
+    // })
+    for (const step of stepSequence) {
+      console.log("step: ", step);
+      if (step === currentStep) {
+        currentStepData = steps[currentStep];
+        break;
+      }
+    }
     return (
       <Layout>
         <Title size={2}>{title}</Title>
@@ -35,12 +64,13 @@ class HowToPraySalah extends Component {
             </div>
           ))}
         </div>
-        <PraySalahContent
-          content={content}
+        {/* <PraySalahContent
           heading={heading}
           recitations={recitations}
           steps={steps}
-        />
+          stepSequence={stepSequence}
+          currentStep={currentStep}
+        /> */}
         <StepControls />
       </Layout>
     );
@@ -59,22 +89,22 @@ export const query = graphql`
       edges {
         node {
           title
-          Steps {
-            heading
-            content {
-              id
-              classes
-              eleType
-              insertion {
-                location
-                recitationRef
+          steps {
+            a1 {
+              heading
+              content {
+                id
+                classes
+                eleType
+                insertion {
+                  location
+                }
+                txt
               }
-              txt
             }
           }
-          sections {
+          prayers {
             heading
-            id
             stepSequence
             rakaats {
               type
