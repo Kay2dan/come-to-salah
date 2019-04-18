@@ -1,34 +1,34 @@
 import React, { Component } from "react";
-import { graphql, navigate } from "gatsby";
+import { graphql } from "gatsby";
 import { Title } from "bloomer";
 import Layout from "../components/layout";
 import PraySalahContent from "../components/PraySalahContent";
-import StepControls from "../components/StepControls";
+import SalahPagination from "../components/SalahPagination";
 import "../styles/howToPraySalah.sass";
 
 class HowToPraySalah extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentStep: "a01",
+      currentStepId: "a01",
+      currentStep: 1,
       ttlSteps: 0,
     };
   }
 
-  // componentDidMount() {
-  //   const { edges } = this.props.data.allDataJson;
-  //   const { navigateTo } = this.props.location.state;
-  //   const prayerNode = edges.find(
-  //     node => node.title === "How To Pray Each Salah"
-  //   );
-  //   const prayer = prayerNode.find(
-  //     aPrayer => aPrayer.heading.split(",")[0] === navigateTo
-  //   );
-  //   console.log("pp: ", prayerNode, prayer);
-  //   // this.setState({
-  //   //   ttlSteps:
-  //   // })
-  // }
+  componentDidMount() {
+    const { edges } = this.props.data.allDataJson;
+    const { navigateTo } = this.props.location.state;
+    const prayers = edges.find(
+      nodes => nodes.node.title === "How To Pray Each Salah"
+    ).node.prayers;
+    const stepSequence = prayers.find(
+      each => each.heading.split(",")[0] === navigateTo
+    ).stepSequence;
+    this.setState({
+      ttlSteps: stepSequence.length,
+    });
+  }
 
   render() {
     const { navigateTo } = this.props.location.state;
@@ -55,11 +55,11 @@ class HowToPraySalah extends Component {
       }
     });
     const { heading, rakaats, stepSequence } = prayer;
-    const { currentStep } = this.state;
+    const { currentStep, currentStepId, ttlSteps } = this.state;
     let currentStepTxt;
     for (const step of stepSequence) {
-      if (step === currentStep) {
-        currentStepTxt = steps[currentStep];
+      if (step === currentStepId) {
+        currentStepTxt = steps[currentStepId];
         break;
       }
     }
@@ -80,7 +80,7 @@ class HowToPraySalah extends Component {
           recitations={recitations}
           currentStepTxt={currentStepTxt}
         />
-        <StepControls />
+        <SalahPagination currentStep={currentStep} ttlSteps={ttlSteps} />
       </Layout>
     );
   }

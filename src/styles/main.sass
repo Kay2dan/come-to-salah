@@ -57,13 +57,23 @@ button.button
 
 
 // Bulma Overrides
-  navbar
-    navbar-link
-      &:not::after
-        border-color: $font-blue
+.navbar
+  .navbar-link
+    &:not::after
+      border-color: $font-blue
 
-    navbar-end > navbar-item
-      padding: 0 1rem
+  .navbar-end > .navbar-item
+    padding: 0 1rem
+
+// Bulma Pagination Overrides
+.pagination-link
+  width: 5px
+  min-width: 5px
+  height: 5px
+  padding: 5px
+  border-radius: 10px
+
+
 
 // finally import Bulma
 @import "~bulma"

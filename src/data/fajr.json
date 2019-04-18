@@ -2,7 +2,7 @@
   "title": "How To Pray Each Salah",
   "prayers": [
     {
-      "heading": "Fajr, The Morning Prayer",
+      "heading": "Fajr, The Dawn Prayer",
       "id": "howToPrayFajr",
       "stepSequence": ["a01", "a02"],
       "rakaats": [

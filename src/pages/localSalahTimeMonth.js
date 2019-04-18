@@ -1,5 +1,5 @@
 import React from "react";
-import SalahTimes from "../components/salahTimes";
+import SalahTimes from "../components/SalahTimes";
 
 const LocalSalahTimeMonth = () => {
   return <SalahTimes />;

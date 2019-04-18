@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Columns, Column, Title, Section } from "bloomer";
 import DomContent from "./DomContent";
+import Illustration from "./Illustration";
 
 const PraySalahContent = ({ heading, recitations, currentStepTxt }) => {
   // console.log("PraySalahContent: ", heading, currentStepTxt);
@@ -15,9 +16,7 @@ const PraySalahContent = ({ heading, recitations, currentStepTxt }) => {
           ))}
         </Column>
         <Column isSize="1/2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10000 16940">
-            {/* the svg illustration paths will go here */}
-          </svg>
+          <Illustration />
         </Column>
       </Columns>
     </Section>
@@ -25,8 +24,10 @@ const PraySalahContent = ({ heading, recitations, currentStepTxt }) => {
 };
 
 PraySalahContent.propTypes = {
-  content: PropTypes.object.isRequired,
+  // content: PropTypes.object.isRequired,
   heading: PropTypes.string.isRequired,
+  recitations: PropTypes.array.isRequired,
+  currentStepTxt: PropTypes.array.isRequired,
 };
 
 export default PraySalahContent;

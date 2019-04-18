@@ -1,7 +1,7 @@
 import React from "react";
 import SEO from "../components/seo";
 import { Container, Icon } from "bloomer";
-import SalahTimes from "../components/salahTimes";
+import SalahTimes from "../components/SalahTimes";
 import "../styles/localSalahTime.sass";
 
 const LocalSalahTimePage = () => {
