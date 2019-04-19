@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 66">
   <g>
     <g transform="matrix(.26458 0 0 .26458 -521 42)">
-      <path d="M2634-154l-666-6V6h13c22 0 40 19 40 42 0 24 19 43 41 43h484c23 0 41-19 41-43 0-23 18-42 41-42z" fill="rgb(255,255,255)" stroke="rgb(255,255,255)" stroke-width="0" stroke-miterlimit="10"/>
+      <path d="M2634-154l-666-6V6h13c22 0 40 19 40 42 0 24 19 43 41 43h484c23 0 41-19 41-43 0-23 18-42 41-42z" fill="black" stroke="rgb(255,255,255)" stroke-width="0" stroke-miterlimit="10"/>
     </g>
   </g>
-  </style>
 </svg>

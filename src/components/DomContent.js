@@ -11,57 +11,72 @@ import RecitationTable from "./RecitationTable";
  */
 const DomContent = ({ contentObj, recitations }) => {
   const { id, classes, eleType, insertion, txt } = contentObj;
+  // FIXME : recitationId is an array, we should loop to get all
+  // recitations for insertion
   const { location: recitationLocation, recitationId } = insertion;
-  console.log("recitation: ", recitationLocation, recitationId);
   let recitationRender;
   let markup;
   if (recitationLocation === "before" || recitationLocation === "after") {
+    // console.log("recitation---: ", recitationId);
     recitationRender = (
       <RecitationTable recitationId={recitationId} recitations={recitations} />
     );
   }
+  console.log("recitationRender =", recitationRender);
   switch (eleType) {
     case "h4":
       markup = (
         <>
-          {recitationLocation === "before" ? recitationRender : ""}
+          {recitationLocation === "before" ? recitationRender : undefined}
           {txt.map((val, j) => (
-            <h4 id={id} className={classes} key={j}>
+            <h4
+              id={id ? id : undefined}
+              className={classes ? classes : undefined}
+              key={j}
+            >
               {val}
             </h4>
           ))}
-          {recitationLocation === "after" ? recitationRender : ""}
+          {recitationLocation === "after" ? recitationRender : undefined}
         </>
       );
       break;
 
     case "note":
       markup = (
-        <>
+        <div>
           {recitationLocation === "before" ? recitationRender : ""}
 
           {txt.map((val, j) =>
             j === 0 ? (
-              <h5 id={id} className={classes} key={j}>
+              <h5
+                id={id ? id : undefined}
+                className={`has-text-left ${classes}`}
+                key={j}
+              >
                 {val}
               </h5>
             ) : (
-              <p id={id} className={classes} key={j}>
+              <p
+                id={id ? id : undefined}
+                className={classes ? classes : undefined}
+                key={j}
+              >
                 {val}
               </p>
             )
           )}
           {recitationLocation === "after" ? recitationRender : ""}
-        </>
+        </div>
       );
       break;
 
     case "ol":
       markup = (
-        <ol id={id}>
+        <ol id={id ? id : undefined}>
           {recitationLocation === "before" ? recitationRender : ""}
           {txt.map((val, j) => (
-            <li className={classes} key={j}>
+            <li className={classes ? classes : undefined} key={j}>
               {val}
             </li>
           ))}
@@ -72,7 +87,7 @@ const DomContent = ({ contentObj, recitations }) => {
 
     case "p":
       markup = (
-        <div id={id} className={classes}>
+        <div id={id ? id : undefined} className={classes ? classes : undefined}>
           {recitationLocation === "before" ? recitationRender : ""}
 
           {txt.map((para, j) => (
@@ -85,10 +100,10 @@ const DomContent = ({ contentObj, recitations }) => {
 
     case "quote":
       markup = (
-        <div id={id}>
+        <div id={id ? id : undefined}>
           {recitationLocation === "before" ? recitationRender : ""}
           {txt.map((para, j) => (
-            <blockquote className={classes} key={j}>
+            <blockquote className={classes ? classes : undefined} key={j}>
               {para}
             </blockquote>
           ))}

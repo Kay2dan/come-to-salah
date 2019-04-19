@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const RecitationTable = ({ recitationId, recitations }) => {
-  const { arabic, transliteration, translation } = recitations[recitationId];
+  console.log("Inside RecitationTable component: ", recitationId);
+  const { arabic, transliteration, translation } = recitations[recitationId[0]];
   return (
     <div className="recitationTable">
       {arabic.reverse().map((word, i) => (
@@ -17,7 +18,7 @@ const RecitationTable = ({ recitationId, recitations }) => {
 };
 
 RecitationTable.propTypes = {
-  recitationId: PropTypes.string.isRequired,
+  recitationId: PropTypes.array.isRequired,
   recitations: PropTypes.object.isRequired,
 };
 

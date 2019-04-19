@@ -1,36 +1,39 @@
 nav.navbar
-    background-color: rgba(255,255,255, 0.7)
-    font-size: 0.8rem
-    height: 42px
-    margin: 0 !important
+  background-color: rgba(255,255,255, 0.7)
+  font-size: 0.8rem
+  height: 42px
+  margin: 0 !important
+  position: relative
+  width: 100vw
+  
+  .borderCurve
+    position: absolute
+    bottom: -20px
+    // background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAATCAMAAABFogS7AAAAaVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8G612AAAAInRSTlMA7vcP9Onj0Z+YUTf78duypXNsZGA+Mi0mGRUMAsKFSC4FyzIjBgAAAJdJREFUSMfN0lcOwjAURNHBTm+kkU6b/S8SJH5QsMMHKM9nBSPNxZPuq5A/8A7/FMTJMONlaTw6wa803nU+HRBNWEkVpWU1Pl0orYWBzikrhlFJUWqEUUtREcxOFFXDbKCoK8xmiuph4VNQpmERUdAZcLH5BlZHiinusJoCClEpNtyEdnkJNo0iP4YdvknjMOeOVFEmC1Ye84k1el1JJAwAAAAASUVORK5CYII=')
+    //
+    // insert background-image with svg in base64 format
+    //
+    background-size: contain
+    background-position: center top
+    background-repeat: no-repeat
+    width: 158px
+    height: 20px
+    opacity: 0.7
+
+  svg#svgLogo
+    display: block
+    width: 152px
+    height: 62px
+    max-height: inherit
+    padding: 5px 0
+    box-sizing: content-box
+    margin: 0
     position: relative
-    width: 100vw
-    
-    .borderCurve
-        position: absolute
-        bottom: -19px;
-        background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAATCAMAAABFogS7AAAAaVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8G612AAAAInRSTlMA7vcP9Onj0Z+YUTf78duypXNsZGA+Mi0mGRUMAsKFSC4FyzIjBgAAAJdJREFUSMfN0lcOwjAURNHBTm+kkU6b/S8SJH5QsMMHKM9nBSPNxZPuq5A/8A7/FMTJMONlaTw6wa803nU+HRBNWEkVpWU1Pl0orYWBzikrhlFJUWqEUUtREcxOFFXDbKCoK8xmiuph4VNQpmERUdAZcLH5BlZHiinusJoCClEpNtyEdnkJNo0iP4YdvknjMOeOVFEmC1Ye84k1el1JJAwAAAAASUVORK5CYII=')
-        background-size: contain
-        background-position: center top
-        background-repeat: no-repeat
-        width: 150px
-        height: 19px
-        opacity: 0.7
+    top: 12px
+    border-radius: 0 0 20px 20px
 
-    svg#svgLogo
-        display: block
-        width: 152px
-        height: 62px
-        max-height: inherit
-        padding: 5px 0
-        box-sizing: content-box
-        margin: 0
-        position: relative
-        top: 15px
-        border-radius: 0 0 20px 20px
+  .menu
+    font-size: 0.8rem
 
-    .menu
-        font-size: 0.8rem
-
-        .menu-list
-            background-color: #eee
+    .menu-list
+      background-color: #eee

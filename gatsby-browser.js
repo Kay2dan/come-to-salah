@@ -3,14 +3,10 @@ import Header from "./src/components/header";
 import Layout from "./src/components/layout";
 
 export const wrapPageElement = ({ element, props }) => {
-  return (
-    <div className="pageWrapper">
-      <PageWrapper props={props} element={element} />
-    </div>
-  );
+  return <PageStatefulWrapper props={props} element={element} />;
 };
 
-class PageWrapper extends Component {
+class PageStatefulWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,7 +29,7 @@ class PageWrapper extends Component {
     const { props, element } = this.props;
     const { menuVisibility, activeNavbarItem } = this.state;
     return (
-      <>
+      <div className="pageWrapper">
         <Header
           menuVisibility={menuVisibility}
           activeNavbarItem={activeNavbarItem}
@@ -41,7 +37,7 @@ class PageWrapper extends Component {
           onClickHandler={this.selectMenuItem}
         />
         <Layout {...props}>{element}</Layout>
-      </>
+      </div>
     );
   }
 }

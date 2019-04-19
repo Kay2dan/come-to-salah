@@ -5,12 +5,11 @@ import DomContent from "./DomContent";
 import Illustration from "./Illustration";
 
 const PraySalahContent = ({ heading, recitations, currentStepTxt }) => {
-  // console.log("PraySalahContent: ", heading, currentStepTxt);
   return (
     <Section>
       <Columns>
-        <Column isSize="1/2">
-          <Title isSize={3}>{heading}</Title>
+        <Column isSize="1/2" className="has-text-right">
+          <Title className="is-size-3 has-text-centered">{heading}</Title>
           {currentStepTxt.content.map((txt, i) => (
             <DomContent contentObj={txt} recitations={recitations} key={i} />
           ))}
@@ -24,10 +23,9 @@ const PraySalahContent = ({ heading, recitations, currentStepTxt }) => {
 };
 
 PraySalahContent.propTypes = {
-  // content: PropTypes.object.isRequired,
   heading: PropTypes.string.isRequired,
-  recitations: PropTypes.array.isRequired,
-  currentStepTxt: PropTypes.array.isRequired,
+  recitations: PropTypes.object.isRequired,
+  currentStepTxt: PropTypes.object.isRequired,
 };
 
 export default PraySalahContent;

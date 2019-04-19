@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { graphql } from "gatsby";
 import { Title } from "bloomer";
-import Layout from "../components/layout";
 import PraySalahContent from "../components/PraySalahContent";
 import SalahPagination from "../components/SalahPagination";
 import "../styles/howToPraySalah.sass";
@@ -20,7 +19,7 @@ class HowToPraySalah extends Component {
     const { edges } = this.props.data.allDataJson;
     const { navigateTo } = this.props.location.state;
     const prayers = edges.find(
-      nodes => nodes.node.title === "How To Pray Each Salah"
+      nodes => nodes.node.title === "How To Pray Salah"
     ).node.prayers;
     const stepSequence = prayers.find(
       each => each.heading.split(",")[0] === navigateTo
@@ -34,14 +33,14 @@ class HowToPraySalah extends Component {
     const { navigateTo } = this.props.location.state;
     const { edges } = this.props.data.allDataJson;
     let recitations, prayer, steps, title;
-    console.log("edges: ", edges);
+    // console.log("edges: ", edges);
     edges.forEach(obj => {
       const { node } = obj;
       switch (node.title) {
         case "Salah Steps":
           steps = node.steps;
           break;
-        case "How To Pray Each Salah":
+        case "How To Pray Salah":
           title = node.title;
           prayer = node.prayers.find(
             eachPrayer => eachPrayer.heading.split(",")[0] === navigateTo
@@ -63,25 +62,31 @@ class HowToPraySalah extends Component {
         break;
       }
     }
-    console.log("currentStepTxt", currentStepTxt);
+    // console.log("currentStepTxt", currentStepTxt);
     return (
-      <Layout>
-        <Title size={2}>{title}</Title>
-        <div className="level">
-          {rakaats.map((prayer, i) => (
-            <div className="level-item has-text-centered" key={i}>
-              <p className="heading">{prayer.type}</p>
-              <p className="title">{prayer.offering}</p>
-            </div>
-          ))}
+      <div className="howToPraySalahPageWrapper">
+        <div className="titleContainer">
+          <Title isSize={4}>{title}</Title>
         </div>
-        <PraySalahContent
-          heading={heading}
-          recitations={recitations}
-          currentStepTxt={currentStepTxt}
-        />
-        <SalahPagination currentStep={currentStep} ttlSteps={ttlSteps} />
-      </Layout>
+        <div className="contentContainer">
+          <div className="level rakaatsInfo">
+            {rakaats.map((prayer, i) => (
+              <div className="level-item has-text-centered" key={i}>
+                <div className="blockContainer">
+                  <p className="heading">{prayer.type}</p>
+                  <p className="title is-size-2">{prayer.offering}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <PraySalahContent
+            heading={heading}
+            recitations={recitations}
+            currentStepTxt={currentStepTxt}
+          />
+          <SalahPagination currentStep={currentStep} ttlSteps={ttlSteps} />
+        </div>
+      </div>
     );
   }
 }
@@ -91,9 +96,7 @@ export const query = graphql`
   {
     allDataJson(
       filter: {
-        title: {
-          in: ["How To Pray Each Salah", "Salaat Recitation", "Salah Steps"]
-        }
+        title: { in: ["How To Pray Salah", "Salaat Recitation", "Salah Steps"] }
       }
     ) {
       edges {
