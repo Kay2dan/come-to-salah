@@ -5,13 +5,16 @@
 // ----------------
 // GLOBAL VARIABLES
 // ----------------
-$text: #0d324d
-$text-strong: #0d324d
-$text-color: #0d324d
+$font-blue: #0d324d
+$text: $font-blue
+$text-strong: $font-blue
+$text-color: $font-blue
+$title-color: $font-blue
+$navbar-item-color: $font-blue
+$subtitle-color: $font-blue
 $link: #0d324d
 $link-hover: findColorInvert($link)
 $background_lightBlue: #53b7b5
-$font-blue: #0d324d
 
 
 // --------------
@@ -36,6 +39,8 @@ body
 .pageWrapper
   height: 100vh
 
+svg
+  fill: $font-blue
 
 .arabicTxt 
   font-family: "Amiri", serif !important
@@ -97,17 +102,21 @@ button.button
     padding: 0
 
     &.pageControl
+      // content: ""
       position: relative
-      top: calc(18px - 50vh)
-      border-radius: 18px
+      border: 6px solid $font_blue
+      border-right: 0
+      border-top: 0
+      border-radius: 3px
+      top: calc(-50vh + 18px)
 
-    svg
-      width: 100%
-      height: 100%
-
-  a.pagination-next svg
-    transform: rotate(180deg)
-
+  .pagination-previous.pageControl
+    left: 10px
+    transform: rotate(45deg)
+  
+  .pagination-next.pageControl
+    right: 10px
+    transform: rotate(225deg)
 
 // finally import Bulma
 @import "~bulma"

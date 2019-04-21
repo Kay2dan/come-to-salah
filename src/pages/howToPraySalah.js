@@ -32,16 +32,13 @@ class HowToPraySalah extends Component {
 
   paginationOnClickHandler = ev => {
     let evTarget = ev.target;
-    while (!evTarget.classList.contains("pageControl")) {
-      evTarget = evTarget.parentNode;
-    }
+    // while (!evTarget.classList.contains("pageControl")) {
+    //   evTarget = evTarget.parentNode;
+    // }
     if (!evTarget.hasAttribute("disabled")) {
-      // console.log("evTarget: ", evTarget);
       const btnType = evTarget.classList.contains("pagination-next");
       let { currentStep } = this.state;
       let newStepVal = btnType ? currentStep + 1 : currentStep - 1;
-      // console.log("btnType: ", btnType);
-      // console.log("currentStep:", currentStep, "; newStepVal: ", newStepVal);
       this.setState({
         currentStep: newStepVal,
       });
