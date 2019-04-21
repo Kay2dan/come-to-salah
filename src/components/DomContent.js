@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RecitationTable from "./RecitationTable";
+import { Subtitle } from "bloomer";
+import RecitationSection from "./RecitationSection";
 
 /**
  *
@@ -17,12 +18,13 @@ const DomContent = ({ contentObj, recitations }) => {
   let recitationRender;
   let markup;
   if (recitationLocation === "before" || recitationLocation === "after") {
-    // console.log("recitation---: ", recitationId);
     recitationRender = (
-      <RecitationTable recitationId={recitationId} recitations={recitations} />
+      <RecitationSection
+        recitationId={recitationId}
+        recitations={recitations}
+      />
     );
   }
-  console.log("recitationRender =", recitationRender);
   switch (eleType) {
     case "h4":
       markup = (
@@ -49,11 +51,7 @@ const DomContent = ({ contentObj, recitations }) => {
 
           {txt.map((val, j) =>
             j === 0 ? (
-              <h5
-                id={id ? id : undefined}
-                className={`has-text-left ${classes}`}
-                key={j}
-              >
+              <h5 id={id ? id : undefined} className="has-text-left" key={j}>
                 {val}
               </h5>
             ) : (
@@ -109,6 +107,24 @@ const DomContent = ({ contentObj, recitations }) => {
           ))}
           {recitationLocation === "after" ? recitationRender : ""}
         </div>
+      );
+      break;
+
+    case "subtitle":
+      markup = (
+        <>
+          {recitationLocation === "before" ? recitationRender : undefined}
+          {txt.map((val, j) => (
+            <Subtitle
+              id={id ? id : undefined}
+              className={classes ? classes : undefined}
+              key={j}
+            >
+              {val}
+            </Subtitle>
+          ))}
+          {recitationLocation === "after" ? recitationRender : undefined}
+        </>
       );
       break;
 

@@ -9,10 +9,12 @@ const PraySalahContent = ({ heading, recitations, currentStepTxt }) => {
     <Section>
       <Columns>
         <Column isSize="1/2" className="has-text-right">
-          <Title className="is-size-3 has-text-centered">{heading}</Title>
-          {currentStepTxt.content.map((txt, i) => (
-            <DomContent contentObj={txt} recitations={recitations} key={i} />
-          ))}
+          <div className="contentVerticalCentre">
+            <Title className="is-size-3 has-text-centered">{heading}</Title>
+            {currentStepTxt.content.map((txt, i) => (
+              <DomContent contentObj={txt} recitations={recitations} key={i} />
+            ))}
+          </div>
         </Column>
         <Column isSize="1/2">
           <Illustration />

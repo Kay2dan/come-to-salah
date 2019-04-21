@@ -46,7 +46,7 @@ const HeaderMenu = ({ activeNavbarItem }) => {
                         <Link
                           to={`/${link}`}
                           state={{ navigateTo }}
-                          className="testHeading"
+                          className=""
                           activeClassName="activeLink"
                           data-heading={heading}
                           key={j}

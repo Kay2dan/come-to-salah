@@ -10,8 +10,8 @@ class HowToPraySalah extends Component {
     super(props);
     this.state = {
       currentStepId: "a01",
-      currentStep: 1,
-      ttlSteps: 0,
+      currentStep: 0,
+      ttlSteps: 0, // counts starts at 0 so real count = ttlSteps + 1
     };
   }
 
@@ -24,10 +24,31 @@ class HowToPraySalah extends Component {
     const stepSequence = prayers.find(
       each => each.heading.split(",")[0] === navigateTo
     ).stepSequence;
+    console.log("ttlSteps: ", stepSequence.length);
     this.setState({
-      ttlSteps: stepSequence.length,
+      ttlSteps: stepSequence.length - 1,
     });
   }
+
+  paginationOnClickHandler = ev => {
+    let evTarget = ev.target;
+    while (!evTarget.classList.contains("pageControl")) {
+      evTarget = evTarget.parentNode;
+    }
+    if (!evTarget.hasAttribute("disabled")) {
+      // console.log("evTarget: ", evTarget);
+      const btnType = evTarget.classList.contains("pagination-next");
+      let { currentStep } = this.state;
+      let newStepVal = btnType ? currentStep + 1 : currentStep - 1;
+      // console.log("btnType: ", btnType);
+      // console.log("currentStep:", currentStep, "; newStepVal: ", newStepVal);
+      this.setState({
+        currentStep: newStepVal,
+      });
+    } else {
+      return false;
+    }
+  };
 
   render() {
     const { navigateTo } = this.props.location.state;
@@ -84,7 +105,11 @@ class HowToPraySalah extends Component {
             recitations={recitations}
             currentStepTxt={currentStepTxt}
           />
-          <SalahPagination currentStep={currentStep} ttlSteps={ttlSteps} />
+          <SalahPagination
+            currentStep={currentStep}
+            ttlSteps={ttlSteps}
+            paginationOnClickHandler={this.paginationOnClickHandler}
+          />
         </div>
       </div>
     );

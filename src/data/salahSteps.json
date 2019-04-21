@@ -6,7 +6,7 @@
       "heading": "Standing For Niyyah",
       "content": [
         {
-          "eleType": "h3",
+          "eleType": "subtitle",
           "id": "",
           "classes": "",
           "insertion": {
@@ -30,7 +30,7 @@
         {
           "eleType": "note",
           "id": "",
-          "classes": "",
+          "classes": "is-small smallTxt",
           "insertion": {
             "location": "none",
             "recitationId": [""]
