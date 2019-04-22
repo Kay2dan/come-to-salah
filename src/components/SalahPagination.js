@@ -8,7 +8,6 @@ const SalahPagination = ({
   paginationOnClickHandler,
 }) => {
   let pages = [];
-  console.log("tooootleSteps: ", ttlSteps);
   for (let i = 0; i <= ttlSteps; i++) {
     pages.push(
       <Page key={i}>

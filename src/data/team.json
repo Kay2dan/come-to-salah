@@ -1,0 +1,59 @@
+{
+  "title": "Team Profile",
+  "profiles": [
+    {
+      "name": "Khalil Zried",
+      "role": "Editor",
+      "link": {
+        "type": "none",
+        "to": ""
+      },
+      "message": "Lorem ipsum dolor sit amet, natum appetere patrioque an pro. Populo mollis voluptatibus quo cu, mea no rebum expetenda. Quo malorum molestie inciderint ne, te pri augue fierent repudiare, id vivendum abhorreant eam. No mazim aeque eum. Cum corrumpit forensibus et."
+    },
+    {
+      "name": "Olesya Gridneva",
+      "role": "Illustrator & UI Mentor",
+      "link": {
+        "type": "linkedIn",
+        "to": "www.linkedIn.com/"
+      },
+      "message": "Lorem ipsum dolor sit amet, natum appetere patrioque an pro. Populo mollis voluptatibus quo cu, mea no rebum expetenda. Quo malorum molestie inciderint ne, te pri augue fierent repudiare, id vivendum abhorreant eam. No mazim aeque eum. Cum corrumpit forensibus et."
+    },
+    {
+      "name": "Nathif Jamaa Adam",
+      "role": "Original Author",
+      "link": {
+        "type": "none",
+        "to": ""
+      },
+      "message": "Lorem ipsum dolor sit amet, natum appetere patrioque an pro. Populo mollis voluptatibus quo cu, mea no rebum expetenda. Quo malorum molestie inciderint ne, te pri augue fierent repudiare, id vivendum abhorreant eam. No mazim aeque eum. Cum corrumpit forensibus et."
+    },
+    {
+      "name": "Nida Zaffar",
+      "role": "UI/ UX Designer",
+      "link": {
+        "type": "behance",
+        "to": "www.behance.com/"
+      },
+      "message": "Lorem ipsum dolor sit amet, natum appetere patrioque an pro. Populo mollis voluptatibus quo cu, mea no rebum expetenda. Quo malorum molestie inciderint ne, te pri augue fierent repudiare, id vivendum abhorreant eam. No mazim aeque eum. Cum corrumpit forensibus et."
+    },
+    {
+      "name": "Salman Khan",
+      "role": "Developer",
+      "link": {
+        "type": "github",
+        "to": "www.github.com/kay2dan"
+      },
+      "message": "Lorem ipsum dolor sit amet, natum appetere patrioque an pro. Populo mollis voluptatibus quo cu, mea no rebum expetenda. Quo malorum molestie inciderint ne, te pri augue fierent repudiare, id vivendum abhorreant eam. No mazim aeque eum. Cum corrumpit forensibus et."
+    },
+    {
+      "name": "Shahbaz Farooq",
+      "role": "Editor",
+      "link": {
+        "type": "linkedIn",
+        "to": "www.linkedIn.com/"
+      },
+      "message": "Lorem ipsum dolor sit amet, natum appetere patrioque an pro. Populo mollis voluptatibus quo cu, mea no rebum expetenda. Quo malorum molestie inciderint ne, te pri augue fierent repudiare, id vivendum abhorreant eam. No mazim aeque eum. Cum corrumpit forensibus et."
+    }
+  ]
+}

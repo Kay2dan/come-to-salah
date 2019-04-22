@@ -17,6 +17,7 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-json": "^2.1.11",
     "gatsby-transformer-sharp": "^2.1.17",
+    "kute.js": "^1.6.6",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",

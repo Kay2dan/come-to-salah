@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import HeaderMenu from "./headerMenu";
+import HeaderMenu from "./HeaderMenu";
 import {
   Navbar,
   NavbarBrand,
