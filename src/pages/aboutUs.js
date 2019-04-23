@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Section } from "bloomer";
+import PropTypes from "prop-types";
+import { Section } from "bloomer";
 import { graphql } from "gatsby";
 import TeamProfile from "../components/TeamProfile";
 import "../styles/aboutUs.sass";
@@ -9,11 +10,8 @@ const AboutUs = ({ data }) => {
     allDataJson: { edges },
   } = data;
   const team = edges.filter(mom => mom.node.title === "Team Profile")[0].node;
-  // console.log("team: ", team.profiles);
   return (
     <div className="aboutUsPageWrapper">
-      {/* <Container> */}
-      {/* <h2>About 'Come To Salah'</h2> */}
       <Section>
         <div className="intro">
           <p>Assalam U Aliekum,</p>
@@ -28,7 +26,6 @@ const AboutUs = ({ data }) => {
           ))}
         </div>
       </Section>
-      {/* </Container> */}
     </div>
   );
 };
@@ -53,5 +50,9 @@ export const query = graphql`
     }
   }
 `;
+
+AboutUs.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default AboutUs;

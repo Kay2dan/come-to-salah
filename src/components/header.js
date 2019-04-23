@@ -13,9 +13,9 @@ import {
 import "../styles/header.sass";
 
 const Header = ({
-  menuVisibility,
   activeNavbarItem = "",
   menuToggleHandler,
+  menuVisibility,
   // onClickHandler,
 }) => {
   return (

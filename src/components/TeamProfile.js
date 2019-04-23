@@ -1,5 +1,6 @@
 import React from "react";
-import { Title, Subtitle, Image, Columns, Column } from "bloomer";
+import PropTypes from "prop-types";
+import { Title, Subtitle, Columns, Column } from "bloomer";
 
 const TeamProfile = ({ data }) => {
   const { name, role, link, message } = data;
@@ -20,6 +21,10 @@ const TeamProfile = ({ data }) => {
       </Columns>
     </div>
   );
+};
+
+TeamProfile.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default TeamProfile;
