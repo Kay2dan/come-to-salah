@@ -18,39 +18,41 @@ class HowToPraySalah extends Component {
   // filter data from gql by excluding null objects/ entries returned
   // by gql. Func used to extract 'salah steps', 'how to pray salah',
   // 'salah recitation' & 'title' from the gql data into the data obj.
-  filterDataFromGql = () => {
-    const { edges } = this.props.data.allDataJson;
-    const { navigateTo } = this.props.location.state;
-    const data = {}; // recitations, prayer, steps, title
+  filterDataFromGql = (data, navigateTo) => {
+    const { edges } = data.allDataJson;
+    // const { state = { navigateTo: "Fajr" } } = this.props.location;
+    // const { navigateTo } = this.props.location.state;
+    const rtnData = {}; // recitations, prayer, steps, title
     edges.forEach(obj => {
       const { node } = obj;
       switch (node.title) {
         case "Salah Steps":
-          data.steps = node.steps;
+          rtnData.steps = node.steps;
           break;
         case "How To Pray Salah":
-          data.title = node.title;
-          data.prayer = node.prayers.find(
+          rtnData.title = node.title;
+          rtnData.prayer = node.prayers.find(
             eachPrayer => eachPrayer.heading.split(",")[0] === navigateTo
           );
           break;
         case "Salaat Recitation":
-          data.recitations = node.recitations;
+          rtnData.recitations = node.recitations;
           break;
         default:
           return;
       }
     });
-    return data;
+    return rtnData;
   };
 
   // finds the obj which contains the salah steps sequence
   // based on the title of the node; Used to find the current
   // active step data to display & to update the component
   // state
-  getStepSequenceFromGqlData = () => {
-    const { edges } = this.props.data.allDataJson;
-    const { navigateTo } = this.props.location.state;
+  getStepSequenceFromGqlData = (data, navigateTo) => {
+    console.log("data", data);
+    const { edges } = data.allDataJson;
+    // const { navigateTo = { navigateTo: "Fajr" } } = this.props.location.state;
     const prayers = edges.find(
       nodes => nodes.node.title === "How To Pray Salah"
     ).node.prayers;
@@ -59,7 +61,10 @@ class HowToPraySalah extends Component {
   };
 
   componentDidMount() {
-    const stepSequence = this.getStepSequenceFromGqlData();
+    const { data, location } = this.props;
+    // const { navigateTo = "Fajr" } = location.state;
+    const navigateTo = location.state ? location.state.navigateTo : "Fajr";
+    const stepSequence = this.getStepSequenceFromGqlData(data, navigateTo);
     this.setState({
       ttlSteps: stepSequence.length - 1,
     });
@@ -67,6 +72,9 @@ class HowToPraySalah extends Component {
 
   paginationOnClickHandler = ev => {
     let evTarget = ev.target;
+    const { data, location } = this.props;
+    // const { navigateTo = "Fajr" } = location.state;
+    const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     // while (!evTarget.classList.contains("pageControl")) {
     //   evTarget = evTarget.parentNode;
     // }
@@ -77,7 +85,7 @@ class HowToPraySalah extends Component {
       // const { edges } = this.props.data.allDataJson;
       // const steps = edges.filter(obj => obj.node.title === "Salah Steps")[0]
       //   .node.steps;
-      const stepSequence = this.getStepSequenceFromGqlData();
+      const stepSequence = this.getStepSequenceFromGqlData(data, navigateTo);
       this.setState({
         currentStep: newStepVal,
         currentStepId: stepSequence[newStepVal],
@@ -86,9 +94,21 @@ class HowToPraySalah extends Component {
   };
 
   render() {
-    const { recitations, prayer, steps, title } = this.filterDataFromGql();
-    const { heading, rakaats, stepSequence } = prayer;
+    const { data, location } = this.props;
+    // const { navigateTo = "Fajr" } = location.state;
+    const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     const { currentStep, currentStepId, ttlSteps } = this.state;
+    console.log("data & location: ", data, location);
+    // let elementsToRender, filteredData, prayerData, currentStepTxt;
+    // const { recitations, prayer, steps, title } = filteredData;
+    // const { heading, rakaats, stepSequence } = prayerData;
+    // if (location.state.navigateTo) {
+    const { recitations, prayer, steps, title } = this.filterDataFromGql(
+      data,
+      navigateTo
+    );
+    console.log("prayer: ", prayer);
+    const { heading, rakaats, stepSequence } = prayer;
     let currentStepTxt;
     for (const step of stepSequence) {
       if (step === currentStepId) {
@@ -96,7 +116,12 @@ class HowToPraySalah extends Component {
         break;
       }
     }
-    // console.log("currentStepTxt", currentStepTxt);
+    // } else {
+    //   const salahs = ["Fajr", "Dhuhr", "Asr", "Mughrib", "Isha"];
+    //   elementsToRender = salahs.map((salah, i) => (
+    //     <Button key={i}>salah</Button>
+    //   ));
+    // }
     return (
       <div className="howToPraySalahPageWrapper">
         <div className="titleContainer">
