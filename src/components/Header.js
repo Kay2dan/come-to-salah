@@ -163,7 +163,6 @@ const Header = ({
                   </g>
                 </g>
               </g>
-              {/* <style id="style10">.{fill:#0d324d}.st1{font-family:&apos;TrajanPro-Bold&apos;}.st2{fontSize:92.4438px}.st3{letter-spacing:2}</style> */}
             </svg>
           </Link>
         </NavbarItem>
@@ -171,22 +170,6 @@ const Header = ({
       </NavbarBrand>
       <NavbarMenu>
         <NavbarEnd>
-          {/* <a
-            className={menuVisibility ? "close_icon" : "menu_icon"}
-            onClick={menuToggleHandler}
-          />
-          {menuVisibility && <HeaderMenu activeNavbarItem={activeNavbarItem} />} */}
-          {/* <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            href="#"
-          >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </a> */}
           <HeaderMenu activeNavbarItem={activeNavbarItem} />
         </NavbarEnd>
       </NavbarMenu>
@@ -194,10 +177,9 @@ const Header = ({
   );
 };
 
-Header.propTypes = {
-  // siteTitle: PropTypes.string.isRequired,
-  activeNavbarItem: PropTypes.string,
-  onClickHandler: PropTypes.func.isRequired,
-};
+// Header.propTypes = {
+//   activeNavbarItem: PropTypes.string,
+//   onClickHandler: PropTypes.func.isRequired,
+// };
 
 export default Header;

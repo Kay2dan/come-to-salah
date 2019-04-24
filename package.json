@@ -27,11 +27,13 @@
   "devDependencies": {
     "babel-jest": "^24.7.1",
     "babel-preset-gatsby": "^0.1.11",
+    "cypress": "^3.2.0",
     "gh-pages": "^2.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.7.1",
     "prettier": "^1.16.4",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "start-server-and-test": "^1.9.0"
   },
   "keywords": [
     "salah",
@@ -46,7 +48,9 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest"
+    "test": "jest",
+    "cy:open": "cypress open",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
   "repository": {
     "type": "git"

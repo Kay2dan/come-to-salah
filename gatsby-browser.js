@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "./src/components/header";
+import Header from "./src/components/Header";
 import Layout from "./src/components/layout";
 
 export const wrapPageElement = ({ element, props }) => {
