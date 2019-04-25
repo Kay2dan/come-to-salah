@@ -44,6 +44,24 @@ const DomContent = ({ contentObj, recitations }) => {
       );
       break;
 
+    case "h5":
+      markup = (
+        <>
+          {recitationLocation === "before" ? recitationRender : undefined}
+          {txt.map((val, j) => (
+            <Subtitle
+              id={id ? id : undefined}
+              className={classes ? classes : undefined}
+              key={j}
+            >
+              {val}
+            </Subtitle>
+          ))}
+          {recitationLocation === "after" ? recitationRender : undefined}
+        </>
+      );
+      break;
+
     case "note":
       markup = (
         <div>
@@ -107,24 +125,6 @@ const DomContent = ({ contentObj, recitations }) => {
           ))}
           {recitationLocation === "after" ? recitationRender : ""}
         </div>
-      );
-      break;
-
-    case "subtitle":
-      markup = (
-        <>
-          {recitationLocation === "before" ? recitationRender : undefined}
-          {txt.map((val, j) => (
-            <Subtitle
-              id={id ? id : undefined}
-              className={classes ? classes : undefined}
-              key={j}
-            >
-              {val}
-            </Subtitle>
-          ))}
-          {recitationLocation === "after" ? recitationRender : undefined}
-        </>
       );
       break;
 

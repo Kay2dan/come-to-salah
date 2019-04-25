@@ -2,11 +2,11 @@
   "title": "Salah Steps",
   "steps": {
     "a01": {
-      "id": "a01",
+      "id": "standingForNiyyah",
       "heading": "Standing For Niyyah",
       "content": [
         {
-          "eleType": "subtitle",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -43,11 +43,11 @@
       ]
     },
     "a02": {
-      "id": "a02",
+      "id": "takbiir",
       "heading": "Takbiir",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
