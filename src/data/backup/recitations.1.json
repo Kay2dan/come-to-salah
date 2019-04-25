@@ -1,14 +1,12 @@
 {
   "title": "Salaat Recitation",
-  "recitations": [
-    {
-      "id": "AllahuAkbar",
+  "recitations": {
+    "AllahuAkbar": {
       "arabic": ["الله", "أكبر"],
       "transliteration": ["Allahu", "Akbar"],
       "translation": ["Allah is", "Greater"]
     },
-    {
-      "id": "Hamd1",
+    "Hamd1": {
       "arabic": [
         "سُبْحَانَكَ",
         "اللَّهُمَّ",
@@ -43,8 +41,7 @@
         "other than You"
       ]
     },
-    {
-      "id": "Hamd2",
+    "Hamd2": {
       "arabic": [
         "اللَّهُمَّ",
         "بَاعِدْ",
@@ -100,8 +97,7 @@
         "and ice"
       ]
     },
-    {
-      "id": "Hamd3",
+    "Hamd3": {
       "arabic": [
         "وجهت",
         "وجهي",
@@ -139,8 +135,7 @@
         "of (those) who associates"
       ]
     },
-    {
-      "id": "AuzoBillah",
+    "AuzoBillah": {
       "arabic": ["أعوذ", "بالله", "من", "الشيطان", "الرجيم"],
       "transliteration": ["AUZO", "BILLAHI", "MIN", "ASHA YTANI", "ARAJIIM"],
       "translation": [
@@ -151,8 +146,7 @@
         "the outcast"
       ]
     },
-    {
-      "id": "Bismillah",
+    "Bismillah": {
       "arabic": ["بسم", "الله", "الرحمن", "الرحيم"],
       "transliteration": ["BISMI", "Allahi", "RAHMAN", "RAHIIM"],
       "translation": [
@@ -162,8 +156,7 @@
         "The Most Merciful"
       ]
     },
-    {
-      "id": "Fatiha",
+    "Fatiha": {
       "arabic": [
         "الْحَمْدُ",
         "لِلَّه",
@@ -264,14 +257,12 @@
         "those who are astray"
       ]
     },
-    {
-      "id": "RukuuMain",
+    "RukuuMain": {
       "arabic": ["سبحان", "ربي", "العظيم"],
       "transliteration": ["SUBHANA", "RABBI", "AL A'ZIM"],
       "translation": ["Glory be to", "My Lord", "The Magnificent"]
     },
-    {
-      "id": "RukuuSupplementary",
+    "RukuuSupplementary": {
       "arabic": ["سبحانك", "اللهم", "وبحمدك", "اللهم", "إغفر لي"],
       "transliteration": [
         "SUBHANAKA",
@@ -288,14 +279,12 @@
         "Forgive me"
       ]
     },
-    {
-      "id": "QaumahMain",
+    "QaumahMain": {
       "arabic": ["سمع الله", "لمن", "حمده"],
       "transliteration": ["SAMI A'ALLAHU", "LIMAN", "HAMIDAH"],
       "translation": ["Allah has listened", "to the one who", "praised Him"]
     },
-    {
-      "id": "QaumahSecondary",
+    "QaumahSecondary": {
       "arabic": [
         "ربنا",
         "ولك",
@@ -339,14 +328,12 @@
         "After"
       ]
     },
-    {
-      "id": "SajdahMain",
+    "SajdahMain": {
       "arabic": ["سبحان", "ربي", "الأعلى"],
       "transliteration": ["SUBHANA", "RABBIY", "AL A'ALA"],
       "translation": ["Glory be to", "my Lord", "the Exalted"]
     },
-    {
-      "id": "SajdahSecondary",
+    "SajdahSecondary": {
       "arabic": ["سبحانك", "اللهم", "ربنا", "وبحمدك", "اللهم", "اغفر لي"],
       "transliteration": [
         "SUBHANAKA",
@@ -367,8 +354,7 @@
         "Forgive me"
       ]
     },
-    {
-      "id": "Jalsah",
+    "Jalsah": {
       "arabic": [
         "ربي",
         "اغفر لي",
@@ -397,8 +383,7 @@
         "and raise me(in rank)"
       ]
     },
-    {
-      "id": "TashahudStart",
+    "TashahudStart": {
       "arabic": [
         "التحيات",
         "لله",
@@ -618,8 +603,7 @@
         "Glory"
       ]
     },
-    {
-      "id": "TashahudEnd",
+    "TashahudEnd": {
       "arabic": [
         "اللهم",
         "إني",
@@ -686,11 +670,10 @@
         "anti-christ"
       ]
     },
-    {
-      "id": "SalaatEnd",
+    "SalaatEnd": {
       "arabic": ["السلام", "عليكم", "ورحمة الله"],
       "transliteration": ["AS-SALAMU", "ALEYKUM", "WA RAHMATU-LAAH"],
       "translation": ["The peace", "(be) upon you", "and (the) Mercy of Allah"]
     }
-  ]
+  }
 }

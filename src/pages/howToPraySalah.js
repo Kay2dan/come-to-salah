@@ -20,8 +20,6 @@ class HowToPraySalah extends Component {
   // 'salah recitation' & 'title' from the gql data into the data obj.
   filterDataFromGql = (data, navigateTo) => {
     const { edges } = data.allDataJson;
-    // const { state = { navigateTo: "Fajr" } } = this.props.location;
-    // const { navigateTo } = this.props.location.state;
     const rtnData = {}; // recitations, prayer, steps, title
     edges.forEach(obj => {
       const { node } = obj;
@@ -131,7 +129,6 @@ class HowToPraySalah extends Component {
   }
 }
 
-// TODO: Convert repeat code to graphql fragments
 export const query = graphql`
   {
     allDataJson(
@@ -143,31 +140,10 @@ export const query = graphql`
         node {
           title
           steps {
-            a01 {
-              heading
-              content {
-                id
-                classes
-                eleType
-                insertion {
-                  location
-                  recitationId
-                }
-                txt
-              }
-            }
-            a02 {
-              heading
-              content {
-                id
-                classes
-                eleType
-                insertion {
-                  location
-                  recitationId
-                }
-                txt
-              }
+            id
+            heading
+            content {
+              ...stepsData
             }
           }
           prayers {
@@ -179,91 +155,7 @@ export const query = graphql`
             }
           }
           recitations {
-            AllahuAkbar {
-              arabic
-              transliteration
-              translation
-            }
-            Hamd1 {
-              arabic
-              transliteration
-              translation
-            }
-            Hamd2 {
-              arabic
-              translation
-              transliteration
-            }
-            Hamd3 {
-              arabic
-              translation
-              transliteration
-            }
-            AuzoBillah {
-              arabic
-              translation
-              transliteration
-            }
-            Bismillah {
-              arabic
-              transliteration
-              translation
-            }
-            Fatiha {
-              arabic
-              transliteration
-              translation
-            }
-            RukuuMain {
-              arabic
-              transliteration
-              translation
-            }
-            RukuuSupplementary {
-              arabic
-              transliteration
-              translation
-            }
-            QaumahMain {
-              arabic
-              transliteration
-              translation
-            }
-            QaumahSecondary {
-              arabic
-              transliteration
-              translation
-            }
-            SajdahMain {
-              arabic
-              transliteration
-              translation
-            }
-            SajdahSecondary {
-              arabic
-              transliteration
-              translation
-            }
-            Jalsah {
-              arabic
-              transliteration
-              translation
-            }
-            TashahudStart {
-              arabic
-              transliteration
-              translation
-            }
-            TashahudEnd {
-              arabic
-              transliteration
-              translation
-            }
-            SalaatEnd {
-              arabic
-              transliteration
-              translation
-            }
+            ...recitationData
           }
         }
       }
