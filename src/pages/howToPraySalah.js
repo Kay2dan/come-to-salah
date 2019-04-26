@@ -9,7 +9,7 @@ class HowToPraySalah extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentStepId: "a01",
+      currentStepId: "standingForNiyyah",
       currentStep: 0,
       ttlSteps: 0, // counts starts at 0 so real count = ttlSteps + 1
     };
@@ -18,7 +18,7 @@ class HowToPraySalah extends Component {
   // filter data from gql by excluding null objects/ entries returned
   // by gql. Func used to extract 'salah steps', 'how to pray salah',
   // 'salah recitation' & 'title' from the gql data into the data obj.
-  filterDataFromGql = (data, navigateTo) => {
+  getEachSection = (data, navigateTo) => {
     const { edges } = data.allDataJson;
     const rtnData = {}; // recitations, prayer, steps, title
     edges.forEach(obj => {
@@ -53,7 +53,7 @@ class HowToPraySalah extends Component {
       nodes => nodes.node.title === "How To Pray Salah"
     ).node.prayers;
     return prayers.find(each => each.heading.split(",")[0] === navigateTo)
-      .stepSequence;
+      .stepSequenceIds;
   };
 
   componentDidMount() {
@@ -85,16 +85,19 @@ class HowToPraySalah extends Component {
     const { data, location } = this.props;
     const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     const { currentStep, currentStepId, ttlSteps } = this.state;
-    const { recitations, prayer, steps, title } = this.filterDataFromGql(
+    const { recitations, prayer, steps, title } = this.getEachSection(
       data,
       navigateTo
     );
-    const { heading, rakaats, stepSequence } = prayer;
+    const { heading, rakaats, stepSequenceIds } = prayer;
     let currentStepTxt;
-    for (const step of stepSequence) {
+    for (const step of stepSequenceIds) {
       if (step === currentStepId) {
-        currentStepTxt = steps[currentStepId];
-        break;
+        steps.forEach(entry => {
+          if (entry.id === currentStepId) {
+            currentStepTxt = entry;
+          }
+        });
       }
     }
     return (
@@ -147,8 +150,9 @@ export const query = graphql`
             }
           }
           prayers {
+            id
             heading
-            stepSequence
+            stepSequenceIds
             rakaats {
               type
               offering
@@ -159,6 +163,22 @@ export const query = graphql`
           }
         }
       }
+    }
+  }
+  fragment recitationData on DataJsonRecitations {
+    id
+    arabic
+    transliteration
+    translation
+  }
+  fragment stepsData on DataJsonStepsContent {
+    id
+    classes
+    eleType
+    txt
+    insertion {
+      location
+      recitationId
     }
   }
 `;

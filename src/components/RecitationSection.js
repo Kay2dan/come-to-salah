@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const RecitationSection = ({ recitationId, recitations }) => {
-  const { arabic, transliteration, translation } = recitations[recitationId[0]];
+  const { arabic, transliteration, translation } = recitations.find(
+    passage => passage.id === recitationId[0]
+  );
   let recitationContainer = [];
   for (let i = arabic.length - 1, j = 0; i >= 0; i--, j++) {
     recitationContainer.push(
@@ -29,7 +31,7 @@ const RecitationSection = ({ recitationId, recitations }) => {
 
 RecitationSection.propTypes = {
   recitationId: PropTypes.array.isRequired,
-  recitations: PropTypes.object.isRequired,
+  recitations: PropTypes.array.isRequired,
 };
 
 export default RecitationSection;

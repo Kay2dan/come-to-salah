@@ -137,7 +137,7 @@ const DomContent = ({ contentObj, recitations }) => {
 
 DomContent.propTypes = {
   contentObj: PropTypes.object.isRequired,
-  recitations: PropTypes.object.isRequired,
+  recitations: PropTypes.array.isRequired,
 };
 
 export default DomContent;
