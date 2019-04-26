@@ -36,6 +36,9 @@ class HowToPraySalah extends Component {
         case "Salaat Recitation":
           rtnData.recitations = node.recitations;
           break;
+        case "Vector Illustrations":
+          rtnData.illustrations = node.illustrations;
+          break;
         default:
           return;
       }
@@ -85,10 +88,13 @@ class HowToPraySalah extends Component {
     const { data, location } = this.props;
     const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     const { currentStep, currentStepId, ttlSteps } = this.state;
-    const { recitations, prayer, steps, title } = this.getEachSection(
-      data,
-      navigateTo
-    );
+    const {
+      recitations,
+      prayer,
+      steps,
+      title,
+      illustrations,
+    } = this.getEachSection(data, navigateTo);
     const { heading, rakaats, stepSequenceIds } = prayer;
     let currentStepTxt;
     for (const step of stepSequenceIds) {
@@ -117,9 +123,10 @@ class HowToPraySalah extends Component {
             ))}
           </div>
           <PraySalahContent
-            heading={heading}
-            recitations={recitations}
             currentStepTxt={currentStepTxt}
+            heading={heading}
+            illustrations={illustrations}
+            recitations={recitations}
           />
           <SalahPagination
             currentStep={currentStep}
@@ -136,7 +143,14 @@ export const query = graphql`
   {
     allDataJson(
       filter: {
-        title: { in: ["How To Pray Salah", "Salaat Recitation", "Salah Steps"] }
+        title: {
+          in: [
+            "How To Pray Salah"
+            "Salaat Recitation"
+            "Salah Steps"
+            "Vector Illustrations"
+          ]
+        }
       }
     ) {
       edges {
@@ -161,6 +175,12 @@ export const query = graphql`
           recitations {
             ...recitationData
           }
+          illustrations {
+            salahType
+            stances {
+              ...svgIllustrationData
+            }
+          }
         }
       }
     }
@@ -179,6 +199,14 @@ export const query = graphql`
     insertion {
       location
       recitationId
+    }
+  }
+  fragment svgIllustrationData on DataJsonIllustrationsStances {
+    id
+    name
+    paths {
+      pathId
+      d
     }
   }
 `;

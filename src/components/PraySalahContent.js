@@ -2,9 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Columns, Column, Title, Section } from "bloomer";
 import DomContent from "./DomContent";
-import Illustration from "./Illustration";
+import SVGIllustration from "./SVGIllustration";
 
-const PraySalahContent = ({ heading, recitations, currentStepTxt }) => (
+const PraySalahContent = ({
+  currentStepTxt,
+  heading,
+  recitations,
+  illustrations,
+}) => (
   <Section>
     <Columns>
       <Column isSize="1/2" className="has-text-right">
@@ -16,7 +21,7 @@ const PraySalahContent = ({ heading, recitations, currentStepTxt }) => (
         </div>
       </Column>
       <Column isSize="1/2">
-        <Illustration />
+        <SVGIllustration data={illustrations} />
       </Column>
     </Columns>
   </Section>
