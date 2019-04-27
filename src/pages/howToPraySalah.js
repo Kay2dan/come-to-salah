@@ -123,6 +123,7 @@ class HowToPraySalah extends Component {
             ))}
           </div>
           <PraySalahContent
+            currentStep={currentStep}
             currentStepTxt={currentStepTxt}
             heading={heading}
             illustrations={illustrations}
