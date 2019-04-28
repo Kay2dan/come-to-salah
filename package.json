@@ -27,6 +27,7 @@
   "devDependencies": {
     "babel-jest": "^24.7.1",
     "babel-preset-gatsby": "^0.1.11",
+    "core-js": "^2.6.5",
     "cypress": "^3.2.0",
     "gh-pages": "^2.0.1",
     "identity-obj-proxy": "^3.0.0",

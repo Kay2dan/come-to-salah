@@ -4,7 +4,14 @@
     {
       "heading": "Fajr, The Dawn Prayer",
       "id": "howToPrayFajr",
-      "stepSequenceIds": ["standingForNiyyah", "takbiir"],
+      "stepSequenceIds": [
+        "standingForNiyyah",
+        "takbiir",
+        "openingHamd",
+        "fatiha",
+        "recitationOfPassageFromTheQuran",
+        "rukuu"
+      ],
       "rakaats": [
         {
           "type": "sunnah",

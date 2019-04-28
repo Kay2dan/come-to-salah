@@ -177,9 +177,9 @@ const Header = ({
   );
 };
 
-// Header.propTypes = {
-//   activeNavbarItem: PropTypes.string,
-//   onClickHandler: PropTypes.func.isRequired,
-// };
+Header.propTypes = {
+  activeNavbarItem: PropTypes.string,
+  // onClickHandler: PropTypes.func.isRequired,
+};
 
 export default Header;
