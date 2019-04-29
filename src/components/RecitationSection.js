@@ -5,19 +5,17 @@ const RecitationSection = ({ recitationId, recitations }) => {
   const { arabic, transliteration, translation } = recitations.find(
     passage => passage.id === recitationId[0]
   );
-  let recitationContainer = [];
-  for (let i = arabic.length - 1, j = 0; i >= 0; i--, j++) {
-    recitationContainer.push(
-      <div className="wordsContainer" key={j}>
-        <span className="word arabicTxt">{arabic[i]}</span>
-        <span className="word transliteration">{transliteration[i]}</span>
-        <span className="word translation">{translation[i]}</span>
-      </div>
-    );
-  }
   return (
     <div className="recitationTable">
-      <div className="wordByWordContainer">{recitationContainer}</div>
+      <div className="wordByWordContainer">
+        {arabic.map((word, i) => (
+          <div className="wordsContainer" key={i}>
+            <div className="word arabicTxt">{word}</div>
+            <div className="word transliteration">{transliteration[i]}</div>
+            <div className="word translation">{translation[i]}</div>
+          </div>
+        ))}
+      </div>
       <div className="transliterationContainer">
         {transliteration.map((word, i) => (
           <span className="is-size-6" key={i}>

@@ -53,13 +53,17 @@
       display: block
 
 .wordByWordContainer
+  display: flex
+  flex-direction: row-reverse
+  flex-wrap: wrap
+
   div.wordsContainer
     display: inline-block
     background-color: rgba(225,225,225,0.9)
     border: 1px solid white
     border-radius: 24px
     padding: 5px
-    margin: 0 3px
+    margin: 3px 1px
 
     &:last-child
       margin-right: 0
@@ -70,6 +74,9 @@
       text-align: center
     .arabicTxt
       font-size: 1.3rem
+      line-height: 1.25
+      position: relative
+      top: 3px
     .transliteration
       font-size: 1rem
       font-weight: 700

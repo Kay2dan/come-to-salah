@@ -10,7 +10,14 @@
         "openingHamd",
         "fatiha",
         "recitationOfPassageFromTheQuran",
-        "rukuu"
+        "rukuu",
+        "qaumah",
+        "prostration",
+        "jalsah",
+        "secondProstration",
+        "endOfFirstRakaat",
+        "atTashahudStart",
+        "atTashahudEnd"
       ],
       "rakaats": [
         {
