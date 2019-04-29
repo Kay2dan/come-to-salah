@@ -9,6 +9,7 @@ const PraySalahContent = ({
   currentStepTxt,
   heading,
   illustrations,
+  rakaats,
   recitations,
 }) => (
   <Section>
@@ -22,6 +23,18 @@ const PraySalahContent = ({
         </div>
       </Column>
       <Column isSize="1/2">
+        <div className="level rakaatsInfo">
+          <Title className="is-size-6">Rakaats:</Title>
+          {rakaats.map((prayer, i) => (
+            <div className="level-item has-text-centered" key={i}>
+              <div className="blockContainer">
+                <p className="heading">{prayer.type}</p>
+                <p className="title is-size-2">{prayer.offering}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <SVGIllustration data={illustrations} currentStep={currentStep} />
       </Column>
     </Columns>
@@ -29,9 +42,12 @@ const PraySalahContent = ({
 );
 
 PraySalahContent.propTypes = {
-  heading: PropTypes.string.isRequired,
-  recitations: PropTypes.array.isRequired,
+  currentStep: PropTypes.object.isRequired,
   currentStepTxt: PropTypes.object.isRequired,
+  heading: PropTypes.string.isRequired,
+  illustrations: PropTypes.object.isRequired,
+  rakaats: PropTypes.array.isRequired,
+  recitations: PropTypes.array.isRequired,
 };
 
 export default PraySalahContent;

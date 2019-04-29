@@ -112,21 +112,12 @@ class HowToPraySalah extends Component {
           <Title isSize={4}>{title}</Title>
         </div>
         <div className="contentContainer">
-          <div className="level rakaatsInfo">
-            {rakaats.map((prayer, i) => (
-              <div className="level-item has-text-centered" key={i}>
-                <div className="blockContainer">
-                  <p className="heading">{prayer.type}</p>
-                  <p className="title is-size-2">{prayer.offering}</p>
-                </div>
-              </div>
-            ))}
-          </div>
           <PraySalahContent
             currentStep={currentStep}
             currentStepTxt={currentStepTxt}
             heading={heading}
             illustrations={illustrations}
+            rakaats={rakaats}
             recitations={recitations}
           />
           <SalahPagination

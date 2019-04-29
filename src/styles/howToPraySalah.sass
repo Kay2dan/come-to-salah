@@ -31,7 +31,8 @@
       // height reducts padding, pagination, rakaats padding
       // rakaats margin & rakaats content
       // height: calc(100% - 3rem - 44px - 3.5rem - 67px)
-      height: calc(100% - 3rem - 3.5rem - 67px)
+      // height: calc(100% - 3rem - 3.5rem - 67px)
+      height: calc(100% - 44px)
       padding-top: 1.5rem
       padding-bottom: 1.5rem
 
@@ -47,10 +48,15 @@
 
   .rakaatsInfo
     padding: 2rem 0 0
+    position: relative
     // used for breaking paras into blocks for rakaats
     // section, bug in Bulma? File a github issue
     .blockContainer
       display: block
+    
+    h1.title.is-size-6
+      position: absolute
+      top: 0
 
 .wordByWordContainer
   display: flex
@@ -93,4 +99,4 @@
 
 svg.svgIllustration
   width: 100%
-  max-height: 100%
+  max-height: calc(100% - 3.5rem - 44px)

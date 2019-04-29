@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Kute from "kute.js";
 import "kute.js/kute-svg";
 
@@ -60,5 +61,15 @@ class Path extends Component {
     return <path d={d} id={pathId} ref={this[pathId]} />;
   }
 }
+
+SVGIllustration.propTypes = {
+  data: PropTypes.string.isRequired,
+  currentStep: PropTypes.object.isRequired,
+};
+
+Path.propTypes = {
+  d: PropTypes.string.isRequired,
+  pathId: PropTypes.string.isRequired,
+};
 
 export default SVGIllustration;
