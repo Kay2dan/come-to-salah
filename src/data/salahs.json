@@ -33,7 +33,21 @@
     {
       "heading": "Dhuhr, The Noon Prayer",
       "id": "howToPrayDhuhr",
-      "stepSequence": ["a01", "a02"],
+      "stepSequenceIds": [
+        "standingForNiyyah",
+        "takbiir",
+        "openingHamd",
+        "fatiha",
+        "recitationOfPassageFromTheQuran",
+        "rukuu",
+        "qaumah",
+        "prostration",
+        "jalsah",
+        "secondProstration",
+        "endOfFirstRakaat",
+        "atTashahudStart",
+        "atTashahudEnd"
+      ],
       "rakaats": [
         {
           "type": "sunnah",
@@ -46,6 +60,109 @@
         {
           "type": "sunnah",
           "offering": 2
+        },
+        {
+          "type": "nafal",
+          "offering": 2
+        }
+      ]
+    },
+    {
+      "heading": "Asr, The Afternoon Prayer",
+      "id": "howToPrayAsr",
+      "stepSequenceIds": [
+        "standingForNiyyah",
+        "takbiir",
+        "openingHamd",
+        "fatiha",
+        "recitationOfPassageFromTheQuran",
+        "rukuu",
+        "qaumah",
+        "prostration",
+        "jalsah",
+        "secondProstration",
+        "endOfFirstRakaat",
+        "atTashahudStart",
+        "atTashahudEnd"
+      ],
+      "rakaats": [
+        {
+          "type": "sunnah",
+          "offering": 4
+        },
+        {
+          "type": "fard",
+          "offering": 4
+        }
+      ]
+    },
+    {
+      "heading": "Mughrib, The Sunset Prayer",
+      "id": "howToPrayMughrib",
+      "stepSequenceIds": [
+        "standingForNiyyah",
+        "takbiir",
+        "openingHamd",
+        "fatiha",
+        "recitationOfPassageFromTheQuran",
+        "rukuu",
+        "qaumah",
+        "prostration",
+        "jalsah",
+        "secondProstration",
+        "endOfFirstRakaat",
+        "atTashahudStart",
+        "atTashahudEnd"
+      ],
+      "rakaats": [
+        {
+          "type": "fard",
+          "offering": 3
+        },
+        {
+          "type": "sunnah",
+          "offering": 2
+        },
+        {
+          "type": "nafal",
+          "offering": 2
+        }
+      ]
+    },
+    {
+      "heading": "Isha, The Night Prayer",
+      "id": "howToPrayIsha",
+      "stepSequenceIds": [
+        "standingForNiyyah",
+        "takbiir",
+        "openingHamd",
+        "fatiha",
+        "recitationOfPassageFromTheQuran",
+        "rukuu",
+        "qaumah",
+        "prostration",
+        "jalsah",
+        "secondProstration",
+        "endOfFirstRakaat",
+        "atTashahudStart",
+        "atTashahudEnd"
+      ],
+      "rakaats": [
+        {
+          "type": "sunnah",
+          "offering": 4
+        },
+        {
+          "type": "fard",
+          "offering": 4
+        },
+        {
+          "type": "sunnah",
+          "offering": 2
+        },
+        {
+          "type": "witr",
+          "offering": 3
         },
         {
           "type": "nafal",

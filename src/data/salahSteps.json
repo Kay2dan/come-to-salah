@@ -201,12 +201,13 @@
         {
           "eleType": "note",
           "id": "",
-          "classes": "",
+          "classes": "is-small smallTxt",
           "insertion": {
             "location": "",
             "recitationId": []
           },
           "txt": [
+            "note:",
             "If the person is praying with a Congregation behind an Imam (leader) he/she would apply Nos. 1, 2, 3 and 4, and would listen to the Imam reciting the 'Al-Fatihah' loudly and upon the Imam completing its recitation, the person along with the rest of the congregation would say 'Ameen' loudly after which, the person would apply No. 5 in a low voice."
           ]
         }
@@ -497,7 +498,7 @@
             "recitationId": ["TashahudStart"]
           },
           "txt": [
-            "Upon completing the second prostration as discussed in No. 12 above, the person takes a sitting for the 'At-Tashahud' (words of witness) and while in this position, the fingers of the right hand are to be placed close-fisted save the index finger which the person uses to point out as an indication for monotheistic belief although, the person may as well keep both the little and the ring fingers closed, while rounding the thumb and middle finger in a ring-shaped form and uses the index finger to point out as a sign for monotheistic belief. It has been related 76 that the Prophet (PBUH), practiced both these methods and it is advisable to practice the first method at times and the other method at other times. The left hand is placed on the left knee with the fingers kept open.",
+            "Upon completing the second prostration as discussed above, the person takes a sitting for the 'At-Tashahud' (words of witness) and while in this position, the fingers of the right hand are to be placed close-fisted save the index finger which the person uses to point out as an indication for monotheistic belief although, the person may as well keep both the little and the ring fingers closed, while rounding the thumb and middle finger in a ring-shaped form and uses the index finger to point out as a sign for monotheistic belief. It has been relate that the Prophet (PBUH), practiced both these methods and it is advisable to practice the first method at times and the other method at other times. The left hand is placed on the left knee with the fingers kept open.",
             "After sitting as discussed above, the person recites the AT-Tashahud(words of witness) as follows:"
           ]
         }

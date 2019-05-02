@@ -55,6 +55,7 @@ class HowToPraySalah extends Component {
     const prayers = edges.find(
       nodes => nodes.node.title === "How To Pray Salah"
     ).node.prayers;
+    // console.log("prayers:::", prayers);
     return prayers.find(each => each.heading.split(",")[0] === navigateTo)
       .stepSequenceIds;
   };
@@ -86,6 +87,7 @@ class HowToPraySalah extends Component {
 
   render() {
     const { data, location } = this.props;
+    // console.log("data:::::::::::", data);
     const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     const { currentStep, currentStepId, ttlSteps } = this.state;
     const {
@@ -95,6 +97,7 @@ class HowToPraySalah extends Component {
       title,
       illustrations,
     } = this.getEachSection(data, navigateTo);
+    console.log("prayer:", prayer);
     const { heading, rakaats, stepSequenceIds } = prayer;
     let currentStepTxt;
     for (const step of stepSequenceIds) {
