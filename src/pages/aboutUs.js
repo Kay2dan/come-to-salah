@@ -12,20 +12,22 @@ const AboutUs = ({ data }) => {
   const team = edges.filter(mom => mom.node.title === "Team Profile")[0].node;
   return (
     <div className="aboutUsPageWrapper">
-      <Section>
-        <div className="intro">
-          <p>Assalam U Aliekum,</p>
-          <p>
-            This app has been created to help learn & understand the prayers we
-            pray as muslims.
-          </p>
-        </div>
-        <div className="profiles">
-          {team.profiles.map((fellow, i) => (
-            <TeamProfile data={fellow} key={i} />
-          ))}
-        </div>
-      </Section>
+      <div className="contentContainer">
+        <Section>
+          <div className="intro">
+            <p>Assalam U Aliekum,</p>
+            <p>
+              This app has been created to help learn & understand the prayers
+              we pray as muslims.
+            </p>
+          </div>
+          <div className="profiles">
+            {team.profiles.map((fellow, i) => (
+              <TeamProfile data={fellow} key={i} />
+            ))}
+          </div>
+        </Section>
+      </div>
     </div>
   );
 };
