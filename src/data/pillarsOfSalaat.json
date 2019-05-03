@@ -1,0 +1,52 @@
+{
+  "id": "pillarsOfSalaatSection",
+  "title": "Pillars of Salaat",
+  "sections": [
+    {
+      "heading": "Pillars Of The Salaat - (Arkanu-Salaat)",
+      "id": "pillarsOfTheSalaat",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            " The prayer has obligatory pillars which must be fulfilled for it to be valid and these are as follows:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'Al-Qiyaam''القيام'  - prayer is to be performed in a standing position if a person is physically capable.",
+            "'Takbiiratil lhraam''تكبيرة الإحرام' , that is saying 'ALLAHU AKBAR' at the commencement of the prayer.",
+            "'Al-Fatihah''الفاتحة'  - that is reciting the opening chapter of the Holy Qur'an in every Rakaat.",
+            "'Rukuu''الركوع'  - this is bowing posture whereby the head and the back are positioned on the same level and both hands are rested on the knees with the fingers spread apart.",
+            "A requirement to raise the head up from the Rukuu position.",
+            "A requirement to stand up from the Rukuu position in such a way that the person feels that all his/her backbones are straightened.",
+            "'Sujuud''السجود' that is prostrating oneself in such a way that the following seven parts of the body are firmly placed on the ground: the forehead together with the tip of the nose, both the palms, both the knees, the bottom surface of the toes of both feet.",
+            "A requirement to raise the head from the Sujuud position",
+            "A requirement to sit upright during the pause between the two prostrations.",
+            "A requirement to take a Sitting  Position for the recitation of the 'At-Tashahud' 'التشهد' (words of witness).",
+            "A requirement to recite the final 'At-Tashahud'.",
+            "A requirement to recite the words of supplication for the Prophet (PBUH).",
+            "A requirement to conclude the prayer with the words of peace 'Tasleem''التسليم' , i.e. 'Assalamu Aleykum Wa Rahmatullaahi Wa Barakatuh'(السلام عليكم ورحمة الله وبركاته) .",
+            "A requirement that in fulfilling the above pillars the person should be in a state of tranquility."
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "The above are the pillars of the prayer, wherein, if any of them is missed, it is required to repeat the whole Rakaat (Unit) in which the pillar is omitted, but if, the Takbiirat it - Ihraam is omitted, it becomes necessary to repeat the whole salaat."
+          ]
+        }
+      ]
+    }
+  ]
+}
