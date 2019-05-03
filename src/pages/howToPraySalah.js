@@ -74,8 +74,8 @@ class HowToPraySalah extends Component {
     const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     if (!evTarget.hasAttribute("disabled")) {
       const btnType = evTarget.classList.contains("pagination-next");
-      let { currentStep } = this.state;
-      let newStepVal = btnType ? currentStep + 1 : currentStep - 1;
+      const { currentStep } = this.state;
+      const newStepVal = btnType ? currentStep + 1 : currentStep - 1;
       const stepSequence = this.getStepSequenceFromGqlData(data, navigateTo);
       this.setState({
         currentStep: newStepVal,

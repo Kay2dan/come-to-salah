@@ -1,0 +1,365 @@
+{
+  "id": "adhaanSection",
+  "title": "Adhaan (Call to Prayer)",
+  "sections": [
+    {
+      "heading": "The Timings Of The Obligatory Prayers",
+      "id": "theTimingsOfTheObligatoryPrayers",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Islam has prescribed specified time limits for each obligatory prayer as can be noted from the following verse of the Holy Qur'an:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'Prayer is enjoined on believers at stated times'(Qur an 4:103)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "And in an authentic Prophetic saying it is confirmed that someone once asked the Prophet (PBUH) about the best action in the sight of Allah (SWT) and the Prophet (PBUH) replied:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'Offering prayer at its prescribed time'(Reported by Imam Bukhari)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Thus, the arrival of the time for prayer is a fundamental condition for performing it and if, therefore, a prayer is intentionally performed before or after its designated time it shall not be acceptable in the sight of Allah (SWT). However, persons who may forget (without intention) to perform any of the obligatory prayers within its ordained time or who are overtaken by sleep, then such persons should perform the prayer as soon as they remember it and/or as soon as they wake up from their sleep.",
+            "We shall now enumerate the different timings of the five obligatory prayers:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "FAJR (Dawn) PRAYER - Its time begins at dawn when morning light first appears in the horizon and continues until the sun rises.",
+            "DHUHR (Noon) PRAYER - Its time begins when the sun reaches its highest point in the sky and continues up to the time of Asr Prayer.",
+            "ASR (Afternoon) PRAYER - Its time begins when the shadow of an object is equal to its own length, plus the length of its noontime shadow and continues until sunset.",
+            "MAGHRIB (Sunset) PRAYER - Its time starts from sunset and continues until the end of twilight. Twilight is the redness which remains in the horizon after sunset.",
+            "ISHA (Evening) PRAYER-Its time starts when the twilight disappears and continues upto mid-night. Mid-night in this case may not necessarily be interpreted to mean 12:00 o'clock but may be construed as the mid-time between   sunset and the appearance of the true dawn."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Adhaan (Call To Prayer)",
+      "id": "adhaan",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "The 'Adhaan' is a call to inform others in specific words that the time for a particular prayer has begun. It is a call to the congregation and is an expression of the Islamic practice. It is required as an act for all the Obligatory Prayers."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "The Virtues Of Adhaan",
+      "id": "theVirtuesOfAdhaan",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "The greatness of the virtue which Islam attaches to the 'Adhaan' and the one who performs it i.e. the 'Muadhin', can be noted from the following verse of the Holy Qur'an:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTxt",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ (41:33)"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'Who is better in speech than one who calls (the people) to allah and works righteousness.' (Qur'an 41:33)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "The mother of the faithful, Aisha (may Allah be pleased with her) confirmed that this verse concerns and refers to the Muadhin and was revealed on no other reason than for the Muadhin.', can be noted from the following verse of the Holy Qur'an:",
+            "And, from the Prophetic traditions, Abu Hurairah reported that the Prophet (PBUH), said:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'If the people knew the reward in the Adhaan and the first row of the prayer and that they could not get it (the reward) save by drawing lots, they would draw lots ' (Narrated by Imam Bukhari)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["And, in another saying the Prophet (PBUH), said:"]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'The 'Muadhins' will on the Day of Judgement have the longest necks (reflecting their exclusive eminence).' (Reported by Imam Muslim)"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "How The Adhaan Is Performed",
+      "id": "howTheAdhaanIsPerformed",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Preferably, there should be an appointed Muadhin at each Mosque who will call the people to prayer when the time of a particular prayer is due. In performing the Adhaan, the Muadhin would stand facing the direction of the 'Ciblah' (the sacred mosque in Makkah). He would then raise both hands upto his ears and say in a loud voice the following words:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "ALLAHU AKBAR - Allah is the greatest- الله أكبر (to be repeated 4 times)",
+            "ASH-HADU ANLA ILAHA ILLALLAAH - I testify that there is no god but Allah- أشهد أن لا إله إلا الله  (to be repeated 2 times)",
+            "ASH-HADU ANNA MUHAMMADAN RASUULULLAAH – I testify that Muhammad is Allah's messenger- أشهد أن محمدًا رسول الله (to be repeated 2 times)",
+            "HAYYA'ALAS SALAAT - Come fast to prayer- حي على الصلاة (to be repeated 2 times). The Muadhin, when reciting this turns the face slightly to the right side.",
+            "HAYYA'ALAL FALAAH - Come fast to success- حي على الفلاح (to be repeated 2 times). The Muadhin, when reciting this turns the face slightly to the left side.",
+            "ALLAHU AKBAR - Allah is the greatest-  الله أكبر (to be repeated 2 times)",
+            "LAA ILAHA ILLALLAAH - There is no god but Allah- لا إله إلا الله (to be recited once)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "boldTxt",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["Note:"]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "In the Adhaan,for the Fajr (Dawn) prayer, the following words are recited twice after Hayya'alal Falaah:",
+            "'ASSALATU KHEIRUM MINA NAWM', (to be recited for two times) which means –"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTxt",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["الصلاة خيرٌ من النوم"]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["'Salaat is better than sleep.'"]
+        }
+      ]
+    },
+    {
+      "heading": "What Someone Supplicates Upon Hearing The Adhaan",
+      "id": "whatSomeoneSupplicatesUponHearingTheAdhaan",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "It is preferred practice that when a person hears the Adhaan, he should repeat the words the Muadhin calls out, except, when he says 'Haaya alal Salaat and Hayya alal Falaah', the listener should instead say:",
+            "'La howla wala quwata ila billah', which means –"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTxt",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["لا حول ولا قوة إلا بالله"]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["'There is no power and strength except by Allah.'"]
+        }
+      ]
+    },
+    {
+      "heading": "The Supplication After The Adhaan",
+      "id": "theSupplicationAfterTheAdhaan",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Upon the completion of the Adhaan, it is recommended that the listener recites the following supplication:",
+            "'Allahumma rabba hadhihid da'wati - tammah, wasalatil qa'imah, a ti muhammadanal wasilata wal fadhilata, - waab'athuhu maqamum mah-mudan-alladhii wa'ad tahu'. which means –"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTxt",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            " اللهم رب هذه الدعوة التامة، والصلاة القائمة، آت محمدًا الوسيلة والفضيلة، وابعثه مقامًا محمودًا الذي وعدته"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'O Allah, Lord of this complete call and of the prayer to be held, grant Muhammad the most favored and excellent position in the Paradise and raise him to the praise worthy place that You have promised him.'"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "It is highly recommended to recite the above supplication at the end of every Adhaan and in this regard the Prophet (PBUH) said:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'....it becomes obligatory upon me to intercede for him (person reciting the supplication) on the Day of Judgment.' (Reported by Imam Bukhari)"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Iqamah (Second Call To Prayer)",
+      "id": "iqamah",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'lqamah' is the second call to the prayer and is said inside the Mosque at the start of the congregational prayer. It goes as follows:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "ALLAHU AKBAR-الله أكبر. (repeated two times)",
+            "ASH-HADU ANLA ILLAHA ILA LAAH-أشهد أن لا إله إلا الله. (once)",
+            "ASH-HADU ANNA MUHAMMADAR RASULUL-LAAH- أشهد أن محمدًا رسول الله. (once)",
+            "HAYY A ALAS-SALAAT-حي على الصلاة. (once)",
+            "HAYYA ALAL-FALAAH-حي على الفلاح. (once)",
+            "QAD QAMATIS-SALAAT-قد قامت الصلاة. (repeated two times)",
+            "ALLAHU AKBAR-الله أكبر . (repeated two times)",
+            "LAA ILAAHA ILA-LAAH-لا إله إلا الله. (once)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "boldTxt",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["Notes:"]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "It is recommended that a brief time gapping be maintained between the 'Adhaan' and the 'lqamah' to allow the congregation to get ready for the salaat.",
+            "It is preferred that the 'Iqamah' is performed by the same person (Muadhin) who performed the 'Adhaan'.",
+            "It is disliked for anyone to leave the mosque once the 'Adhaan' is made, unless for urgent reason(s) but with a determination to return for the prayer.",
+            "It is prohibited to offer voluntary prayers after lqamah has been called out. The Prophet (PBUH) says: 'When lqamah is called out, no prayer is permissible except the obligatory one.' (Reported by Imam Muslim)",
+            "If a person misses a prayer due to oversleeping or forgetfulness, then, before starting the missed prayer the person is required to come up with both Adhaan and lqamah. However, if a person misses a number of prayers, it is preferred that he comes up with only one 'Adhaan' for all the missed prayers, but to come up with a separate 'lqamah' for each salaat.",
+            "Where a person misses the congregational prayer at the mosque, such a person, before starting to pray is at liberty to either perform or omit the Adhaan and the lqamah. However, if he decides to perform the Adhaan, it is preferred that he does it in a low voice so as not to attract the attention of others outside.",
+            "It is not obligatory on women to perform the Adhaan and lqamah but if they wish to perform the same there is no harm."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Performance Of The Salaat",
+      "id": "performanceOfTheSalaat",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            " After introducing the salaat and discussing its pre-requisites, we shall next turn to matters pertaining to its actual performance."
+          ]
+        }
+      ]
+    }
+  ]
+}

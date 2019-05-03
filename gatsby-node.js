@@ -1,14 +1,9 @@
-// Pausing the code here
-// We need to call the export.modules component 'GuideTemplate'
-// from here & append it to the createPage function below
-// WIP
-
 const path = require("path");
 
 // see this post:
 // https://justinformentin.com/guide-to-building-a-gatsby-site#creating-the-layout-page
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPages } = actions;
+  const { createPage } = actions;
   const results = await graphql(`
     {
       allDataJson {
@@ -22,29 +17,30 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
   if (results.errors) {
+    console.log("results.errors: ", results.error);
     return results.errors;
   } else {
-    console.log("no errors reported by node");
     const { menuSections } = results.data.allDataJson.nodes[0];
-    menuSections.forEach((headingObj, i) => {
-      const { label, headings } = headingObj;
-      if (
-        label !== "Local Salah Time" &&
-        label !== "Salah Walkthrough" &&
-        label !== "Misc"
-      ) {
-        // console.log("filtered label: ", label);
-        const collection = [];
-        headings.forEach(heading => {
-          let link = heading.replace(/[^\w]/g, "");
-          link = link.charAt(0).toLowerCase() + link.slice(1);
-          // console.log("link: ", link);
-          // createPages({
-          //   link,
-          //   component: GuideTemplate,
-          // });
+    const filteredSections = menuSections.filter(
+      section =>
+        section.label !== "Local Salah Time" &&
+        section.label !== "How To Pray Salah" &&
+        section.label !== "About"
+    );
+    // console.log("filteredSections:", filteredSections);
+    filteredSections.forEach(section =>
+      section.headings.forEach(heading => {
+        let link = heading.replace(/[^\w]/g, "");
+        link = link.charAt(0).toLowerCase() + link.slice(1);
+        console.log("link: ", link);
+        createPage({
+          path: link,
+          component: path.resolve("./src/template/GuideTemplate.js"),
+          context: {
+            heading,
+          },
         });
-      }
-    });
+      })
+    );
   }
 };

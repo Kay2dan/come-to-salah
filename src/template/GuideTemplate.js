@@ -4,9 +4,8 @@ import { Container, Title } from "bloomer";
 import Layout from "../components/layout";
 import GuideContent from "../components/GuideContent";
 
-const WhatisSalah = ({ data }) => {
+const GuideTemplate = ({ data }) => {
   const { id, sections, title } = data.allDataJson.edges[0].node;
-  console.log("id, sec, title", id, sections, title);
   return (
     <Layout>
       <Container className="">
@@ -20,19 +19,21 @@ const WhatisSalah = ({ data }) => {
 };
 
 export const query = graphql`
-  {
-    allDataJson(filter: { title: { eq: "What Is Salaat" } }) {
+  query($heading: String!) {
+    allDataJson(filter: { title: { eq: $heading } }) {
       edges {
         node {
-          id
           title
           sections {
-            heading
             id
+            heading
             content {
               id
               classes
               eleType
+              insertion {
+                location
+              }
               txt
             }
           }
@@ -42,4 +43,4 @@ export const query = graphql`
   }
 `;
 
-export default WhatisSalah;
+export default GuideTemplate;

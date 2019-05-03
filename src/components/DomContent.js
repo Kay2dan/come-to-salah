@@ -14,7 +14,7 @@ const DomContent = ({ contentObj, recitations }) => {
   const { id, classes, eleType, insertion, txt } = contentObj;
   // FIXME : recitationId is an array, we should loop to get all
   // recitations for insertion
-  const { location: recitationLocation, recitationId } = insertion;
+  const { location: recitationLocation, recitationId = [] } = insertion;
   let recitationRender;
   let markup;
   if (recitationLocation === "before" || recitationLocation === "after") {
