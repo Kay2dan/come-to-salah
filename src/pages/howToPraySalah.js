@@ -99,11 +99,15 @@ class HowToPraySalah extends Component {
     let currentStepTxt;
     for (const step of stepSequenceIds) {
       if (step === currentStepId) {
-        steps.forEach(entry => {
-          if (entry.id === currentStepId) {
-            currentStepTxt = entry;
-          }
-        });
+        // eslint-disable-next-line no-loop-func
+        steps.forEach(v =>
+          v.id === currentStepId ? (currentStepTxt = v) : false
+        );
+        // steps.forEach(entry => {
+        //   if (entry.id === currentStepId) {
+        //     currentStepTxt = entry;
+        //   }
+        // });
       }
     }
     return (

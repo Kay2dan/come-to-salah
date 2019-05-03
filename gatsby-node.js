@@ -26,7 +26,6 @@ exports.createPages = async ({ graphql, actions }) => {
   } else {
     console.log("no errors reported by node");
     const { menuSections } = results.data.allDataJson.nodes[0];
-    console.log("guideTemplate: ", GuideTemplate);
     menuSections.forEach((headingObj, i) => {
       const { label, headings } = headingObj;
       if (

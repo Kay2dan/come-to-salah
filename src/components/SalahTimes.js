@@ -1,11 +1,7 @@
 import React from "react";
 import { Columns, Column, Table } from "bloomer";
 
-const SalahTimes = (
-  {
-    /*schedule*/
-  }
-) => (
+const SalahTimes = () => (
   <Columns>
     <Column className="is-6 is-offset-3">
       <Table className="salahTimeTable">
