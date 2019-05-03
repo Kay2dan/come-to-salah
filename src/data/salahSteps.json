@@ -10,8 +10,8 @@
           "id": "",
           "classes": "",
           "insertion": {
-            "location": "after",
-            "recitationId": ["AllahuAkbar"]
+            "location": "none",
+            "recitationId": []
           },
           "txt": ["Step 1: Standing"]
         },
@@ -115,7 +115,7 @@
       "heading": "Fatiha",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -177,7 +177,7 @@
       "heading": "Recitation Of Passage From The Qur'an",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -218,7 +218,7 @@
       "heading": "Rukuu",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -258,7 +258,7 @@
       "heading": "Qaumah",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -310,7 +310,7 @@
       "heading": "Prostration",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -384,7 +384,7 @@
       "heading": "Jalsah",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -412,7 +412,7 @@
       "heading": "Second Prostration",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -440,7 +440,7 @@
       "heading": "End Of First Rakaat",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -480,7 +480,7 @@
       "heading": "At-Tashahud Start",
       "content": [
         {
-          "eleType": "h4",
+          "eleType": "h5",
           "id": "",
           "classes": "",
           "insertion": {
@@ -508,6 +508,16 @@
       "id": "atTashahudEnd",
       "heading": "At-TashahudEnd",
       "content": [
+        {
+          "eleType": "h5",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "none",
+            "recitationId": []
+          },
+          "txt": ["Step 1.13: Tashahud End"]
+        },
         {
           "eleType": "p",
           "id": "",
