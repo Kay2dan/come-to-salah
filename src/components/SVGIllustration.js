@@ -15,7 +15,7 @@ class SVGIllustration extends Component {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 7000 11000"
+        viewBox="0 0 590 1000"
         className="svgIllustration"
       >
         {paths &&
