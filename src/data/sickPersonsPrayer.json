@@ -1,0 +1,75 @@
+{
+  "id": "sickPersonsPrayerSection",
+  "title": "Sick Person’s Prayer",
+  "sections": [
+    {
+      "heading": "Performance Of The Prayer By One Who Is Sick",
+      "id": "performanceOfThePrayerByOneWhoIsSick",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "A sick person has to perform the prayer in accordance with the person's conditions. The Prophet (PBUH) was once asked by a sick companion as to how he can perform the prayer and the Prophet (PBUH) replied him as follows:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'Pray standing but if unable then by sitting and if still unable then do so whilst on your back'. (Reported by Imam Bukhari)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["Thus"]
+        },
+        {
+          "eleType": "ul",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "If, it is impossible for the sick person to stand up, he/she shall perform the prayer by sitting and making token gestures for the 'Rukuu' and 'Sujuud' positions by bringing the head slightly down as indication for 'Rukuu' and slightly further down as indication for 'Sujuud'.",
+            "If, it is impossible for the sick person to pray sitting, he/she shall perform the prayer by lying on his/her back. Allah (SWT) says:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabic",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "(Qur'an 3:190-191) 'الَّذِينَ يَذْكُرُونَ اللَّهَ قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِهِمْ...'( 3:191"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTransalation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "...THOSE ARE THEY (MEN OF UNDERSTANDING) WHO REMEMBER ALLAH WHILE STANDING, SITTING AND RECLINING..."
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "The person's legs are directed towards the Qiblah and will make mere token gestures as far as possible with the head for the bowing (Rukuu) and the prostration (Sujuud) positions.",
+            "If it is impossible for the the sick person to perform the prayer while lying as discussed in No. 2 above, then, the person shall perform the prayer by heart. The person shall come up with all the required recitations as far as possible, and will recall to mind all the necessary postures for the prayer. If, still, it is impossible for the the sick person to perform the prayer while lying as discussed in No. 2 above, then, the person shall perform the prayer by heart. The person shall come up with all the required recitations as far as possible, and will recall to mind all the necessary postures for the prayer."
+          ]
+        }
+      ]
+    }
+  ]
+}

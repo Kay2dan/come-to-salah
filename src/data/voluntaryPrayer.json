@@ -1,0 +1,141 @@
+{
+  "id": "voluntaryPrayerSection",
+  "title": "Voluntary Prayer (incl. Witr)",
+  "sections": [
+    {
+      "heading": "Voluntary Prayers",
+      "id": "voluntaryPrayers",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Besides the prescribed obligatory prayers, a person may come up with as many voluntary prayers as is possible. Through voluntary prayers a person receives additional rewards and through them he draws closer to 'Allah (SWT)' although a person will not be punished for neglecting to perform voluntary prayers.",
+            "However, the Prophet (PBUH) had set a tradition of practicing certain voluntary prayers before and/or after the obligatory prayers and every Muslim is strongly recommended to perform them. These are as follows:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "DHUHR (NOON) PRAYER : Four (4) rakaats before (with each two rakaats performed separately) and two (2) rakaats after",
+            "MAGHRIB (SUNSET) PRAYER : Two (2) rakaats after.",
+            "ISHA (EVENING) PRAYER : Two (2) rakaats after.",
+            "FAJR (DAWN) PRAYER : Two (2) rakaats before."
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "These Voluntary prayers are known in Arabic Language as (Rawatib) which may be construed to mean definite practices and the Prophet (PBUH), used to preserve their performance continuously whenever in residence. However, during his travels he used to omit their practice except the two rakaats before the Fajr prayer. Performance of these two rakaats is so important that the prophet(PBUH) said :"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTranslation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'These two Rakaats are more important to me than the whole world.' (Reported by imam Muslim)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "While there is no objection to perform these optional prayers at the mosque, it is preferred to perform them at home in view of the following saying of the Prophet(PBUH):"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTranslation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'The best of the prayers are those which are fulfilled at one's home, with the exception of the obligatory prayers (which are to be performed with the congregation at the Mosque)'. (Reported by Imam Abu Dawoud)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Fulfilling these twelve (12) voluntary prayers is a means to gain admission to paradise as can be noted from the following saying of the Prophet (PBUH):"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTranslation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'Whoever prays optionally twelve rakaats every one day and night, Allah will reward him by an established dwelling in the paradise'.(Reported by Imam Bukhari)"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Besides the above twelve definite voluntary prayers, the person may also pray four optional rakaats before Asr (Afternoon) prayer, and two before Isha 126 (Evening) prayer, because these were also reported to have been practiced by the Prophet (PBUH)."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Times When Performance Of Voluntary Prayers Is Prohibited",
+      "id": "timesWhenPerformanceOfVoluntaryPrayersIsProhibited",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "There are certain times when voluntary prayers are not allowed to be performed and these are as follows:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "In between the Fajr Prayer and the rising of the sun.",
+            "In between when the sun is close to its zenith and the Dhuhr Prayer.",
+            "In between the Asr Prayer and until sunset."
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "However, a person can perform the two rakaats prayed as salutation to mosques whenever a person enters a mosque even though, the time of entering the mosque may coincide with one of the above stated timings. This is in accordance with the following prophetic saying:"
+          ]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTranslation",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'Anyone of you entering a mosque, should not sit until after performing two rakaats.' (Reported by Imam Al-Bhukari)"
+          ]
+        }
+      ]
+    }
+  ]
+}
