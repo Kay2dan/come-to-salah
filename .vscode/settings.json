@@ -1,6 +1,6 @@
 {
   "files.exclude": {
-    "**/.cache": true,
+    "**/.cache": false,
     "**/node_modules": true
   }
 }

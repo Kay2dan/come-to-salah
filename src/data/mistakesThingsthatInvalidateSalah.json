@@ -1,0 +1,81 @@
+{
+  "id": "mistakesThingsthatInvalidateSalaatSection",
+  "title": "Mistakes & Things that Invalidate Salaat",
+  "sections": [
+    {
+      "heading": "Things Which Invalidate The Prayer",
+      "id": "thingsWhichInvalidateThePrayer",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Prayer if performed well with due regard to its conditions, pillars, duties and preferred acts truly illuminates the heart and purifies the soul. It is the means by which man communicates with Allah (SWT) and therefore, one should keep it free from anything which would render it invalid. In Arabic Language, acts which invalidate the prayer are known as 'Mubdillatu-Salaah' and we now list them here below:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Speaking or talking in the course of the prayer.",
+            "Laughing in the course of the prayer.",
+            "Eating while praying, even though what is eaten maybe as small as a piece of dates.",
+            "Drinking while praying, even though what is drank maybe as small as taking only a mouthful",
+            "If someone in the course of the prayer remembers that he/she did not actually perform the ablution (wudhu), then, such a person is required to break the prayer and get out to perform Wudhu.",
+            "If a person's ablution (wudhu) gets invalidated in the course of the prayer, then the prayer becomes invalid.",
+            "The prayer is also invalidated by carrying out the Rukuu and Sujuud postures with haste and without ease. While in prostration, bobbing (jerking) up and down like chicken pecking food from the ground is not allowed.",
+            "Turning oneself away from the direction of the Qiblah also invalidates the prayer."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Things Which Are Not Preferred In The Prayer",
+      "id": "thingsWhichAreNotPreferredInThePrayer",
+      "content": [
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Turning of the eyes up . The Prophet (PBUH) strongly admonished against this as can be noted from the following saying: 'What is the matter with the people who raise their eyes towards the sky while praying? They shall have to refrain from this or else they will lose their eyesights'. (Reported by Imam Bukhari) قال النبي صلى الله عليه وسلم: 'ما بال أقوام يرفعون أبصارهم إلى السماء في صلاتهم؟!' فاشتد قوله في ذلك حتى قال: 'لَيَنْتَهُنَّ عن ذلك أو لَتُخْطَفَنَّ أبصارُهم'  It is also disliked to look right and left and the Prophet (PBUH) in this regard says: 'It is a deception with which satan deceives the servant while in prayer'. (Reproted by Imam Bukhari) قال النبي صلى الله عليه وسلم: ( هُوَ اخْتِلاَسٌ يَخْتَلِسُهُ الشَّيْطَانُ مِنْ صَلاَةِ الْعَبْدِ ) The person while praying is required to direct his eyes at the point of prostration.",
+            "Closing the eyes in the course of the prayer.",
+            "Placing the hands above the kidneys or on the waist. Hands should be placed over the chest.",
+            "Wiping the earth more than once to remove pebbles on it.",
+            "Reading of the Holy Qur'an, while in Rukuu and in Sujuud positions.",
+            "Making unnecessary movements in the course of the prayer such as touching the chin (beard) or fidgeting the fingertips or mending up the clothes e.g. the head turban etc.",
+            "Entering to prayer, while food has been served to the person before the prayer or while badly in need of passing excrement and/or urine. The Prophet (PBUH) in this regard says: 'Prayer is not valid when food has been served and when a person is in need of relieving himself of excrement and/or urine.' (Reported by Imam Muslim) قال ﷺ: ‘لا صلاة بحضرة الطعام ولا هو يدافعه الأخبثان’",
+            "It is prohibited for someone in a congregational prayer to raise the head from Rukuu and Sujuud positions ahead of the Imam. The Prophet (PBUH) strongly warned persons doing this as can be noted from the following saying: 'Doesn't the person who raises up his head before the Imam fear that Allah will turn his head to that of a donkey or make his face look like a donkey'. (Reported by Imam Bukhari) قال ﷺ: ‘أما يخشى الذي يرفع رأسه قبل الإمام أن يحول الله رأسه رأس حمار’"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Other Important Notes Regarding Prayer",
+      "id": "otherImportantNotesRegardingPrayer",
+      "content": [
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "If a person is smelling of garlic, onion, leek, cigarettes, tobacco or anything  similar which has an unpleasant odour and which may cause inconvenience to others, then, such person must not join the congregational prayer and should keep away until the odour dissipates from him/her. The Prophet (PBUH) in this regard says: 'A person who has eaten garlic or onion or any other bad smelling thing should not approach our Mosques because the angels are offended by the things which human beings get offended from'. (Reported by Imam Muslim). قال ﷺ:: ( مَنْ أَكَلَ مِنْ هَذِهِ الشَّجَرَةِ [الثُّومِ وَالْبَصَلِ وَالْكُرَّاثِ] ، فَلَا يَقْرَبْنَا فِي مَسَاجِدِنَا ، فَإِنَّ الْمَلَائِكَةَ تَتَأَذَّى مِمَّا يَتَأَذَّى مِنْهُ الْإِنْسُ )",
+            "The whole earth is for the Muslims a place of prayer and virtually clean. Therefore, anyone can pray wherever he may be when the time of prayer comes if there are no Mosques nearby. However, it is forbidden to perform prayers at cemeteries, except the funeral prayer administered over a dead Muslim. It is also forbidden to pray inside toilets and/or bathrooms and at filthy places. All prayers performed in such areas are considered null and void.",
+            "When entering a mosque it is the tradition that the person steps in with the right foot reciting the following supplication: 'BISMILLAH WASSALATU WASSA-LAMU 'ALAA RASULULLAAH, - ALAHUMMA IQFIR LII DHUNUBI, WAFTAH LII ABWABA RAHMATIK' . which means – 'In the name of Allah.. and blessings and peace be upon the messenger of Allah. O Lord, forgive me my sins and open for me the gates of your mercy'. And, when departing from the mosque, the person steps out with the left foot first saying: 'BISMILLAH WASSALATU - WASSALAMU 'ALA RASULULLAAAH, ALLAHUMMA IQGHFIR LII DHUNUBIl WAFTAH LII ABWABA FADHLIKA'. which means 'In the name of Allah...may blessings and peace upon the messenger of Allah. O Lord, forgive me my sins and open for me the gates of your favors'.",
+            "It is not proper to come to the prayer hastening but the person is required to come calmly and in a state of serenity and tranquility. If a person joins the prayer while the Imam/congregation are in Rukuu position, then, that particular Rakaat (unit) is counted for him as if he started the Rakaat (unit) with the rest of the congregation from the start. However, if a person joins the prayer after the Imam/congregation has already risen from the Rukuu position, then, that particular Rakaat is not counted for him, but he should continue praying with the rest until the Imam completes the prayer after which the person is required to come up with the missed rakaat(s) inorder to complete his prayer. Here below is an example: Assuming that a person joins the Dhuhr prayer in the first rakaat but after the congregation has already risen from the Rukuu position, the person would complete the remaining part of the Rakaat with the rest, although such Rakaat is not counted for him. The Imam and the congregation proceed to the second Rakaat, but the late corner should count the second Rakaat as his first Rakaat. Thereafter, the congregation sits for the first 'At-Tashahuh' and would then, stand up to perform the third rakaat and subsequently, the fourth rakaat up to the second and final 'At-Tashahud'. After the Imam reads the words of peace to conclude the prayer the late-comer under discussion, would thereby stand up to perform one more rakaat in lieu of the rakaat missed at the beginning.",
+            "It is allowed for a person to pray while wearing shoes, but before doing so, the person is required to check on the soles of the shoes, and should there appear any trace of wetness and/or defilement, this should be cleaned well on the ground.",
+            "A person is not allowed to pass infront of another person who is praying no matter how long and how much inconvenience the waiting may cause. The Prophet (PBUH) says: 'If a person who passes in front of a praying person could realize the gravity of the sin, it would have been better for him to wait for forty rather than pass in front of the praying person. The narrator was not sure whether the Prophet (PBUH) said forty days or forty months or forty years'. (Reported by Imam Bukhari) قال ﷺ: ‘لو يعلم المار بين يدي المصلي ماذا عليه لكان أن يقف أربعين خيرًا له من أن يمر بين يدي المصلي’",
+            "If a person who wishes to perform a prayer fears others may pass in front of him in the course of his prayer, it is advisable for such a person to place any kind of object in front of him before commencing the prayer. Such an object is known as SUTRA in Arabic and it acts as a boundary for the person so that people may pass only beyond the object. If thereafter, any person attempts to pass between him and the object, the person in prayer may push away the passerby. But if the passerby insists on passing, the praying person has perfect right to fight the intruder for he is an evil one.",
+            "A stranger woman passing too close in front of a praying male person who has no 'Sutra', has the effect of invalidating the prayer, except when the prayer is being done in the grand mosque of Makah."
+          ]
+        }
+      ]
+    }
+  ]
+}

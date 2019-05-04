@@ -1,0 +1,110 @@
+{
+  "id": "miscNotesOnSalaatSection",
+  "title": "Misc. Notes on Salaat",
+  "sections": [
+    {
+      "heading": "The Forgetfulness Prostrations (Sujuud Sahw)",
+      "id": "theForgetfulnessProstrations",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": [
+            "As human beings, we are by nature subject to mistakes and errors, and as mentioned earlier, if a person fails to perform any of the pillars of the prayer and/or necessary duties, the person is required to mend the error by coming up with two prostrations at the end of the prayer known as 'Sujuud Sahw' i.e. forgetfulness prostrations, although, where a pillar(s) is omitted a repetition of the missed pillar(s) is necessary.",
+            "There are some disagreements between religious jurists regarding this subject as to whether it should be performed before or after the words of peace (Tasleem). What seems to be a fair solution, however, is that if a person made an addition to the prayer, then, the two prostrations of forgetfulness should be performed after reciting the Tasleem. While, if a deduction is made from the prayer, then, the two prostrations of forgetfulness should be performed before reciting the Tasleem. However, where both an addition and a deduction may have been made in the course of the prayer, then, in this case, the forgetfulness prostrations can be performed before the recitation of the words of peace (Tasleem)."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Various Instances Where 'Sujuud Sahw' Becomes Apparent",
+      "id": "variousInstancesWhereSujuudSahwBecomesApparent",
+      "content": [
+        {
+          "eleType": "h3",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": ["Where a Pillar of the Prayer is Omitted"]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": [
+            "Where, for example, a person forgets to recite the 'Al-Fatihah' but remembers the same before Rukuu or in the process of bowing, then, the person is required to 87 resume a proper standing position and read the 'Al-Fatihah' and some other verses from the Holy Qur'an as usual. If this omission occurred in the first rakaat and the person remembers the omission while in the course of the second Rakaat, then, the person should count the second Rakaat as being the first Rakaat and treat the first one in which he/she missed to recite the 'Al-Fatihah' as null and void. The person should then proceed to perform one more Rakaat to complete his/her Salaat and at the end, recite the 'Tasleem' (words of peace) after which, the person comes up with the two prostrations of forgetfulness and again, recites the Tasleem.",
+            "If, however, while sitting for the final 'At-Tashahud', (the words of witness), a person remembers that he missed a prostration, then the person should immediately come up with the missed prostration and sit back again to repeat a 88 recitation of the At-Tashahud. The person would then say the Tasleem to conclude the prayer, but would thereafter come up with the two prostrations of forgetfulness before once again reciting the Tasleem."
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": [
+            "The above are some examples where errors are committed in performing FARA/DH (i.e. Pillars) of the Salaat, wherein, the person is not only required to repeat the missed act, but also, to come up with the two prostrations of forgetfulness."
+          ]
+        },
+        {
+          "eleType": "h3",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": ["Where a Necessary Duty is Omitted"]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": [
+            "However, where someone misses a' WAJIB' (Necessary Duty) of the prayer, the mere coming up with the two prostrations of forgetfulness will suffice without the need for repeating the missed act. Thus, if a Wajib act is missed and the person remembers it after starting another action of the prayer, then, he is not required to repeat the forgotten act but would proceed to complete the rest of the salaat and at the end, just before the Tasleem, the person comes up with the two prostrations of forgetfulness."
+          ]
+        },
+        {
+          "eleType": "h3",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": ["Where a Preferred Act is Omitted"]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": [
+            "As for SUNNANS (Preferred Acts) of the prayer which may be missed, neither is it a requirement to reperform them nor is the forgetfulness prostrations needed."
+          ]
+        }
+      ]
+    }
+  ]
+}

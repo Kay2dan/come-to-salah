@@ -1,0 +1,49 @@
+{
+  "id": "preferredActsOfSalaatSection",
+  "title": "Preferred Acts of Salaat",
+  "sections": [
+    {
+      "heading": "Preferred Acts Of The Salaat (Sunanu-Salaat)",
+      "id": "preferredActsOfSalaat",
+      "content": [
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "In addition to the Pillars and Necessary duties already discussed, there are also certain preferred acts to be fulfilled in the course of the prayer. These are as follows:"
+          ]
+        },
+        {
+          "eleType": "ol",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "Reciting of an opening supplication (Du'a-al-Istiftaah) after the 'Takbiiratil-Ihraam'.",
+            "Placing the hands over the chest while the person is in a standing position with the right hand placed over the left hand.",
+            "Raising of both hands upto the level of the shoulders or near to the lobes of the ears when saying 'Takbiiratil-Ihraam'; when heading for the Rukuu; when resuming standing position from the Rukuu and when resuming standing position from the prostration.",
+            "Seeking the protection of Allah from the cursed satan (only at the start of the first rakaat) by saying: 'Auzu billahi minas- shaytani-r-rajiim,' which means 'I seek Allah's refuge from the cursed satan.'",
+            "Starting the prayer with the silent invocation of 'Allah (SWT)' by saying: 'BISMILLAHI-R-RAHMANI-R--RAHEEM,' which means 'In the name of Allah, the Compassionate, the Merciful.'",
+            "Saying 'Ameen' upon concluding the recitation of 'Al-Fatihah'.",
+            "Reciting some chapters or passages (at least three (3) verses) of the Holy Qur'an after Al-Fatihah in the first two rakaats (units) of each prayer.",
+            "A preference that the recitation of Al-Fatihah and of any other additional readings from the Holy Qur'an are recited in a loud voice in the first two rakaats of Fajr, Maghrib and Isha prayers.",
+            "A preference that when sitting for the first At-Tashahud and in between the two prostrations, the person rests on his left foot flattened on the ground while keepingthe right foot erect with the bottom of the toes firmed on the ground.",
+            "A preference to practice At-Tawaruk when sitting for the final At-Tashahud in the Dhuhr, Asr,Maghrib and Isha prayers. 'At-Tawaruk' is a mode of sitting, wherein the person protrudes out his left foot from underneath his right leg, in such a way that the person does not relax on his left foot.",
+            "Reciting the following supplica-tion,when sitting for At-Tashahud, in between the supplication for the Prophet (PBUH) and the final words of peace: 'Allahumma inii audhu bika min adhabi jahanama, wamin adhabiil qabr. Wamin fitnatil mahyaa wal-ma-mati, wamin fitnatil masihid-dajaal'. which means – 'O Lord I seek your protection from the torment of Jahanam (the hell fire), and from the torment of the grave, and from the trials of living and dying and from the trials of the Masiih Addajaal.'"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "The above points are the preferred acts of the prayer and all Muslims are encouraged to preserve these practices because their observance entitles the person great rewards from 'Allah (SWT)'. However, missing any of them does neither invalidate the salaat nor require the two prostrations of forgetfulness."
+          ]
+        }
+      ]
+    }
+  ]
+}
