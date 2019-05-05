@@ -17,8 +17,11 @@ const AboutUs = ({ data }) => {
           <div className="intro">
             <p>Assalam U Aliekum,</p>
             <p>
-              This app has been created to help learn & understand the prayers
-              we pray as muslims.
+              Like most things in life, this understand is a result of efforts
+              of many individuals from different walks of life & geographies.
+              And as with most things in life, this is a work in progress, we
+              will continue our efforts to improve & create an application that
+              is genuinely helpful to you & ourselves. With duas.
             </p>
           </div>
           <div className="profiles">

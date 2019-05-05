@@ -8,15 +8,17 @@ nav.navbar
   
   .borderCurve
     position: absolute
-    bottom: -20px
+    bottom: -23px
     // background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAATCAMAAABFogS7AAAAaVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8G612AAAAInRSTlMA7vcP9Onj0Z+YUTf78duypXNsZGA+Mi0mGRUMAsKFSC4FyzIjBgAAAJdJREFUSMfN0lcOwjAURNHBTm+kkU6b/S8SJH5QsMMHKM9nBSPNxZPuq5A/8A7/FMTJMONlaTw6wa803nU+HRBNWEkVpWU1Pl0orYWBzikrhlFJUWqEUUtREcxOFFXDbKCoK8xmiuph4VNQpmERUdAZcLH5BlZHiinusJoCClEpNtyEdnkJNo0iP4YdvknjMOeOVFEmC1Ye84k1el1JJAwAAAAASUVORK5CYII=')
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-166 -589 532 71'%3E%3Cpath d='M366-589c-6 1-11 5-16 9-6 7-10 16-10 26 0 20-15 36-34 36h-411c-9 0-18-4-24-10-7-7-10-16-10-26 0-17-12-31-27-35h532z' fill='rgba(255,255,255,0.7)'/%3E%3C/svg%3E%0A")
     background-size: contain
     background-position: center top
     background-repeat: no-repeat
-    width: 158px
-    height: 20px
+    width: 174px
+    height: 24px
     opacity: 1
+    @media screen and(max-width: 1087px)
+      bottom: 13px
 
   svg#svgLogo
     display: block
@@ -28,7 +30,10 @@ nav.navbar
     margin: 0
     position: relative
     top: 12px
+    left: 10px
     border-radius: 0 0 20px 20px
+    @media screen and(max-width: 1087px)
+      top: -6px
 
   .menu
     font-size: 0.8rem
