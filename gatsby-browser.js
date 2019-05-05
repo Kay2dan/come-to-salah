@@ -10,7 +10,7 @@ class PageStatefulWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuVisibility: true,
+      menuVisibility: false,
       activeNavbarItem: "",
     };
   }

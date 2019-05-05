@@ -166,9 +166,9 @@ const Header = ({
             </svg>
           </Link>
         </NavbarItem>
-        <NavbarBurger className="" />
+        <NavbarBurger isActive={menuVisibility} onClick={menuToggleHandler} />
       </NavbarBrand>
-      <NavbarMenu>
+      <NavbarMenu isActive={menuVisibility} onClick={menuToggleHandler}>
         <NavbarEnd>
           <HeaderMenu activeNavbarItem={activeNavbarItem} />
         </NavbarEnd>
