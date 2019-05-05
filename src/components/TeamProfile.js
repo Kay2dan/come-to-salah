@@ -9,7 +9,7 @@ const TeamProfile = ({ data }) => {
     <div className="profile">
       <Columns>
         <Column isSize="1/2">
-          <Title isSize="5">{name}</Title>
+          <Title isSize="4">{name}</Title>
           <Subtitle isSize="6">{role}</Subtitle>
           <a href={link.to} blank="">
             <div className={imgClass} />

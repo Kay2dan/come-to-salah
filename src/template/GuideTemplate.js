@@ -1,20 +1,18 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Container, Title } from "bloomer";
-import Layout from "../components/layout";
+import { Title } from "bloomer";
 import GuideContent from "../components/GuideContent";
+import "../styles/guideTemplate.sass";
 
 const GuideTemplate = ({ data }) => {
   const { id, sections, title } = data.allDataJson.edges[0].node;
   return (
-    <Layout>
-      <Container className="">
-        <Title isSize={2} id={id}>
-          {title}
-        </Title>
-        <GuideContent data={sections} />
-      </Container>
-    </Layout>
+    <div className="salahGuideContainer">
+      <Title isSize={2} id={id}>
+        {title}
+      </Title>
+      <GuideContent data={sections} />
+    </div>
   );
 };
 

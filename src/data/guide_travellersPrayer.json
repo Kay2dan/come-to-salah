@@ -18,19 +18,19 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTxt",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
-            "'When ye travel through the earth there is no blame on you if ye shorten your prayers...' (Qur'an 4:101)"
+            "'وَإِذَا ضَرَبْتُمْ فِي الْأَرْضِ فَلَيْسَ عَلَيْكُمْ جُنَاحٌ أَن تَقْصُرُوا مِنَ الصَّلَاةِ' (4:101)"
           ]
         },
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTxt",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
-            "'وَإِذَا ضَرَبْتُمْ فِي الْأَرْضِ فَلَيْسَ عَلَيْكُمْ جُنَاحٌ أَن تَقْصُرُوا مِنَ الصَّلَاةِ' (4:101)"
+            "'When ye travel through the earth there is no blame on you if ye shorten your prayers...' (Qur'an 4:101)"
           ]
         },
         {

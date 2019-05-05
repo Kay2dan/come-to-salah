@@ -18,7 +18,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'Prayer is enjoined on believers at stated times' (Qur an 4:103)"
@@ -36,7 +36,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'Offering prayer at its prescribed time' (Reported by Imam Bukhari)"

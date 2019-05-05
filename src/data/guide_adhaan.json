@@ -42,7 +42,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'Who is better in speech than one who calls (the people) to allah and works righteousness.' (Qur'an 41:33)"
@@ -61,7 +61,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'If the people knew the reward in the Adhaan and the first row of the prayer and that they could not get it (the reward) save by drawing lots, they would draw lots ' (Narrated by Imam Bukhari)"
@@ -77,7 +77,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'The 'Muadhins' will on the Day of Judgement have the longest necks (reflecting their exclusive eminence).' (Reported by Imam Muslim)"
@@ -140,7 +140,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": ["'Salaat is better than sleep.'"]
         }
@@ -170,7 +170,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": ["'There is no power and strength except by Allah.'"]
         }
@@ -186,8 +186,7 @@
           "classes": "",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
-            "Upon the completion of the Adhaan, it is recommended that the listener recites the following supplication:",
-            "'Allahumma rabba hadhihid da'wati - tammah, wasalatil qa'imah, a ti muhammadanal wasilata wal fadhilata, - waab'athuhu maqamum mah-mudan-alladhii wa'ad tahu'. which means –"
+            "Upon the completion of the Adhaan, it is recommended that the listener recites the following supplication:"
           ]
         },
         {
@@ -202,7 +201,23 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTransliteration",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": [
+            "'Allahumma rabba hadhihid da'wati - tammah, wasalatil qa'imah, a ti muhammadanal wasilata wal fadhilata, - waab'athuhu maqamum mah-mudan-alladhii wa'ad tahu'."
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": { "location": "", "recitationId": [] },
+          "txt": ["which means –"]
+        },
+        {
+          "eleType": "quote",
+          "id": "",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'O Allah, Lord of this complete call and of the prayer to be held, grant Muhammad the most favored and excellent position in the Paradise and raise him to the praise worthy place that You have promised him.'"
@@ -220,7 +235,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'....it becomes obligatory upon me to intercede for him (person reciting the supplication) on the Day of Judgment.' (Reported by Imam Bukhari)"

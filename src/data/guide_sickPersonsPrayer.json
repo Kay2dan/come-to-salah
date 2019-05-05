@@ -18,7 +18,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'Pray standing but if unable then by sitting and if still unable then do so whilst on your back'. (Reported by Imam Bukhari)"
@@ -29,7 +29,7 @@
           "id": "",
           "classes": "",
           "insertion": { "location": "", "recitationId": [] },
-          "txt": ["Thus"]
+          "txt": ["Thus:"]
         },
         {
           "eleType": "ul",
@@ -44,7 +44,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabic",
+          "classes": "arabicTxt",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "(Qur'an 3:190-191) 'الَّذِينَ يَذْكُرُونَ اللَّهَ قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِهِمْ...'( 3:191"
@@ -53,7 +53,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "...THOSE ARE THEY (MEN OF UNDERSTANDING) WHO REMEMBER ALLAH WHILE STANDING, SITTING AND RECLINING..."

@@ -18,19 +18,19 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTxt",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
-            "'...And bow down your heads with those who bow down (in worship)'. (Qur'an 2:43)"
+            "'وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَارْكَعُوا مَعَ الرَّاكِعِينَ'(2:43)"
           ]
         },
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTxt",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
-            "'وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَارْكَعُوا مَعَ الرَّاكِعِينَ'(2:43)"
+            "'...And bow down your heads with those who bow down (in worship)'. (Qur'an 2:43)"
           ]
         },
         {
@@ -103,18 +103,18 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTxt",
           "insertion": { "location": "", "recitationId": [] },
-          "txt": [
-            "'....Verlly, the most honored of you in the sight of Allah is (he who is) the most righteous of you....' (Holy Qur'an 49:13)"
-          ]
+          "txt": ["' إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ' (49:13)"]
         },
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTxt",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
-          "txt": ["' إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ' (49:13)"]
+          "txt": [
+            "'....Verlly, the most honored of you in the sight of Allah is (he who is) the most righteous of you....' (Holy Qur'an 49:13)"
+          ]
         },
         {
           "eleType": "p",

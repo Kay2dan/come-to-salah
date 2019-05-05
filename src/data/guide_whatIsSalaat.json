@@ -29,10 +29,10 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
-            "Establish regular prayers at the sun's decline till the darkness of the night, and the morning prayer...'. (Qur'an 17:78)"
+            "'Establish regular prayers at the sun's decline till the darkness of the night, and the morning prayer...'. (Qur'an 17:78)"
           ]
         },
         {
@@ -54,10 +54,10 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
-            "`And establish regular prayers at the two ends of the day and at the approaches of the night.' (Qur'an 11:114)"
+            "'And establish regular prayers at the two ends of the day and at the approaches of the night.' (Qur'an 11:114)"
           ]
         },
         {
@@ -72,7 +72,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'What lies between a perfect man and disbelief is the leaving of prayer'. (Related by Imams Ahmed and Muslim)"
@@ -88,7 +88,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'The obligation which separates us from them (the non-believers) is the prayer and he who renounces it becomes a disbeliever.' (Related by Imams Ahmed and Muslim)"
@@ -131,7 +131,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'Prosperous indeed are the believers who are humble in their prayers'."
@@ -168,7 +168,7 @@
         {
           "eleType": "quote",
           "id": "",
-          "classes": "arabicTransalation",
+          "classes": "arabicTranslation",
           "insertion": { "location": "", "recitationId": [] },
           "txt": [
             "'...Verily, prayer refrains from indecency and evil...'(Qur'an 29:45)"
