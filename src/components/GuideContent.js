@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Title } from "bloomer";
+import { Section, Title } from "bloomer";
 import DomContent from "./DomContent";
 
 /**
@@ -11,7 +11,7 @@ import DomContent from "./DomContent";
  *          @param {data} container obj for all content for page
  */
 const GuideContent = ({ data }) => (
-  <section>
+  <Section>
     {data.map((eachSection, k) => {
       const { id, heading, content } = eachSection;
       return (
@@ -25,7 +25,7 @@ const GuideContent = ({ data }) => (
         </div>
       );
     })}
-  </section>
+  </Section>
 );
 
 GuideContent.propTypes = {
