@@ -38,7 +38,6 @@ class Path extends Component {
     const { d: prevD } = prevProps;
     const { d, pathId } = this.props;
     if (prevD !== d) {
-      console.log("pathid: ", prevProps.pathId, ":::", pathId);
       Kute.fromTo(
         this[pathId].current,
         {
@@ -48,10 +47,10 @@ class Path extends Component {
           path: d,
         },
         {
-          duration: 1000,
+          duration: 333,
           morphPrecision: 250,
           morphIndex: 70,
-          start: () => console.log(prevD, "___ --- ___", d),
+          // start: () => console.log(prevD, "___ --- ___", d),
         }
       ).start();
     }

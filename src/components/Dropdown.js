@@ -9,27 +9,39 @@ import {
   DropdownItem,
 } from "bloomer";
 
-const DropDownContainer = ({ data, btnTxt, onClickHandler }) => {
+const DropDownContainer = ({
+  data,
+  btnTxt,
+  stateProps,
+  onClickHandlerForDropDown,
+  onClickHandlerForDropDownItem,
+}) => {
+  const { toggleMenu, selected } = stateProps;
   return (
-    <Dropdown className="pushUp">
+    <Dropdown className="pushUp" isActive={toggleMenu}>
       <DropdownTrigger>
         <Button
           className="has-text-centered lowerCaseFont"
+          onClick={onClickHandlerForDropDown}
           isOutlined
           aria-haspopup="true"
           aria-controls="dropdown-menu"
         >
-          <span>{btnTxt}</span>
+          <span>{selected || `Select ${btnTxt}:`}</span>
           <Icon icon="angle-down" isSize="small" />
         </Button>
       </DropdownTrigger>
       <DropdownMenu>
         <DropdownContent>
-          <DropdownItem href="#" />
-          <DropdownItem href="#" isActive>
-            Second item
-          </DropdownItem>
-          <DropdownItem href="#">Third item</DropdownItem>
+          {data.map((entry, i) => (
+            <DropdownItem
+              isActive={entry === selected}
+              onClick={onClickHandlerForDropDownItem}
+              key={i}
+            >
+              {entry}
+            </DropdownItem>
+          ))}
         </DropdownContent>
       </DropdownMenu>
     </Dropdown>
