@@ -47,9 +47,9 @@ class Path extends Component {
           path: d,
         },
         {
-          duration: 333,
-          morphPrecision: 250,
-          morphIndex: 70,
+          duration: 250,
+          morphPrecision: 50,
+          morphIndex: 10,
           // start: () => console.log(prevD, "___ --- ___", d),
         }
       ).start();

@@ -9,6 +9,7 @@ const methodData = [
   "University of Islamic Sciences, Karachi",
   "Islamic Society of North America",
   "Muslim World League",
+  "Shia Ithna-Ansari",
   "Umm Al-Qura University, Makkah",
   "Egyptian General Authority of Survey",
   "Institute of Geophysics, University of Tehran",
@@ -19,7 +20,6 @@ const methodData = [
   "Union Organization islamic de France",
   "Diyanet İşleri Başkanlığı, Turkey",
   "Spiritual Administration of Muslims of Russia",
-  "Shia Ithna-Ansari",
 ];
 
 const schoolData = ["Hanafi", "Shafi"];
@@ -54,7 +54,8 @@ class LocalSalahTimePage extends Component {
       userLocation ||
       window.navigator.geolocation.getCurrentPosition(
         coord => {
-          const { latitude, longitude } = coord;
+          console.log("___", coord.coords);
+          const { latitude, longitude } = coord.coords;
           console.log("coords are:", latitude, longitude);
           userLocation = { latitude, longitude };
           window.localStorage.setItem("userCoordForSalah", userLocation);
@@ -94,14 +95,16 @@ class LocalSalahTimePage extends Component {
     //   month,
     //   year,
     // } = this.state;
-    const lattitude = ""; // temp
-    const longitude = ""; // temp
+    // const lattitude = "51.509865"; // temp
+    // const longitude = "-0.118092"; // temp
+    const lattitude = "";
+    const longitude = "";
     const month = 5; // temp
     const year = 2019; // temp
     const method = 0; // temp
     if (!lattitude) {
       const result = await this.getUserLocation();
-      console.log("result within Fetch: ", result);
+      console.log("userLocation: ", result);
       const url = `http://api.aladhan.com/v1/calendar?latitude=${lattitude}&longitude=${longitude}&method=${method}&month=${month}&year=${year}`;
       const resp = await fetch(url);
       const data = await resp.json();
@@ -149,7 +152,8 @@ class LocalSalahTimePage extends Component {
               </div>
               <div
                 className="level userLocation"
-                onClick={this.getUserLocation}
+                // onClick={this.getUserLocation}
+                onClick={this.fetchSalahTimes}
               >
                 {/* <Icon isSize="" className="level-item" /> */}
                 <div className="level-item">{`Your location: ${userLocation}`}</div>
