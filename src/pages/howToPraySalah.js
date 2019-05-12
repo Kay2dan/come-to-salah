@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import { Title } from "bloomer";
 import PraySalahContent from "../components/PraySalahContent";
-// import SalahPagination from "../components/SalahPagination";
 import PaginationParent from "../components/PaginationParent";
 import "../styles/howToPraySalah.sass";
 
@@ -12,7 +11,6 @@ class HowToPraySalah extends Component {
     this.state = {
       currentStepId: "standingForNiyyah",
       currentStep: 0,
-      // ttlSteps: 0, // counts starts at 0 so real count = ttlSteps + 1
       stepsInSalah: [],
     };
   }
@@ -67,20 +65,16 @@ class HowToPraySalah extends Component {
     const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     const stepSequence = this.getStepSequenceFromGqlData(data, navigateTo);
     this.setState({
-      // ttlSteps: stepSequence.length - 1,
       stepsInSalah: stepSequence,
     });
   }
 
   paginationCtrlOnClickHandler = ev => {
     let evTarget = ev.target;
-    // const { data, location } = this.props;
-    // const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     if (!evTarget.hasAttribute("disabled")) {
       const btnType = evTarget.classList.contains("pagination-next");
       const { currentStep, stepsInSalah } = this.state;
       const newStepVal = btnType ? currentStep + 1 : currentStep - 1;
-      // const stepSequence = this.getStepSequenceFromGqlData(data, navigateTo);
       this.setState({
         currentStep: newStepVal,
         currentStepId: stepsInSalah[newStepVal],
@@ -103,11 +97,7 @@ class HowToPraySalah extends Component {
   render() {
     const { data, location } = this.props;
     const navigateTo = location.state ? location.state.navigateTo : "Fajr";
-    const {
-      currentStep,
-      currentStepId,
-      /* ttlSteps, */ stepsInSalah,
-    } = this.state;
+    const { currentStep, currentStepId, stepsInSalah } = this.state;
     const {
       recitations,
       prayer,
@@ -141,7 +131,6 @@ class HowToPraySalah extends Component {
           />
           <PaginationParent
             currentStep={currentStep}
-            // ttlSteps={ttlSteps}
             linkCollection={stepsInSalah}
             paginationLinkOnClickHandler={this.paginationLinkOnClickHandler}
             paginationCtrlOnClickHandler={this.paginationCtrlOnClickHandler}

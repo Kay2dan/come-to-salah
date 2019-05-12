@@ -5,7 +5,8 @@ import GuideContent from "../components/GuideContent";
 import "../styles/guideTemplate.sass";
 
 const GuideTemplate = ({ data }) => {
-  const { id, sections, title } = data.allDataJson.edges[0].node;
+  console.log("data: ", data.allDataJson.edges[0].node);
+  const { id, pagination, sections, title } = data.allDataJson.edges[0].node;
   return (
     <div className="salahGuideContainer">
       <Title isSize={2} id={id}>
@@ -21,7 +22,12 @@ export const query = graphql`
     allDataJson(filter: { title: { eq: $heading } }) {
       edges {
         node {
+          id
           title
+          pagination {
+            previous
+            next
+          }
           sections {
             id
             heading

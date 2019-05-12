@@ -18,7 +18,7 @@ const paginationParentWithLink = ({
         key={i}
       />
     ))}
-    <PageList>
+    {/* <PageList>
       {linkCollection.map((step, i) => (
         <Page key={i}>
           <PageLink isCurrent={i === currentStep}>
@@ -26,7 +26,7 @@ const paginationParentWithLink = ({
           </PageLink>
         </Page>
       ))}
-    </PageList>
+    </PageList> */}
   </Pagination>
 );
 

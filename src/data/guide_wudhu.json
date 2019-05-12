@@ -1,6 +1,10 @@
 {
   "id": "wudhuSection",
   "title": "Wudhu (Ablution)",
+  "pagination": {
+    "previous": "What Is Salaat",
+    "next": "Adhaan (Call to Prayer)"
+  },
   "sections": [
     {
       "heading": "Introduction to Wudhu (Ablution)",

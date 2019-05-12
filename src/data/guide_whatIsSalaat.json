@@ -1,6 +1,10 @@
 {
   "id": "whatIsSalaatSection",
   "title": "What Is Salaat",
+  "pagination": {
+    "previous": "",
+    "next": "Wudhu (Ablution)"
+  },
   "sections": [
     {
       "heading": "Introduction to Salaat",
