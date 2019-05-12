@@ -46,10 +46,11 @@ class HowToPraySalah extends Component {
     return rtnData;
   };
 
-  // finds the obj which contains the salah steps sequence
-  // based on the title of the node; Used to find the current
-  // active step data to display & to update the component
-  // state
+  // getStepSequenceFromGqlData => finds the obj which contains the
+  // salah steps sequence based on the title of the node;
+  // Used to find the current active step data to display &
+  // to update the component state
+  // returns: an array of all the steps for the prayer
   getStepSequenceFromGqlData = (data, navigateTo) => {
     const { edges } = data.allDataJson;
     const prayers = edges.find(
