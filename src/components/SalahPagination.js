@@ -7,6 +7,7 @@ const SalahPagination = ({
   ttlSteps,
   paginationOnClickHandler,
 }) => {
+  // use of for-loop because ttlSteps is an 'int', not array
   let pages = [];
   for (let i = 0; i <= ttlSteps; i++) {
     pages.push(

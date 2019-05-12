@@ -54,13 +54,9 @@ class LocalSalahTimePage extends Component {
       userLocation ||
       window.navigator.geolocation.getCurrentPosition(
         coord => {
-          console.log("___", coord.coords);
-          const { latitude, longitude } = coord.coords;
-          console.log("coords are:", latitude, longitude);
-          userLocation = { latitude, longitude };
-          window.localStorage.setItem("userCoordForSalah", userLocation);
+          window.localStorage.setItem("userCoordForSalah", coord.coords);
           this.setState({
-            userLocation,
+            userLocation: coord.coords,
           });
         },
         err => {
@@ -89,22 +85,16 @@ class LocalSalahTimePage extends Component {
   //      See the above link for documentation for the
   //      api we are using to get the salah times
   fetchSalahTimes = async () => {
-    // const {
-    //   userlocation: { lattitude, longitude },
-    //   method,
-    //   month,
-    //   year,
-    // } = this.state;
-    // const lattitude = "51.509865"; // temp
-    // const longitude = "-0.118092"; // temp
-    const lattitude = "";
-    const longitude = "";
-    const month = 5; // temp
-    const year = 2019; // temp
-    const method = 0; // temp
+    const {
+      userlocation: { lattitude, longitude },
+      method,
+      month,
+      year,
+    } = this.state;
     if (!lattitude) {
       const result = await this.getUserLocation();
       console.log("userLocation: ", result);
+      //TODO: add the school in the below request
       const url = `http://api.aladhan.com/v1/calendar?latitude=${lattitude}&longitude=${longitude}&method=${method}&month=${month}&year=${year}`;
       const resp = await fetch(url);
       const data = await resp.json();
