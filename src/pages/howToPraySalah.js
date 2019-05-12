@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import { Title } from "bloomer";
 import PraySalahContent from "../components/PraySalahContent";
-import SalahPagination from "../components/SalahPagination";
+// import SalahPagination from "../components/SalahPagination";
+import PaginationParent from "../components/PaginationParent";
 import "../styles/howToPraySalah.sass";
 
 class HowToPraySalah extends Component {
@@ -11,7 +12,8 @@ class HowToPraySalah extends Component {
     this.state = {
       currentStepId: "standingForNiyyah",
       currentStep: 0,
-      ttlSteps: 0, // counts starts at 0 so real count = ttlSteps + 1
+      // ttlSteps: 0, // counts starts at 0 so real count = ttlSteps + 1
+      stepsInSalah: [],
     };
   }
 
@@ -47,9 +49,9 @@ class HowToPraySalah extends Component {
   };
 
   // getStepSequenceFromGqlData => finds the obj which contains the
-  // salah steps sequence based on the title of the node;
+  // salah steps sequence array based on the title of the node;
   // Used to find the current active step data to display &
-  // to update the component state
+  // to update the component state.
   // returns: an array of all the steps for the prayer
   getStepSequenceFromGqlData = (data, navigateTo) => {
     const { edges } = data.allDataJson;
@@ -65,30 +67,47 @@ class HowToPraySalah extends Component {
     const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     const stepSequence = this.getStepSequenceFromGqlData(data, navigateTo);
     this.setState({
-      ttlSteps: stepSequence.length - 1,
+      // ttlSteps: stepSequence.length - 1,
+      stepsInSalah: stepSequence,
     });
   }
 
-  paginationOnClickHandler = ev => {
+  paginationCtrlOnClickHandler = ev => {
     let evTarget = ev.target;
-    const { data, location } = this.props;
-    const navigateTo = location.state ? location.state.navigateTo : "Fajr";
+    // const { data, location } = this.props;
+    // const navigateTo = location.state ? location.state.navigateTo : "Fajr";
     if (!evTarget.hasAttribute("disabled")) {
       const btnType = evTarget.classList.contains("pagination-next");
-      const { currentStep } = this.state;
+      const { currentStep, stepsInSalah } = this.state;
       const newStepVal = btnType ? currentStep + 1 : currentStep - 1;
-      const stepSequence = this.getStepSequenceFromGqlData(data, navigateTo);
+      // const stepSequence = this.getStepSequenceFromGqlData(data, navigateTo);
       this.setState({
         currentStep: newStepVal,
-        currentStepId: stepSequence[newStepVal],
+        currentStepId: stepsInSalah[newStepVal],
       });
     }
+  };
+
+  paginationLinkOnClickHandler = ev => {
+    const evTarget = ev.target;
+    const { stepsInSalah } = this.state;
+    const dataRef = evTarget.getAttribute("data-ref");
+    let pos = 0;
+    stepsInSalah.forEach((s, i) => (s === dataRef ? (pos = i) : false));
+    this.setState({
+      currentStepId: dataRef,
+      currentStep: pos,
+    });
   };
 
   render() {
     const { data, location } = this.props;
     const navigateTo = location.state ? location.state.navigateTo : "Fajr";
-    const { currentStep, currentStepId, ttlSteps } = this.state;
+    const {
+      currentStep,
+      currentStepId,
+      /* ttlSteps, */ stepsInSalah,
+    } = this.state;
     const {
       recitations,
       prayer,
@@ -104,11 +123,6 @@ class HowToPraySalah extends Component {
         steps.forEach(v =>
           v.id === currentStepId ? (currentStepTxt = v) : false
         );
-        // steps.forEach(entry => {
-        //   if (entry.id === currentStepId) {
-        //     currentStepTxt = entry;
-        //   }
-        // });
       }
     }
     return (
@@ -125,10 +139,12 @@ class HowToPraySalah extends Component {
             rakaats={rakaats}
             recitations={recitations}
           />
-          <SalahPagination
+          <PaginationParent
             currentStep={currentStep}
-            ttlSteps={ttlSteps}
-            paginationOnClickHandler={this.paginationOnClickHandler}
+            // ttlSteps={ttlSteps}
+            linkCollection={stepsInSalah}
+            paginationLinkOnClickHandler={this.paginationLinkOnClickHandler}
+            paginationCtrlOnClickHandler={this.paginationCtrlOnClickHandler}
           />
         </div>
       </div>
