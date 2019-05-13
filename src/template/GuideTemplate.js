@@ -1,18 +1,25 @@
 import React from "react";
-import { graphql } from "gatsby";
-import { Title } from "bloomer";
+import { graphql, Link } from "gatsby";
+import { PageControl, Pagination, Title } from "bloomer";
 import GuideContent from "../components/GuideContent";
 import "../styles/guideTemplate.sass";
 
 const GuideTemplate = ({ data }) => {
-  console.log("data: ", data.allDataJson.edges[0].node);
   const { id, pagination, sections, title } = data.allDataJson.edges[0].node;
+  let { previous, next } = pagination;
+
   return (
     <div className="salahGuideContainer">
       <Title isSize={2} id={id}>
         {title}
       </Title>
       <GuideContent data={sections} />
+      <Pagination>
+        <PageControl disabled={previous.length === 0 ? true : false} />
+        <PageControl disabled={next.length === 0 ? true : false}>
+          Next
+        </PageControl>
+      </Pagination>
     </div>
   );
 };
