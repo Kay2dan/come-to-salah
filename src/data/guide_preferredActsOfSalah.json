@@ -1,6 +1,10 @@
 {
   "id": "preferredActsOfSalaatSection",
   "title": "Preferred Acts of Salaat",
+  "pagination": {
+    "previous": "Pillars of Salaat",
+    "next": "Mistakes & Things that Invalidate Salaat"
+  },
   "sections": [
     {
       "heading": "Preferred Acts Of The Salaat (Sunanu-Salaat)",

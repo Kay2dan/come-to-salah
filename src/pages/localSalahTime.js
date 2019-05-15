@@ -30,7 +30,7 @@ class LocalSalahTimePage extends Component {
     this.state = {
       month: new Date().getMonth(),
       userLocation: {
-        lattitude: "",
+        latitude: "",
         longitude: "",
       },
       year: new Date().getYear(),
@@ -48,17 +48,26 @@ class LocalSalahTimePage extends Component {
 
   //https://stackoverflow.com/questions/6159074/given-the-lat-long-coordinates-how-can-we-find-out-the-city-country
   getUserLocation = () => {
-    const { localStorage } = window;
-    let userLocation = JSON.parse(localStorage.getItem("userCoOrdForSalah"));
-    return (
-      userLocation ||
-      window.navigator.geolocation.getCurrentPosition(
-        coord => {
-          window.localStorage.setItem("userCoordForSalah", coord.coords);
-          this.setState({
-            userLocation: coord.coords,
-          });
-        },
+    return new Promise(function(resolve, reject) {
+      window.navigator.geolocation.getCurrentPosition(resolve, reject, {
+        enableHighAccuracy: true,
+        timeout: 5000,
+      });
+    });
+  };
+
+  //      https://aladhan.com/prayer-times-api
+  //      See the above link for documentation for the
+  //      api we are using to get the salah times
+  fetchSalahTimes = async () => {
+    console.log("inside fetchy");
+    const { userLocation, method, month, year } = this.state;
+    const { latitude, longitude } = userLocation;
+    // console.log(this.state);
+    if (!latitude) {
+      console.log("inside");
+      let ress = await this.getUserLocation(
+        coord => coord.coords,
         err => {
           const { code, msg } = err;
           if (code === 1) {
@@ -72,30 +81,19 @@ class LocalSalahTimePage extends Component {
               msg
             );
           }
-        },
-        {
-          enableHighAccuracy: true,
-          timeout: 5000,
         }
-      )
-    );
-  };
-
-  //      https://aladhan.com/prayer-times-api
-  //      See the above link for documentation for the
-  //      api we are using to get the salah times
-  fetchSalahTimes = async () => {
-    const {
-      userlocation: { lattitude, longitude },
-      method,
-      month,
-      year,
-    } = this.state;
-    if (!lattitude) {
-      const result = await this.getUserLocation();
-      console.log("userLocation: ", result);
+      );
+      console.log("ress: ", ress.coords);
+      this.setState({
+        userLocation: {
+          latitude: ress.coords.latitude,
+          longitude: ress.coords.longitude,
+        },
+      });
+      console.log("___", userLocation, method, month, year);
       //TODO: add the school in the below request
-      const url = `http://api.aladhan.com/v1/calendar?latitude=${lattitude}&longitude=${longitude}&method=${method}&month=${month}&year=${year}`;
+      const url = `http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${longitude}&method=${method}&month=${month}&year=${year}`;
+      console.log("url:", url);
       const resp = await fetch(url);
       const data = await resp.json();
       console.log("resp from json data: ", data);

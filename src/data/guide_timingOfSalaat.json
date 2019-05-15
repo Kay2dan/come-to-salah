@@ -1,6 +1,10 @@
 {
   "id": "timingOfSalaat",
   "title": "Timing of Salaat",
+  "pagination": {
+    "previous": "Adhaan (Call to Prayer)",
+    "next": "Conditions & Duties of Salaat"
+  },
   "sections": [
     {
       "heading": "The Timings Of The Obligatory Prayers",

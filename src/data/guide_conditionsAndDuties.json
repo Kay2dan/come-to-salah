@@ -1,6 +1,10 @@
 {
   "id": "conditionsDutiesofSalaatSection",
   "title": "Conditions & Duties of Salaat",
+  "pagination": {
+    "previous": "Timing of Salaat",
+    "next": "Pillars of Salaat"
+  },
   "sections": [
     {
       "heading": "Conditions For The Prayer (Shuruut-L-Salaat)",

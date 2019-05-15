@@ -3,4 +3,5 @@ const removeSpecialCharactersAndCapitaliseFirstLetter = str => {
   return newStr.charAt(0).toLowerCase() + newStr.slice(1);
 };
 
-export { removeSpecialCharactersAndCapitaliseFirstLetter };
+// export { removeSpecialCharactersAndCapitaliseFirstLetter };
+module.exports = removeSpecialCharactersAndCapitaliseFirstLetter;

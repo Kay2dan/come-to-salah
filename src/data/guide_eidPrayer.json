@@ -1,6 +1,10 @@
 {
   "id": "eidPrayerSection",
   "title": "Eid Prayer",
+  "pagination": {
+    "previous": "Jummah Prayer",
+    "next": "Prayer For Rain"
+  },
   "sections": [
     {
       "heading": "The Prayers Of The Two Feasts",

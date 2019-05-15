@@ -1,6 +1,10 @@
 {
   "id": "voluntaryPrayerSection",
   "title": "Voluntary Prayer (incl. Witr)",
+  "pagination": {
+    "previous": "Sick Person’s Prayer",
+    "next": "Jummah Prayer"
+  },
   "sections": [
     {
       "heading": "Voluntary Prayers",

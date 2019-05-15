@@ -1,6 +1,10 @@
 {
   "id": "miscNotesOnSalaatSection",
   "title": "Misc. Notes on Salaat",
+  "pagination": {
+    "previous": "Mistakes & Things that Invalidate Salaat",
+    "next": "Private Supplications After Salaat"
+  },
   "sections": [
     {
       "heading": "The Forgetfulness Prostrations (Sujuud Sahw)",

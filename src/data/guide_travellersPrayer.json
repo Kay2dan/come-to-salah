@@ -1,6 +1,10 @@
 {
   "id": "travellersPrayerSection",
   "title": "Traveller’s Prayer",
+  "pagination": {
+    "previous": "Congregational Prayer",
+    "next": "Sick Person’s Prayer"
+  },
   "sections": [
     {
       "heading": "The Prayer Of A Travelling Person (Musafir)",

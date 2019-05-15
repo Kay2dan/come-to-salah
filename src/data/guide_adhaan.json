@@ -1,6 +1,10 @@
 {
   "id": "adhaanSection",
   "title": "Adhaan (Call to Prayer)",
+  "pagination": {
+    "previous": "Wudhu (Ablution)",
+    "next": "Timing of Salaat"
+  },
   "sections": [
     {
       "heading": "Adhaan - Introduction",

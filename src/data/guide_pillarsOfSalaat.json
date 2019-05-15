@@ -1,6 +1,10 @@
 {
   "id": "pillarsOfSalaatSection",
   "title": "Pillars of Salaat",
+  "pagination": {
+    "previous": "Conditions & Duties of Salaat",
+    "next": "Preferred Acts of Salaat"
+  },
   "sections": [
     {
       "heading": "Pillars Of The Salaat - (Arkanu-Salaat)",

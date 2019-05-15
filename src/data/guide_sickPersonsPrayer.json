@@ -1,6 +1,10 @@
 {
   "id": "sickPersonsPrayerSection",
   "title": "Sick Person’s Prayer",
+  "pagination": {
+    "previous": "Traveller’s Prayer",
+    "next": "Voluntary Prayer (incl. Witr)"
+  },
   "sections": [
     {
       "heading": "Performance Of The Prayer By One Who Is Sick",

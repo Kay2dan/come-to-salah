@@ -1,6 +1,10 @@
 {
   "id": "mistakesThingsthatInvalidateSalaatSection",
   "title": "Mistakes & Things that Invalidate Salaat",
+  "pagination": {
+    "previous": "Preferred Acts of Salaat",
+    "next": "Misc. Notes on Salaat"
+  },
   "sections": [
     {
       "heading": "Things Which Invalidate The Prayer",

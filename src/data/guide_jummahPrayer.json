@@ -1,6 +1,10 @@
 {
   "id": "jummahPrayerSection",
   "title": "Jummah Prayer",
+  "pagination": {
+    "previous": "Voluntary Prayer (incl. Witr)",
+    "next": "Eid Prayer"
+  },
   "sections": [
     {
       "heading": "Jumma'h (Friday) Prayer",

@@ -1,6 +1,10 @@
 {
   "id": "prayerForRainSection",
   "title": "Prayer For Rain",
+  "pagination": {
+    "previous": "Eid Prayer",
+    "next": "Funeral Prayer"
+  },
   "sections": [
     {
       "heading": "The Prayer For Rain",

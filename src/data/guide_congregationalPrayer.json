@@ -1,6 +1,10 @@
 {
   "id": "congregationalPrayerSection",
   "title": "Congregational Prayer",
+  "pagination": {
+    "previous": "Private Supplications After Salaat",
+    "next": "Traveller’s Prayer"
+  },
   "sections": [
     {
       "heading": "Congregational Prayer",

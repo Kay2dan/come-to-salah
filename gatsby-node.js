@@ -1,7 +1,5 @@
 const path = require("path");
-const {
-  removeSpecialCharactersAndCapitaliseFirstLetter,
-} = require("./src/utilities/utilities");
+// const removeSpecialCharactersAndCapitaliseFirstLetter = require("./src/utilities/utilities");
 
 // see this post:
 // https://justinformentin.com/guide-to-building-a-gatsby-site#creating-the-layout-page
