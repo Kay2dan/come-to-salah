@@ -66,7 +66,7 @@ class LocalSalahTimePage extends Component {
     // console.log(this.state);
     if (!latitude) {
       console.log("inside");
-      let ress = await this.getUserLocation(
+      const coordinates = await this.getUserLocation(
         coord => coord.coords,
         err => {
           const { code, msg } = err;
@@ -83,22 +83,27 @@ class LocalSalahTimePage extends Component {
           }
         }
       );
-      console.log("ress: ", ress.coords);
-      this.setState({
-        userLocation: {
-          latitude: ress.coords.latitude,
-          longitude: ress.coords.longitude,
+      const { latitude, longitude } = coordinates.coords;
+      console.log("coordinates: ", latitude, longitude);
+      this.setState(
+        {
+          userLocation: {
+            latitude: latitude,
+            longitude: longitude,
+          },
         },
-      });
-      console.log("___", userLocation, method, month, year);
-      //TODO: add the school in the below request
-      const url = `http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${longitude}&method=${method}&month=${month}&year=${year}`;
-      console.log("url:", url);
-      const resp = await fetch(url);
-      const data = await resp.json();
-      console.log("resp from json data: ", data);
-      // 1 - store the relevant data into state
-      // 2 - add error handling
+        async () => {
+          console.log("___", userLocation, method, month, year);
+          //TODO: add the school in the below request
+          const url = `http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${longitude}&method=${method}&month=${month}&year=${year}`;
+          console.log("url:", url);
+          const resp = await fetch(url);
+          const data = await resp.json();
+          console.log("resp from json data: ", data);
+          // 1 - store the relevant data into state
+          // 2 - add error handling
+        }
+      );
     }
   };
 
@@ -151,7 +156,6 @@ class LocalSalahTimePage extends Component {
                   Method:
                 </Title>
                 <DropDownContainer
-                  className="level-item"
                   data={methodData}
                   btnTxt="method"
                   stateProps={method}
@@ -164,7 +168,6 @@ class LocalSalahTimePage extends Component {
                   School:
                 </Title>
                 <DropDownContainer
-                  className="level-item"
                   data={schoolData}
                   btnTxt="school"
                   stateProps={school}

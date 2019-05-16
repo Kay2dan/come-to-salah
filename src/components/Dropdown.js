@@ -18,7 +18,7 @@ const DropDownContainer = ({
 }) => {
   const { toggleMenu, selected } = stateProps;
   return (
-    <Dropdown className="pushUp" isActive={toggleMenu}>
+    <Dropdown className="level-item pushUp" isActive={toggleMenu}>
       <DropdownTrigger>
         <Button
           className="has-text-centered lowerCaseFont"
