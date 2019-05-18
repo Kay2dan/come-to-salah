@@ -5,7 +5,7 @@ import DomContent from "./DomContent";
 import SVGIllustration from "./SVGIllustration";
 
 const PraySalahContent = ({
-  currentStep,
+  currentStepId,
   currentStepTxt,
   heading,
   illustrations,
@@ -35,7 +35,7 @@ const PraySalahContent = ({
           ))}
         </div>
 
-        <SVGIllustration data={illustrations} currentStep={currentStep} />
+        <SVGIllustration data={illustrations} currentStepId={currentStepId} />
       </Column>
     </Columns>
   </Section>

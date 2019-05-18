@@ -5,13 +5,21 @@ import "kute.js/kute-svg";
 
 class SVGIllustration extends Component {
   render() {
-    const { currentStep, data } = this.props;
+    const { currentStepId, data } = this.props;
     const { stances } = data;
-    //FIXME: refactor following line once we have
-    // svg illustrations for all the poses
-    const paths = stances[currentStep]
-      ? stances[currentStep]["paths"]
-      : undefined;
+    console.log("stances:", stances);
+    console.log("currentStepId:", currentStepId);
+    let paths;
+    switch (currentStepId) {
+      case "openingHamd":
+      case "fatiha":
+      case "recitationOfPassageFromTheQuran":
+        paths = stances.find(o => o.id === "openingHamd").paths;
+        console.log("paths: ", paths);
+        break;
+      default:
+        paths = stances.find(o => o.id === currentStepId).paths;
+    }
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
