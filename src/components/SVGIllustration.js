@@ -7,19 +7,21 @@ class SVGIllustration extends Component {
   render() {
     const { currentStepId, data } = this.props;
     const { stances } = data;
-    console.log("stances:", stances);
-    console.log("currentStepId:", currentStepId);
     let paths;
+    let svgIdToRender;
     switch (currentStepId) {
       case "openingHamd":
       case "fatiha":
       case "recitationOfPassageFromTheQuran":
-        paths = stances.find(o => o.id === "openingHamd").paths;
-        console.log("paths: ", paths);
+        svgIdToRender = "openingHamd";
         break;
       default:
-        paths = stances.find(o => o.id === currentStepId).paths;
+        svgIdToRender = currentStepId;
     }
+    paths = stances.find(o => o.id === svgIdToRender).paths;
+    // console.log("stances:", stances);
+    // console.log("currentStepId:", currentStepId);
+    // console.log("paths: ", paths);
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -71,8 +73,8 @@ class Path extends Component {
 }
 
 SVGIllustration.propTypes = {
-  data: PropTypes.string.isRequired,
-  currentStep: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  currentStepId: PropTypes.string.isRequired,
 };
 
 Path.propTypes = {

@@ -42,7 +42,7 @@ const PraySalahContent = ({
 );
 
 PraySalahContent.propTypes = {
-  currentStep: PropTypes.object.isRequired,
+  currentStepId: PropTypes.string,
   currentStepTxt: PropTypes.object.isRequired,
   heading: PropTypes.string.isRequired,
   illustrations: PropTypes.object.isRequired,

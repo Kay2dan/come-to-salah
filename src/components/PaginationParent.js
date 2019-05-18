@@ -69,7 +69,9 @@ const PaginationControl = ({
 
 PaginationParent.propTypes = {
   currentStep: PropTypes.number.isRequired,
-  ttlSteps: PropTypes.number.isRequired,
+  linkCollection: PropTypes.arrayOf(PropTypes.string).isRequired,
+  paginationLinkOnClickHandler: PropTypes.func.isRequired,
+  paginationCtrlOnClickHandler: PropTypes.func.isRequired,
 };
 
 export default PaginationParent;

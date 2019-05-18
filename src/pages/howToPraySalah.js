@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { graphql } from "gatsby";
 import { Title } from "bloomer";
+import PropTypes from "prop-types";
 import PraySalahContent from "../components/PraySalahContent";
 import PaginationParent from "../components/PaginationParent";
 import "../styles/howToPraySalah.sass";
@@ -212,5 +213,10 @@ export const query = graphql`
     }
   }
 `;
+
+HowToPraySalah.propTypes = {
+  data: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired
+};
 
 export default HowToPraySalah;

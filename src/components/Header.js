@@ -179,6 +179,8 @@ const Header = ({
 
 Header.propTypes = {
   activeNavbarItem: PropTypes.string,
+  menuToggleHandler: PropTypes.func.isRequired,
+  menuVisibility: PropTypes.bool.isRequired,
   // onClickHandler: PropTypes.func.isRequired,
 };
 

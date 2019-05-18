@@ -1,11 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { graphql, Link, StaticQuery } from "gatsby";
 import { NavbarDropdown, NavbarItem } from "bloomer";
 
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-const HeaderMenu = ({ activeNavbarItem }) => {
+// const HeaderMenu = ({ activeNavbarItem }) => {
+const HeaderMenu = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -68,8 +69,8 @@ const HeaderMenu = ({ activeNavbarItem }) => {
   );
 };
 
-HeaderMenu.propTypes = {
-  activeNavbarItem: PropTypes.string,
-};
+// HeaderMenu.propTypes = {
+//   activeNavbarItem: PropTypes.string,
+// };
 
 export default HeaderMenu;

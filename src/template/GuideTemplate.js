@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { PageControl, Pagination, Title } from "bloomer";
+import PropTypes from "prop-types";
 import GuideContent from "../components/GuideContent";
 import "../styles/guideTemplate.sass";
 
@@ -61,5 +62,9 @@ export const query = graphql`
     }
   }
 `;
+
+GuideTemplate.propTypes = {
+  data: PropTypes.object.isRequired
+};
 
 export default GuideTemplate;

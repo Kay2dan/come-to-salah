@@ -62,7 +62,7 @@ class LocalSalahTimePage extends Component {
   fetchSalahTimes = async () => {
     console.log("inside fetchy");
     const { userLocation, method, month, year } = this.state;
-    const { latitude, longitude } = userLocation;
+    const { latitude /*, longitude */ } = userLocation;
     // console.log(this.state);
     if (!latitude) {
       console.log("inside");
