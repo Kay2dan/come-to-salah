@@ -2,52 +2,39 @@ import React, { Component } from "react";
 import SEO from "../components/seo";
 import { Button, Column, Columns, Section, Title } from "bloomer";
 import SalahTimes from "../components/SalahTimes";
-import "../styles/localSalahTime.sass";
 import DropDownContainer from "../components/Dropdown";
-
-const methodData = [
-  "University of Islamic Sciences, Karachi",
-  "Islamic Society of North America",
-  "Muslim World League",
-  "Shia Ithna-Ansari",
-  "Umm Al-Qura University, Makkah",
-  "Egyptian General Authority of Survey",
-  "Institute of Geophysics, University of Tehran",
-  "Gulf Region",
-  "Kuwait",
-  "Qatar",
-  "Majlis Ugama Islam Singapura, Singapore",
-  "Union Organization islamic de France",
-  "Diyanet İşleri Başkanlığı, Turkey",
-  "Spiritual Administration of Muslims of Russia",
-];
-
-const schoolData = ["Hanafi", "Shafi"];
+import { methodData, schoolData, salahTimesEndpoint } from "../data/constants";
+import "../styles/localSalahTime.sass";
 
 class LocalSalahTimePage extends Component {
   constructor(props) {
     super(props);
+    const { localStorage } = window;
     this.state = {
-      month: new Date().getMonth(),
       userLocation: {
-        latitude: "",
-        longitude: "",
+        lat: localStorage.getItem("cts_latitude") || null,
+        lng: localStorage.getItem("cts_longitude") || null,
       },
-      year: new Date().getYear(),
-      error: "", // for error handling
       method: {
+        selected: localStorage.getItem("cts_method") || null,
         toggleMenu: false,
-        selected: "",
       },
       school: {
+        selected: localStorage.getItem("cts_school") || null,
         toggleMenu: false,
-        selected: "",
+      },
+      error: "", // for error handling
+      fetchResponse: {
+        // resonse from api
+        data: {
+          date: {},
+          timings: {},
+        },
       },
     };
   }
 
-  //https://stackoverflow.com/questions/6159074/given-the-lat-long-coordinates-how-can-we-find-out-the-city-country
-  getUserLocation = () => {
+  getUserLocationInPromise = () => {
     return new Promise(function(resolve, reject) {
       window.navigator.geolocation.getCurrentPosition(resolve, reject, {
         enableHighAccuracy: true,
@@ -56,61 +43,95 @@ class LocalSalahTimePage extends Component {
     });
   };
 
+  getUserLocation = async () => {
+    try {
+      const coord = await this.getUserLocationInPromise();
+      const { localStorage } = window;
+      const {
+        coords: { latitude, longitude },
+      } = coord;
+      this.setState({
+        userLocation: {
+          lat: latitude,
+          lng: longitude,
+        },
+      });
+      localStorage.setItem("cts_latitude", latitude);
+      localStorage.setItem("cts_longitude", longitude);
+    } catch (err) {
+      const { code, msg } = err;
+      const customMsg =
+        code === 1
+          ? "Location is needed to get the local salah time, please try again."
+          : "Sorry, something went wrong, please try again or try again later.";
+      this.setState({
+        error: `${code}: ${customMsg}. ${msg}`,
+      });
+    }
+  };
+
   //      https://aladhan.com/prayer-times-api
+  //      specifically => https://aladhan.com/prayer-times-api#GetTimings
   //      See the above link for documentation for the
   //      api we are using to get the salah times
-  fetchSalahTimes = async () => {
-    console.log("inside fetchy");
-    const { userLocation, method, month, year } = this.state;
-    const { latitude /*, longitude */ } = userLocation;
-    // console.log(this.state);
-    if (!latitude) {
-      console.log("inside");
-      const coordinates = await this.getUserLocation(
-        coord => coord.coords,
-        err => {
-          const { code, msg } = err;
-          if (code === 1) {
-            prompt(
-              "Location is needed to get the local salah time, please try again.",
-              msg
-            );
-          } else if (code === 2 || code === 3) {
-            prompt(
-              "Sorry, something went wrong, please try again or try again later.",
-              msg
-            );
-          }
-        }
-      );
-      const { latitude, longitude } = coordinates.coords;
-      console.log("coordinates: ", latitude, longitude);
+  updateSalahTimes = async () => {
+    const { userLocation, method, school } = this.state;
+    let isStateNeedingUpdate = false;
+    const newState = {
+      ...this.state,
+    };
+    if (!userLocation.lat) {
+      await this.getUserLocation();
+    }
+    if (!method.selected) {
+      newState.method.selected = 2;
+      localStorage.setItem("cts_method", 2); // set defaults
+      isStateNeedingUpdate = true;
+    }
+    if (!school.selected) {
+      newState.school.selected = 0;
+      localStorage.setItem("cts_school", 0); // set default
+      isStateNeedingUpdate = true;
+    }
+    if (isStateNeedingUpdate) {
       this.setState(
         {
-          userLocation: {
-            latitude: latitude,
-            longitude: longitude,
-          },
+          ...newState,
         },
-        async () => {
-          console.log("___", userLocation, method, month, year);
-          //TODO: add the school in the below request
-          const url = `http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${longitude}&method=${method}&month=${month}&year=${year}`;
-          console.log("url:", url);
-          const resp = await fetch(url);
-          const data = await resp.json();
-          console.log("resp from json data: ", data);
-          // 1 - store the relevant data into state
-          // 2 - add error handling
+        () => {
+          this.fetchSalahTimes();
         }
       );
+    } else {
+      this.fetchSalahTimes();
     }
+  };
+
+  fetchSalahTimes = () => {
+    const { userLocation, method, school } = this.state;
+    const url = salahTimesEndpoint({
+      lat: userLocation.lat,
+      lng: userLocation.lng,
+      method: method.selected,
+      school: school.selected,
+    });
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          fetchResponse: data,
+        });
+      })
+      .catch(err => {
+        this.setState({
+          error: err,
+        });
+      });
   };
 
   toggleMenu = type => () =>
     this.setState({
       [type]: {
-        selected: this.state[type].selected,
         toggleMenu: !this.state[type].toggleMenu,
       },
     });
@@ -119,13 +140,15 @@ class LocalSalahTimePage extends Component {
     const newState = { ...this.state[type] };
     newState.selected = e.target.innerText;
     newState.toggleMenu = !newState.toggleMenu;
+    window.localStorage.setItem(`cts_${type}`, e.target.innerText);
     this.setState({
       [type]: { ...newState },
     });
   };
 
   render() {
-    const { userLocation, method, school } = this.state;
+    const { userLocation, method, school, fetchResponse } = this.state;
+    const { timings, date } = fetchResponse.data;
     return (
       <div id="localSalahTimeWrapper">
         <SEO
@@ -140,16 +163,25 @@ class LocalSalahTimePage extends Component {
           >
             <Column isSize="1/2" className="has-text-centered">
               <div className="has-text-centered dateSection level">
-                <div className="level-left">gregorianDate</div>
-                <div className="level-right">Hijri Date</div>
+                <div className="level-left">
+                  {date.readable ? date.readable : `Gregorian Date`}
+                </div>
+                <div className="level-right">
+                  {date.hijri
+                    ? `${date.hijri.day} ${date.hijri.month.en} ${
+                        date.hijri.year
+                      }`
+                    : `Hijri Date`}
+                </div>
               </div>
               <div
                 className="level userLocation"
-                // onClick={this.getUserLocation}
-                onClick={this.fetchSalahTimes}
+                onClick={this.getUserLocation}
               >
                 {/* <Icon isSize="" className="level-item" /> */}
-                <div className="level-item">{`Your location: ${userLocation}`}</div>
+                <div className="level-item">{`Your location: ${
+                  userLocation.lat
+                }, ${userLocation.lng}`}</div>
               </div>
               <div className="level">
                 <Title isSize="6" className="level-item is-hidden-mobile">
@@ -175,10 +207,12 @@ class LocalSalahTimePage extends Component {
                   onClickHandlerForDropDownItem={this.onClickHandler("school")}
                 />
               </div>
-              <Button className="">Get Salaat Times</Button>
+              <Button className="" onClick={this.fetchSalahTimes}>
+                Get Salaat Times
+              </Button>
             </Column>
             <Column isSize="1/2">
-              <SalahTimes />
+              <SalahTimes timings={timings} />
             </Column>
           </Columns>
         </Section>
