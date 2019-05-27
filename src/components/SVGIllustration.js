@@ -15,6 +15,9 @@ class SVGIllustration extends Component {
       case "recitationOfPassageFromTheQuran":
         svgIdToRender = "openingHamd";
         break;
+      case "qaumah":
+        svgIdToRender = "standingForNiyyah";
+        break;
       default:
         svgIdToRender = currentStepId;
     }
@@ -65,10 +68,13 @@ class Path extends Component {
       ).start();
     }
   }
-
   render() {
     const { d, pathId } = this.props;
-    return <path d={d} id={pathId} ref={this[pathId]} />;
+    const paddingTopStyle =
+      pathId === "paddingTop" ? { fill: "rgba(0,0,0,0)" } : {};
+    return (
+      <path d={d} id={pathId} ref={this[pathId]} style={paddingTopStyle} />
+    );
   }
 }
 
