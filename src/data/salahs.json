@@ -14,10 +14,12 @@
         "qaumah",
         "prostration",
         "jalsah",
-        "secondProstration",
+        "prostration",
         "endOfFirstRakaat",
         "atTashahudStart",
-        "atTashahudEnd"
+        "atTashahudEnd",
+        "salamRgt",
+        "salamLft"
       ],
       "rakaats": [
         {
