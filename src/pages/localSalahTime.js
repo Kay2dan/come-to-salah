@@ -208,7 +208,7 @@ class LocalSalahTimePage extends Component {
                 />
               </div>
               <Button className="" onClick={this.fetchSalahTimes}>
-                Get Salaat Times
+                <span>Get Salaat Times</span>
               </Button>
             </Column>
             <Column isSize="1/2">
