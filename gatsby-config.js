@@ -3,7 +3,8 @@ module.exports = {
     title: `Come to Salah`,
     description: `An introduction to Salah, the second pillar of Islam.`,
   },
-  // pathPrefix: "/come-to-salah",
+  // https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/
+  pathPrefix: "/come-to-salah",
   plugins: [
     {
       resolve: "gatsby-transformer-json",
