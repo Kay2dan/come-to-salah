@@ -18,13 +18,15 @@ class SVGIllustration extends Component {
       case "qaumah":
         svgIdToRender = "standingForNiyyah";
         break;
+      case "jalsah":
+      case "endOfFirstRakaat":
+      case "atTashahudEnd":
+        svgIdToRender = "jalsah";
+        break;
       default:
         svgIdToRender = currentStepId;
     }
     paths = stances.find(o => o.id === svgIdToRender).paths;
-    // console.log("stances:", stances);
-    // console.log("currentStepId:", currentStepId);
-    // console.log("paths: ", paths);
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"

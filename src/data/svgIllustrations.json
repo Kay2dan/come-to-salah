@@ -448,8 +448,8 @@
         ]
       },
       {
-        "id": "raisingIndexFingerInAtTashahud",
-        "name": "raisingIndexFingerInAtTashahud",
+        "id": "atTashahudStart",
+        "name": "at Tashahud start",
         "paths": [
           {
             "pathId": "paddingTop",
@@ -522,8 +522,8 @@
         ]
       },
       {
-        "id": "salamRgt",
-        "name": "salamRgt",
+        "id": "tasleemRgt",
+        "name": "tasleemRgt",
         "paths": [
           {
             "pathId": "paddingTop",
@@ -596,8 +596,8 @@
         ]
       },
       {
-        "id": "salamLft",
-        "name": "salamLft",
+        "id": "tasleemLft",
+        "name": "tasleemLft",
         "paths": [
           {
             "pathId": "paddingTop",

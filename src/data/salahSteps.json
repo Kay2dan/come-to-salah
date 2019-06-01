@@ -531,6 +531,70 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tasleemRgt",
+      "heading": "Tasleem - Right",
+      "content": [
+        {
+          "eleType": "h5",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "none",
+            "recitationId": []
+          },
+          "txt": ["Step 1.14: Tasleem - Right"]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "after",
+            "recitationId": ["tasleem"]
+          },
+          "txt": ["In Tasleem, the prayer looks to the right & says:"]
+        }
+      ]
+    },
+    {
+      "id": "tasleemLft",
+      "heading": "Tasleem - Left",
+      "content": [
+        {
+          "eleType": "h5",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "none",
+            "recitationId": []
+          },
+          "txt": ["Step 1.15: Tasleem Left"]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "after",
+            "recitationId": ["tasleem"]
+          },
+          "txt": [
+            "After performing the turning of the head to the right, the prayer turns the head to the left & again recites:"
+          ]
+        },
+        {
+          "eleType": "p",
+          "id": "",
+          "classes": "",
+          "insertion": {
+            "location": "",
+            "recitationId": []
+          },
+          "txt": ["With that, the salaat is concluded."]
+        }
+      ]
     }
   ]
 }

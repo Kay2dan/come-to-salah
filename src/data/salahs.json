@@ -17,10 +17,9 @@
         "prostration",
         "endOfFirstRakaat",
         "atTashahudStart",
-        "raisingIndexFingerInAtTashahud",
         "atTashahudEnd",
-        "salamRgt",
-        "salamLft"
+        "tasleemRgt",
+        "tasleemLft"
       ],
       "rakaats": [
         {
@@ -46,10 +45,12 @@
         "qaumah",
         "prostration",
         "jalsah",
-        "secondProstration",
+        "prostration",
         "endOfFirstRakaat",
         "atTashahudStart",
-        "atTashahudEnd"
+        "atTashahudEnd",
+        "tasleemRgt",
+        "tasleemLft"
       ],
       "rakaats": [
         {
@@ -83,10 +84,12 @@
         "qaumah",
         "prostration",
         "jalsah",
-        "secondProstration",
+        "prostration",
         "endOfFirstRakaat",
         "atTashahudStart",
-        "atTashahudEnd"
+        "atTashahudEnd",
+        "tasleemRgt",
+        "tasleemLft"
       ],
       "rakaats": [
         {
@@ -112,10 +115,12 @@
         "qaumah",
         "prostration",
         "jalsah",
-        "secondProstration",
+        "prostration",
         "endOfFirstRakaat",
         "atTashahudStart",
-        "atTashahudEnd"
+        "atTashahudEnd",
+        "tasleemRgt",
+        "tasleemLft"
       ],
       "rakaats": [
         {
@@ -145,10 +150,12 @@
         "qaumah",
         "prostration",
         "jalsah",
-        "secondProstration",
+        "prostration",
         "endOfFirstRakaat",
         "atTashahudStart",
-        "atTashahudEnd"
+        "atTashahudEnd",
+        "tasleemRgt",
+        "tasleemLft"
       ],
       "rakaats": [
         {
