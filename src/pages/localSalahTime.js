@@ -9,18 +9,28 @@ import "../styles/localSalahTime.sass";
 class LocalSalahTimePage extends Component {
   constructor(props) {
     super(props);
-    const { localStorage } = window;
+    let lat = null,
+      lng = null,
+      selectedMethod = null,
+      selectedSchool = null;
+    if (typeof window !== `undefined`) {
+      lat = window.localStorage.getItem("cts_latitude") || null;
+      lng = window.localStorage.getItem("cts_longitude") || null;
+      selectedMethod = window.localStorage.getItem("cts_method") || null;
+      selectedSchool = window.localStorage.getItem("cts_school") || null;
+    }
+    // const { localStorage } = window;
     this.state = {
       userLocation: {
-        lat: localStorage.getItem("cts_latitude") || null,
-        lng: localStorage.getItem("cts_longitude") || null,
+        lat: lat,
+        lng: lng,
       },
       method: {
-        selected: localStorage.getItem("cts_method") || null,
+        selected: selectedMethod,
         toggleMenu: false,
       },
       school: {
-        selected: localStorage.getItem("cts_school") || null,
+        selected: selectedSchool,
         toggleMenu: false,
       },
       error: "", // for error handling

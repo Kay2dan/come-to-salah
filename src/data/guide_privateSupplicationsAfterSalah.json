@@ -1,6 +1,11 @@
 {
   "id": "privateSupplicationsAfterSalaatSection",
   "title": "Private Supplications After Salaat",
+  "pagination": {
+    "previous": "Misc. Notes on Salaat",
+    "next": "Congregational Prayer"
+  },
+
   "sections": [
     {
       "heading": "Private Supplications After Salaat",
