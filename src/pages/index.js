@@ -131,16 +131,23 @@ const IndexPage = () => (
       <div className="buttonContainer">
         <Container className=" has-text-centered">
           <Button className="homeButton">
-            <Link className="" to="/localSalahtime">
-              Local Salah Time
+            <Link to="/localSalahTime">Local Salaat Time</Link>
+          </Button>
+        </Container>
+        <Container className=" has-text-centered">
+          <Button className="homeButton">
+            <Link
+              to="/howToPraySalah"
+              state={{ navigateTo: "Fajr" }}
+              data-heading="Fajr"
+            >
+              How to pray salaat
             </Link>
           </Button>
         </Container>
         <Container className=" has-text-centered">
           <Button className="homeButton">
-            <Link className="" to="/">
-              Guide to Salah
-            </Link>
+            <Link to="/whatIsSalaat">Guide to Salaat</Link>
           </Button>
         </Container>
       </div>

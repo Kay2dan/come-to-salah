@@ -216,7 +216,7 @@ export const query = graphql`
 
 HowToPraySalah.propTypes = {
   data: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 };
 
 export default HowToPraySalah;

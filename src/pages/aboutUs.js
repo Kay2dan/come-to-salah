@@ -34,8 +34,16 @@ const AboutUs = ({ data }) => {
               ourselves.
             </p>
             <p>
-              In additional to thanking each other, we also want to thank the
-              people behind{" "}
+              In additional to thanking each other, we also want to thank{" "}
+              <a
+                href="https://unsplash.com/@kalimullin"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontWeight: 700 }}
+              >
+                Ilnur Kalimullin
+              </a>{" "}
+              for the background image & the people behind{" "}
               <a
                 href="https://aladhan.com/prayer-times-api"
                 target="_blank"
@@ -44,7 +52,7 @@ const AboutUs = ({ data }) => {
               >
                 Aladhan.com
               </a>{" "}
-              for the API, jazakAllah khair.
+              for the prayer time API, jazakAllah khair.
             </p>
             <p>With duas.</p>
           </div>
