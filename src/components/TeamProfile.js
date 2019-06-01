@@ -11,7 +11,7 @@ const TeamProfile = ({ data }) => {
         <Column isSize="1/2">
           <Title isSize="4">{name}</Title>
           <Subtitle isSize="6">{role}</Subtitle>
-          <a href={link.to} blank="">
+          <a href={link.to} target="_blank" rel="noopener noreferrer">
             <div className={imgClass} />
           </a>
         </Column>
