@@ -40,6 +40,12 @@ class LocalSalahTimePage extends Component {
         },
       },
     };
+    this.getUserLocationInPromise = this.getUserLocationInPromise.bind(this);
+    this.getUserLocation = this.getUserLocation.bind(this);
+  }
+
+  componentDidMount() {
+    this.getUserLocation();
   }
 
   getUserLocationInPromise = () => {
