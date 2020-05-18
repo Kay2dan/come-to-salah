@@ -32,20 +32,18 @@ html, body
   min-height: 100vh
   height: 100vh
 
-body
+body,
+#___gatsby
   background-image: url("../images/background.jpg")
   background-origin: border-box
   background-position: center -180px
   background-repeat: no-repeat
-  background-size: cover
-
-// .pageWrapper
-  // height: 100vh
+  background-size: cover  
 
 svg
   fill: $font-blue
 
-.arabicTxt 
+.arabicTxt
   font-size: 1.3rem
   line-height: 2rem
   text-align: right
@@ -91,7 +89,7 @@ h5
 .smallTxt
   font-size: 0.8rem
 
-.icon_behance 
+.icon_behance
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAArlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeyFOlAAAAOXRSTlMA9wg/wJbaaeIe+wUS8Oss2PTnyWNJzQy+i1JDHK+Es6ihkDAY07hyXUw8JiMOnH43M22XeEbdmFnlE8XCAAAEdElEQVR42u2a2ZaiMBBACwRBdllEENy3dtdup5v//7E5c+yZ0UpEIMrMQ+6rOXBJKpWqHIHD4XA4HA6Hw+H8c/bvckEWytehZcCzaWbF0Uy1M/JtvWYBbGENY6NmAYzQDfSaBTCmnMBdxEcggWp4jbvvH0v5DKdIoBrN3j0BKctHbSGBqgarugUwXqtuAcy7+I8F2m91C2AG4T8WaAd1C2DkVwg0uxKNrqNlBB2DIjDXhFycJF/gpItUEt8h14CWCyaNfA5ivoAC92j8yDA+MFBaAJZChtjVK7Al4qsr1ioA+wwh1SwQa6UEdMNufHOc6s8QOFqFBcJJHA07lvCN6aRj/7BlFWipxQTEyYdkaWRR6/UnYg0C4ltqaXdL2p7OIGBbBXZBY2jm1pOfdnWBnvAwDxgfbvYAZylWFfDxjC6JORpoBU7RfVhRIEJj3QkaEMyKdTef2+dkwgEKgTe1aH81DqsIvLXRY3wUImrxDm+vlxc4zvAEGLfr38mKY72VrQemSwdHwOE2/gdZGWabchWR5Ah4Q6MF+NAoM+10R32lP+qq5I8RY03oLvXb/OOSOWcYJ5cwFdfLgYAXoccioEmoNwxTYsj8JuuGCg7RkVhZoO0pBj6p8QcKYzxk5aApOFYUaA+UDZEi5vj7I5HcxuiQ6FcU0Mwfnty4fX7QRoNSAwh0lEk9gyEIzfR6hfUh3ks29Tif3X5JzNQZWacQfmO7aJIWQKWP1qCqAE7ooOAskwCV3m0UdEO23lD7gG9G6JcPoLP1btvENWNzan23x2sVBcgK6Ogpaq8ZBTLpEuuBQDatdPo4VEgBSaayo6XzTFiix17wlDv4aLcMSxzH4mbhUKZgi0KgHLNyBclmeJkEvNpGp6pAs5wAGOSn7lG7UA63pABsiKJzLqJ2oRxlBeBEfION2oUXC6xdvA96AMusPgFxQLmlUWoUgEWGiOoVIF8m/wcCAQ5CTShI8zkCK1wOdc6NYhyeI7BRK99dPUcgwTeYzvR1AnuKgIhLYnXzMoGwSxEAGWen88sEjkTaXwCAr5FHFB198Sn/ZWyXFdDfM4QQAMDBxOc8PQjwyd0OCgrg3gb3VyHRF/lAx3ZZBPSzk2E8gxqanaRIJm+fywjo9tjKCMZ3QmNkUCfAeVyWj1cNCj2/n1Kr0vOdQ1KjGWzQUkmoMcnL4xkdz8D3V7/R0gMgVhJxz8naF2gnuBDOMwI3OopXTdEqcol7TmaBzp/tdjYzEkvqB5cl/JI9coDTYhVof6EMQSJc0DIKEbAKjK6meF26OVAnrALd1k2Sckv31owCHXRV7ZtZGVKDUUCa4Ex1Msvor4FJQNglgNEVq8z0MQn88EWgEDtFw2cCLALuzgY6dlqkTTN3CVQX0JpRzv/JQt95+AAv1qGigGZ6cpzokMdm4Wl5wSMp19WKpBbGG3xGXwcDHjONdyrdQZjJsXE7tlWYrQ7FWcfR/IclXL/bddJ+kEB9iIkdKNG7/Iv38SlYT3XgcDgcDofD4XA4/x8/AWdkOaNnrm3MAAAAAElFTkSuQmCC')
   background-position: center
   background-repeat: no-repeat
@@ -136,7 +134,7 @@ h5
     border-color: #0d324d
     border-radius: 10px
     cursor: pointer
-    
+
     &.is-current
       background-color: #fff
       border-color: $font-blue
@@ -151,20 +149,20 @@ h5
 
     &.pageControl
       // content: ""
-      position: absolute
+      // position: absolute
       border: 6px solid $font_blue
       border-right: 0
       border-top: 0
       border-radius: 3px
-      top: calc(-50vh + 18px)
+      // top: calc(-50vh + 18px)
 
   .pagination-previous.pageControl
     left: 10px
     transform: rotate(45deg)
-  
+
   .pagination-next.pageControl
     right: 20px
     transform: rotate(225deg)
 
 // finally import Bulma
-@import "~bulma"
+@import "~bulma";

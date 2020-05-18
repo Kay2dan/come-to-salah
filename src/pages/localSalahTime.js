@@ -19,7 +19,6 @@ class LocalSalahTimePage extends Component {
       selectedMethod = window.localStorage.getItem("cts_method") || null;
       selectedSchool = window.localStorage.getItem("cts_school") || null;
     }
-    // const { localStorage } = window;
     this.state = {
       userLocation: {
         lat: lat,
@@ -35,7 +34,6 @@ class LocalSalahTimePage extends Component {
       },
       error: "", // for error handling
       fetchResponse: {
-        // resonse from api
         data: {
           date: {},
           timings: {},
@@ -178,9 +176,7 @@ class LocalSalahTimePage extends Component {
                 </div>
                 <div className="level-right">
                   {date.hijri
-                    ? `${date.hijri.day} ${date.hijri.month.en} ${
-                        date.hijri.year
-                      }`
+                    ? `${date.hijri.day} ${date.hijri.month.en} ${date.hijri.year}`
                     : `Hijri Date`}
                 </div>
               </div>
@@ -189,9 +185,7 @@ class LocalSalahTimePage extends Component {
                 onClick={this.getUserLocation}
               >
                 {/* <Icon isSize="" className="level-item" /> */}
-                <div className="level-item">{`Your location: ${
-                  userLocation.lat
-                }, ${userLocation.lng}`}</div>
+                <div className="level-item">{`Your location: ${userLocation.lat}, ${userLocation.lng}`}</div>
               </div>
               <div className="level">
                 <Title isSize="6" className="level-item is-hidden-mobile">
