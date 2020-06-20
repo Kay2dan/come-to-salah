@@ -5,7 +5,6 @@ import { NavbarDropdown, NavbarItem } from "bloomer";
 
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-// const HeaderMenu = ({ activeNavbarItem }) => {
 const HeaderMenu = () => {
   return (
     <StaticQuery

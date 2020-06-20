@@ -1,5 +1,5 @@
 #localSalahTimeWrapper
-  margin: 5rem auto
+  margin: 5rem auto 0
   background-color: rgba(217, 231, 233, 0.8)
 
   h1.title.is-2
@@ -8,52 +8,54 @@
     text-align: right
 
   section.section
-    margin: 1.5rem 1.5rem 3rem
+    margin: 0 1.5rem
 
-    .dateSection
-      font-size: 0.9rem
+  .dateSection
+    font-size: 0.9rem
 
-    .userLocation span
-      margin: 1rem auto
-      font-size: 1.2rem
-      font-weight: 700
+  .userLocation span
+    margin: 1rem auto
+    font-size: 1.2rem
+    font-weight: 700
 
-    div.dropdown.pushUp
-      top: -12px
+  div.dropdown.pushUp
+    top: -12px
+
+  button
+    width: 100%
 
 
 
+  table.salahTimeTable
+    background-color: transparent
+    border-collapse: separate
+    border-spacing: 0px 20px
+    border: none
+    color: #222
+    font-size: 0.8rem
+    font-weight: 600
+    opacity: 0.75
+    table-layout: fixed
+    text-transform: uppercase
+    width: 100%
 
-    table.salahTimeTable
-      background-color: transparent
-      border-collapse: separate
-      border-spacing: 0px 20px
+    tr
       border: none
-      color: #222
-      font-size: 0.8rem
-      font-weight: 600
-      opacity: 0.75
-      table-layout: fixed
-      text-transform: uppercase
-      width: 100%
 
-      tr
+      td
         border: none
+        background-color: rgba(255,255,255,0.75)
+        box-shadow: 1px 2px 3px gray
+        padding-top: 0.5rem
+        padding-bottom: 0.5rem
+        padding-left: 15px
+        text-align: left
 
-        td
-          border: none
-          background-color: rgba(255,255,255,0.75)
-          box-shadow: 1px 2px 3px gray
-          padding-top: 0.5rem
-          padding-bottom: 0.5rem
-          padding-left: 15px
-          text-align: left
+      td:nth-child(odd)
+        border-radius: 5px 0 0 5px
 
-        td:nth-child(odd)
-          border-radius: 5px 0 0 5px
-
-        td:nth-child(even)
-          border-radius: 0 5px 5px 0
-          padding-right: 15px
-          text-align: right
-          text-transform: lowercase
+      td:nth-child(even)
+        border-radius: 0 5px 5px 0
+        padding-right: 15px
+        text-align: right
+        text-transform: lowercase
