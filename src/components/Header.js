@@ -7,7 +7,6 @@ import {
   NavbarBrand,
   NavbarBurger,
   NavbarMenu,
-  NavbarItem,
   NavbarEnd,
 } from "bloomer";
 import "../styles/header.sass";
