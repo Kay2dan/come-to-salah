@@ -3,10 +3,6 @@
   "title": "Menu",
   "menuSections": [
     {
-      "label": "Local Salah Time",
-      "headings": ["Local Salah Time"]
-    },
-    {
       "label": "How To Pray Salah",
       "headings": ["Fajr", "Dhuhr", "Asr", "Mughrib", "Isha"]
     },
@@ -32,6 +28,10 @@
         "Prayer For Rain",
         "Funeral Prayer"
       ]
+    },
+    {
+      "label": "Local Salah Time",
+      "headings": ["Local Salah Time"]
     },
     {
       "label": "About",

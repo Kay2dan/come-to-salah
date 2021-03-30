@@ -191,9 +191,12 @@ class LocalSalahTimePage extends Component {
                 onClick={this.getUserLocation}
               >
                 {/* <Icon isSize="" className="level-item" /> */}
-                <div className="level-item">{`Your location: (lat: ${userLocation.lat.toFixed(
-                  3
-                )}, lng: ${userLocation.lng.toFixed(3)})`}</div>
+                {(userLocation.lat && userLocation.lat.toFixed && (
+                  <div className="level-item">{`Your location: (lat: ${userLocation.lat.toFixed(
+                    3
+                  )}, lng: ${userLocation.lng.toFixed(3)})`}</div>
+                )) ||
+                  undefined}
               </div>
               <div className="level">
                 <Title isSize="6" className="level-item is-hidden-mobile">
