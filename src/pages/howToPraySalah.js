@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { graphql } from "gatsby";
 import { Title } from "bloomer";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 import PropTypes from "prop-types";
 import PraySalahContent from "../components/PraySalahContent";
 import PaginationParent from "../components/PaginationParent";
@@ -117,26 +119,34 @@ class HowToPraySalah extends Component {
       }
     }
     return (
-      <div className="howToPraySalahPageWrapper">
-        <div className="titleContainer">
-          <Title isSize={4}>{title}</Title>
-        </div>
-        <div className="contentContainer">
-          <PraySalahContent
-            currentStepId={currentStepId}
-            currentStepTxt={currentStepTxt}
-            heading={heading}
-            illustrations={illustrations}
-            rakaats={rakaats}
-            recitations={recitations}
+      <div>
+        <Layout>
+          <SEO
+            title="How to pray Salaat"
+            keywords={[`salah`, `salaat`, `salat`, `prayer`]}
           />
-          <PaginationParent
-            currentStep={currentStep}
-            linkCollection={stepsInSalah}
-            paginationLinkOnClickHandler={this.paginationLinkOnClickHandler}
-            paginationCtrlOnClickHandler={this.paginationCtrlOnClickHandler}
-          />
-        </div>
+          <div className="howToPraySalahPageWrapper">
+            <div className="titleContainer">
+              <Title isSize={4}>{title}</Title>
+            </div>
+            <div className="contentContainer">
+              <PraySalahContent
+                currentStepId={currentStepId}
+                currentStepTxt={currentStepTxt}
+                heading={heading}
+                illustrations={illustrations}
+                rakaats={rakaats}
+                recitations={recitations}
+              />
+              <PaginationParent
+                currentStep={currentStep}
+                linkCollection={stepsInSalah}
+                paginationLinkOnClickHandler={this.paginationLinkOnClickHandler}
+                paginationCtrlOnClickHandler={this.paginationCtrlOnClickHandler}
+              />
+            </div>
+          </div>
+        </Layout>
       </div>
     );
   }
