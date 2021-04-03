@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import SEO from "../components/seo";
 import { Button, Column, Columns, Section, Title } from "bloomer";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
