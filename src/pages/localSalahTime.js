@@ -199,7 +199,10 @@ class LocalSalahTimePage extends Component {
                   undefined}
               </div>
               <div className="level">
-                <Title isSize="6" className="level-item is-hidden-mobile">
+                <Title
+                  isSize="6"
+                  className="level-item is-justify-content-flex-start is-hidden-mobile"
+                >
                   Method:
                 </Title>
                 <DropDownContainer
@@ -211,7 +214,10 @@ class LocalSalahTimePage extends Component {
                 />
               </div>
               <div className="level">
-                <Title isSize="6" className="level-item is-hidden-mobile">
+                <Title
+                  isSize="6"
+                  className="level-item is-justify-content-flex-start is-hidden-mobile"
+                >
                   School:
                 </Title>
                 <DropDownContainer

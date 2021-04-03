@@ -17,7 +17,10 @@ const DropDownContainer = ({
   onClickHandlerForDropDown,
   onClickHandlerForDropDownItem,
 }) => (
-  <Dropdown className="level-item pushUp" isActive={stateProps.toggleMenu}>
+  <Dropdown
+    className="level-item pushUp is-justify-content-flex-end"
+    isActive={stateProps.toggleMenu}
+  >
     <DropdownTrigger>
       <Button
         className="has-text-centered lowerCaseFont"
