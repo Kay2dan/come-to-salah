@@ -28,7 +28,7 @@
     "babel-jest": "^24.9.0",
     "babel-preset-gatsby": "^0.1.11",
     "core-js": "^2.6.11",
-    "cypress": "^3.8.3",
+    "cypress": "^12.2.0",
     "gh-pages": "^2.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
