@@ -31,7 +31,7 @@
     "cypress": "^3.8.3",
     "gh-pages": "^2.2.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^24.9.0",
+    "jest": "^29.3.1",
     "prettier": "^1.19.1",
     "react-test-renderer": "^16.13.1",
     "start-server-and-test": "^1.11.0"
